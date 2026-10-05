@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AURELIA | Luxury Jewelry</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="icon" href="./assets/logo.webp">
-  
+
   <link rel="stylesheet" href="root.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contact.css">
 
 
 </head>
+
 <body>
 
   <!-- ================= LUXURY HEADER ================= -->
   <header class="site-header" id="siteHeader">
     <div class="header-container">
-      
+
       <!-- Brand Logo (Always visible above drawers) -->
       <a href="index.html" class="brand-logo">
         <img src="./assets/logo 10.webp" alt="Aurelia Jewelry Logo" height="50" width="150">
@@ -41,13 +45,14 @@
 
       <!-- Header Actions (Sign In & Mobile Toggle) -->
       <div class="header-actions">
-        <a href="signin.html" class="btn btn-gold btn-signin-desktop">
+        <a href="auth.html" class="btn btn-gold btn-signin-desktop">
           <i class="fa-regular fa-user"></i>
           <span>Sign In</span>
         </a>
-        
+
         <!-- Hamburger Button (<= 768px only) -->
-        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
           <span class="hamburger-line line-1"></span>
           <span class="hamburger-line line-2"></span>
           <span class="hamburger-line line-3"></span>
@@ -59,7 +64,7 @@
 
   <!-- Mobile Navigation Overlay & Drawer (<= 768px only) -->
   <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
-  
+
   <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
     <div class="drawer-inner">
       <ul class="mobile-menu">
@@ -72,7 +77,7 @@
 
       <!-- Replaced drawer CTA with Sign In -->
       <div class="drawer-footer">
-        <a href="signin.html" class="btn btn-gold drawer-cta">
+        <a href="auth.html" class="btn btn-gold drawer-cta">
           <i class="fa-regular fa-user"></i>
           <span>Sign In</span>
         </a>
@@ -84,771 +89,783 @@
 
 
 
-<section class="atelier-contact-hero" id="contactHero">
-  <!-- Archival Ambient Radial Glow -->
-  <div class="atelier-hero-ambient" aria-hidden="true"></div>
+  <section class="atelier-contact-hero" id="contactHero">
+    <!-- Archival Ambient Radial Glow -->
+    <div class="atelier-hero-ambient" aria-hidden="true"></div>
 
-  <div class="atelier-hero-container">
-    <!-- Breadcrumb Header -->
-    <nav class="atelier-breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html" class="crumb-link">Home</a>
-      <span class="crumb-sep">/</span>
-      <span class="crumb-current">Private Atelier Concierge</span>
-    </nav>
+    <div class="atelier-hero-container">
+      <!-- Breadcrumb Header -->
+      <nav class="atelier-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" class="crumb-link">Home</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">Private Atelier Concierge</span>
+      </nav>
 
-    <!-- Main Hero Split Grid -->
-    <div class="atelier-hero-grid">
-      
-      <!-- Left Narrative Column -->
-      <div class="atelier-hero-narrative">
-        <div class="atelier-kicker-badge">
-          <span class="kicker-spark">✦</span>
-          <span>By Confidential Appointment &bull; Worldwide</span>
-          <span class="kicker-spark">✦</span>
+      <!-- Main Hero Split Grid -->
+      <div class="atelier-hero-grid">
+
+        <!-- Left Narrative Column -->
+        <div class="atelier-hero-narrative">
+          <div class="atelier-kicker-badge">
+            <span class="kicker-spark">✦</span>
+            <span>By Confidential Appointment &bull; Worldwide</span>
+            <span class="kicker-spark">✦</span>
+          </div>
+
+          <h1 class="atelier-hero-title">
+            <span>Inquire &amp; Commission</span>
+            <span class="text-gold-gradient">Imperial Jewelry</span>
+          </h1>
+
+          <p class="atelier-hero-lead">
+            Connect directly with master goldsmiths and certified gemologists for bespoke high-jewelry commissions, rare
+            Type IIa solitaire acquisitions, and confidential private salon consultations.
+          </p>
+
+          <!-- Direct Liaison Contacts -->
+          <div class="atelier-direct-channels">
+            <a href="error.html" class="direct-channel-card">
+              <div class="channel-icon-pod">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-label">Concierge Desk</span>
+                <span class="channel-val">+91 (424) 222-0000</span>
+              </div>
+            </a>
+
+            <a href="error.html" class="direct-channel-card">
+              <div class="channel-icon-pod">
+                <i class="fa-solid fa-envelope-open-text"></i>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-label">Encrypted Dispatch</span>
+                <span class="channel-val">concierge@atelierjewelry.com</span>
+              </div>
+            </a>
+          </div>
         </div>
 
-        <h1 class="atelier-hero-title">
-          <span>Inquire &amp; Commission</span>
-          <span class="text-gold-gradient">Imperial Jewelry</span>
-        </h1>
+        <!-- Right Salon Status & Schedule Card -->
+        <div class="atelier-hero-status-panel">
+          <div class="salon-credential-card">
+            <div class="card-filigree-outline" aria-hidden="true"></div>
 
-        <p class="atelier-hero-lead">
-          Connect directly with master goldsmiths and certified gemologists for bespoke high-jewelry commissions, rare Type IIa solitaire acquisitions, and confidential private salon consultations.
+            <div class="salon-status-head">
+              <div class="live-dot-wrap">
+                <span class="status-live-pulse"></span>
+                <span class="status-live-dot"></span>
+              </div>
+              <span class="status-head-text">Chambers Operating Privately</span>
+            </div>
+
+            <div class="salon-schedule-list">
+              <div class="schedule-item">
+                <div class="schedule-location">
+                  <span class="loc-name">Erode Flagship Salon</span>
+                  <span class="loc-tag">Bespoke Bench &amp; Gem Lab</span>
+                </div>
+                <div class="schedule-time">
+                  <span class="time-primary">10:00 AM &ndash; 08:00 PM</span>
+                  <span class="time-sub">Monday &ndash; Saturday</span>
+                </div>
+              </div>
+
+              <div class="schedule-divider"></div>
+
+              <div class="schedule-item">
+                <div class="schedule-location">
+                  <span class="loc-name">Virtual Private Chambers</span>
+                  <span class="loc-tag">Encrypted 4K Video Microscope</span>
+                </div>
+                <div class="schedule-time">
+                  <span class="time-primary">24 / 7 Global Hours</span>
+                  <span class="time-sub">By Confirmed Booking</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="salon-guarantee-strip">
+              <i class="fa-solid fa-shield-halved guarantee-icon"></i>
+              <span>All consultations protected under NDA &amp; strict client anonymity</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="commission-stage-section" id="commissionBuilder">
+    <div class="stage-ambient-radial" aria-hidden="true"></div>
+
+    <div class="stage-container">
+
+      <!-- Section Header -->
+      <header class="stage-header">
+        <span class="stage-badge">Encrypted Commission Dossier</span>
+        <h2 class="stage-title">Bespoke Jewelry Specification</h2>
+        <p class="stage-subtitle">
+          Configure your private commission parameters below. Your dossier transmits securely to our master goldsmiths
+          in Erode for metallurgical analysis and optical stone selection.
         </p>
+      </header>
 
-        <!-- Direct Liaison Contacts -->
-        <div class="atelier-direct-channels">
-          <a href="tel:+914242220000" class="direct-channel-card">
-            <div class="channel-icon-pod">
-              <i class="fa-solid fa-phone-volume"></i>
-            </div>
-            <div class="channel-meta">
-              <span class="channel-label">Concierge Desk</span>
-              <span class="channel-val">+91 (424) 222-0000</span>
-            </div>
-          </a>
+      <!-- 2-Column Responsive Workspace Grid -->
+      <div class="stage-workspace-grid">
 
-          <a href="mailto:concierge@atelierjewelry.com" class="direct-channel-card">
-            <div class="channel-icon-pod">
-              <i class="fa-solid fa-envelope-open-text"></i>
-            </div>
-            <div class="channel-meta">
-              <span class="channel-label">Encrypted Dispatch</span>
-              <span class="channel-val">concierge@atelierjewelry.com</span>
-            </div>
-          </a>
-        </div>
-      </div>
+        <!-- Left: Interactive Specification Form -->
+        <div class="stage-form-panel">
+          <form class="bespoke-form" id="bespokeCommissionForm" novalidate>
 
-      <!-- Right Salon Status & Schedule Card -->
-      <div class="atelier-hero-status-panel">
-        <div class="salon-credential-card">
-          <div class="card-filigree-outline" aria-hidden="true"></div>
-          
-          <div class="salon-status-head">
-            <div class="live-dot-wrap">
-              <span class="status-live-pulse"></span>
-              <span class="status-live-dot"></span>
-            </div>
-            <span class="status-head-text">Chambers Operating Privately</span>
-          </div>
+            <!-- Step 1: Commission Category -->
+            <div class="spec-block">
+              <label class="spec-block-title">
+                <span class="step-num">01</span>
+                <span>Creation Type</span>
+              </label>
+              <div class="spec-chips-grid">
+                <label class="spec-chip active">
+                  <input type="radio" name="jewelry_category" value="Solitaire Ring" checked>
+                  <i class="fa-solid fa-ring chip-icon"></i>
+                  <span class="chip-name">Solitaire Ring</span>
+                </label>
 
-          <div class="salon-schedule-list">
-            <div class="schedule-item">
-              <div class="schedule-location">
-                <span class="loc-name">Erode Flagship Salon</span>
-                <span class="loc-tag">Bespoke Bench &amp; Gem Lab</span>
-              </div>
-              <div class="schedule-time">
-                <span class="time-primary">10:00 AM &ndash; 08:00 PM</span>
-                <span class="time-sub">Monday &ndash; Saturday</span>
+                <label class="spec-chip">
+                  <input type="radio" name="jewelry_category" value="Imperial Collier">
+                  <i class="fa-solid fa-gem chip-icon"></i>
+                  <span class="chip-name">Imperial Collier</span>
+                </label>
+
+                <label class="spec-chip">
+                  <input type="radio" name="jewelry_category" value="Articulated Cuff">
+                  <i class="fa-solid fa-circle-notch chip-icon"></i>
+                  <span class="chip-name">Articulated Cuff</span>
+                </label>
+
+                <label class="spec-chip">
+                  <input type="radio" name="jewelry_category" value="Bridal Parure">
+                  <i class="fa-solid fa-crown chip-icon"></i>
+                  <span class="chip-name">Bridal Parure</span>
+                </label>
               </div>
             </div>
 
-            <div class="schedule-divider"></div>
-
-            <div class="schedule-item">
-              <div class="schedule-location">
-                <span class="loc-name">Virtual Private Chambers</span>
-                <span class="loc-tag">Encrypted 4K Video Microscope</span>
-              </div>
-              <div class="schedule-time">
-                <span class="time-primary">24 / 7 Global Hours</span>
-                <span class="time-sub">By Confirmed Booking</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="salon-guarantee-strip">
-            <i class="fa-solid fa-shield-halved guarantee-icon"></i>
-            <span>All consultations protected under NDA &amp; strict client anonymity</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<section class="commission-stage-section" id="commissionBuilder">
-  <div class="stage-ambient-radial" aria-hidden="true"></div>
-
-  <div class="stage-container">
-    
-    <!-- Section Header -->
-    <header class="stage-header">
-      <span class="stage-badge">Encrypted Commission Dossier</span>
-      <h2 class="stage-title">Bespoke Jewelry Specification</h2>
-      <p class="stage-subtitle">
-        Configure your private commission parameters below. Your dossier transmits securely to our master goldsmiths in Erode for metallurgical analysis and optical stone selection.
-      </p>
-    </header>
-
-    <!-- 2-Column Responsive Workspace Grid -->
-    <div class="stage-workspace-grid">
-      
-      <!-- Left: Interactive Specification Form -->
-      <div class="stage-form-panel">
-        <form class="bespoke-form" id="bespokeCommissionForm" novalidate>
-          
-          <!-- Step 1: Commission Category -->
-          <div class="spec-block">
-            <label class="spec-block-title">
-              <span class="step-num">01</span>
-              <span>Creation Type</span>
-            </label>
-            <div class="spec-chips-grid">
-              <label class="spec-chip active">
-                <input type="radio" name="jewelry_category" value="Solitaire Ring" checked>
-                <i class="fa-solid fa-ring chip-icon"></i>
-                <span class="chip-name">Solitaire Ring</span>
+            <!-- Step 2: Mineral & Gemstone Criteria (Custom Dropdown Component) -->
+            <div class="spec-block">
+              <label class="spec-block-title">
+                <span class="step-num">02</span>
+                <span>Center Stone Centerpiece</span>
               </label>
+              <div class="spec-dropdown-row">
 
-              <label class="spec-chip">
-                <input type="radio" name="jewelry_category" value="Imperial Collier">
-                <i class="fa-solid fa-gem chip-icon"></i>
-                <span class="chip-name">Imperial Collier</span>
-              </label>
-
-              <label class="spec-chip">
-                <input type="radio" name="jewelry_category" value="Articulated Cuff">
-                <i class="fa-solid fa-circle-notch chip-icon"></i>
-                <span class="chip-name">Articulated Cuff</span>
-              </label>
-
-              <label class="spec-chip">
-                <input type="radio" name="jewelry_category" value="Bridal Parure">
-                <i class="fa-solid fa-crown chip-icon"></i>
-                <span class="chip-name">Bridal Parure</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Step 2: Mineral & Gemstone Criteria (Custom Dropdown Component) -->
-          <div class="spec-block">
-            <label class="spec-block-title">
-              <span class="step-num">02</span>
-              <span>Center Stone Centerpiece</span>
-            </label>
-            <div class="spec-dropdown-row">
-              
-              <!-- Custom Dropdown 01: Stone Type -->
-              <div class="custom-dropdown-wrap" id="stoneDropdownWrap">
-                <span class="field-sublabel">Mineral Selection</span>
-                <input type="hidden" name="stone_type" id="hiddenStoneInput" value="Type IIa Diamond (D Flawless)">
-                <div class="custom-dropdown-trigger" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
-                  <span class="selected-text" id="selectedStoneText">Type IIa Diamond (D Flawless)</span>
-                  <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                <!-- Custom Dropdown 01: Stone Type -->
+                <div class="custom-dropdown-wrap" id="stoneDropdownWrap">
+                  <span class="field-sublabel">Mineral Selection</span>
+                  <input type="hidden" name="stone_type" id="hiddenStoneInput" value="Type IIa Diamond (D Flawless)">
+                  <div class="custom-dropdown-trigger" tabindex="0" role="button" aria-haspopup="listbox"
+                    aria-expanded="false">
+                    <span class="selected-text" id="selectedStoneText">Type IIa Diamond (D Flawless)</span>
+                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                  </div>
+                  <ul class="custom-dropdown-menu" role="listbox">
+                    <li class="custom-option selected" role="option" data-value="Type IIa Diamond (D Flawless)">Type IIa
+                      Diamond &bull; D / Flawless</li>
+                    <li class="custom-option" role="option" data-value="Untreated Muzo Colombian Emerald">Untreated Muzo
+                      Colombian Emerald</li>
+                    <li class="custom-option" role="option" data-value="Ceylon Royal Blue Sapphire (Unheated)">Ceylon
+                      Royal Blue Sapphire &bull; Unheated</li>
+                    <li class="custom-option" role="option" data-value="Burmese Pigeon Blood Ruby">Burmese Pigeon Blood
+                      Ruby &bull; Mogok Tract</li>
+                    <li class="custom-option" role="option" data-value="Client Sourced Archival Heirloom">Remounting
+                      Family Heirloom Stone</li>
+                  </ul>
                 </div>
-                <ul class="custom-dropdown-menu" role="listbox">
-                  <li class="custom-option selected" role="option" data-value="Type IIa Diamond (D Flawless)">Type IIa Diamond &bull; D / Flawless</li>
-                  <li class="custom-option" role="option" data-value="Untreated Muzo Colombian Emerald">Untreated Muzo Colombian Emerald</li>
-                  <li class="custom-option" role="option" data-value="Ceylon Royal Blue Sapphire (Unheated)">Ceylon Royal Blue Sapphire &bull; Unheated</li>
-                  <li class="custom-option" role="option" data-value="Burmese Pigeon Blood Ruby">Burmese Pigeon Blood Ruby &bull; Mogok Tract</li>
-                  <li class="custom-option" role="option" data-value="Client Sourced Archival Heirloom">Remounting Family Heirloom Stone</li>
-                </ul>
-              </div>
 
-              <!-- Custom Dropdown 02: Carat Range -->
-              <div class="custom-dropdown-wrap" id="caratDropdownWrap">
-                <span class="field-sublabel">Approximate Carat Range</span>
-                <input type="hidden" name="stone_carat" id="hiddenCaratInput" value="3.50 - 5.00 ct">
-                <div class="custom-dropdown-trigger" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
-                  <span class="selected-text" id="selectedCaratText">3.50 &ndash; 5.00 ct</span>
-                  <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                <!-- Custom Dropdown 02: Carat Range -->
+                <div class="custom-dropdown-wrap" id="caratDropdownWrap">
+                  <span class="field-sublabel">Approximate Carat Range</span>
+                  <input type="hidden" name="stone_carat" id="hiddenCaratInput" value="3.50 - 5.00 ct">
+                  <div class="custom-dropdown-trigger" tabindex="0" role="button" aria-haspopup="listbox"
+                    aria-expanded="false">
+                    <span class="selected-text" id="selectedCaratText">3.50 &ndash; 5.00 ct</span>
+                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                  </div>
+                  <ul class="custom-dropdown-menu" role="listbox">
+                    <li class="custom-option" role="option" data-value="2.00 - 3.50 ct">2.00 ct &ndash; 3.50 ct</li>
+                    <li class="custom-option selected" role="option" data-value="3.50 - 5.00 ct">3.50 ct &ndash; 5.00 ct
+                    </li>
+                    <li class="custom-option" role="option" data-value="5.00 - 8.00 ct">5.00 ct &ndash; 8.00 ct</li>
+                    <li class="custom-option" role="option" data-value="8.00+ ct (Museum Grade)">8.00+ ct (Museum Grade
+                      Pièce)</li>
+                  </ul>
                 </div>
-                <ul class="custom-dropdown-menu" role="listbox">
-                  <li class="custom-option" role="option" data-value="2.00 - 3.50 ct">2.00 ct &ndash; 3.50 ct</li>
-                  <li class="custom-option selected" role="option" data-value="3.50 - 5.00 ct">3.50 ct &ndash; 5.00 ct</li>
-                  <li class="custom-option" role="option" data-value="5.00 - 8.00 ct">5.00 ct &ndash; 8.00 ct</li>
-                  <li class="custom-option" role="option" data-value="8.00+ ct (Museum Grade)">8.00+ ct (Museum Grade Pièce)</li>
-                </ul>
-              </div>
 
+              </div>
             </div>
-          </div>
 
-          <!-- Step 3: Metal Cradle & Metallurgy -->
-          <div class="spec-block">
-            <label class="spec-block-title">
-              <span class="step-num">03</span>
-              <span>Precious Metallurgy</span>
-            </label>
-            <div class="metal-radio-strip">
-              <label class="metal-card active">
-                <input type="radio" name="metal_choice" value="950 Solid Platinum" checked>
-                <span class="metal-swatch plat-swatch"></span>
-                <div class="metal-text">
-                  <span class="metal-name">950 Solid Platinum</span>
-                  <span class="metal-meta">Cold-Forged &bull; Hypoallergenic</span>
-                </div>
+            <!-- Step 3: Metal Cradle & Metallurgy -->
+            <div class="spec-block">
+              <label class="spec-block-title">
+                <span class="step-num">03</span>
+                <span>Precious Metallurgy</span>
               </label>
+              <div class="metal-radio-strip">
+                <label class="metal-card active">
+                  <input type="radio" name="metal_choice" value="950 Solid Platinum" checked>
+                  <span class="metal-swatch plat-swatch"></span>
+                  <div class="metal-text">
+                    <span class="metal-name">950 Solid Platinum</span>
+                    <span class="metal-meta">Cold-Forged &bull; Hypoallergenic</span>
+                  </div>
+                </label>
 
-              <label class="metal-card">
-                <input type="radio" name="metal_choice" value="18K Sovereign Gold">
-                <span class="metal-swatch gold-swatch"></span>
-                <div class="metal-text">
-                  <span class="metal-name">BIS 916 / 18K Sovereign Gold</span>
-                  <span class="metal-meta">Chola Warm Satin Formulation</span>
-                </div>
+                <label class="metal-card">
+                  <input type="radio" name="metal_choice" value="18K Sovereign Gold">
+                  <span class="metal-swatch gold-swatch"></span>
+                  <div class="metal-text">
+                    <span class="metal-name">BIS 916 / 18K Sovereign Gold</span>
+                    <span class="metal-meta">Chola Warm Satin Formulation</span>
+                  </div>
+                </label>
+
+                <label class="metal-card">
+                  <input type="radio" name="metal_choice" value="18K Imperial Rose Gold">
+                  <span class="metal-swatch rose-swatch"></span>
+                  <div class="metal-text">
+                    <span class="metal-name">18K Imperial Rose Gold</span>
+                    <span class="metal-meta">High-Copper Mineral Resonance</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 4: Client Credentials & Contact with Validation -->
+            <div class="spec-block">
+              <label class="spec-block-title">
+                <span class="step-num">04</span>
+                <span>Client Credentials &amp; Contact</span>
               </label>
+              <div class="form-inputs-grid">
 
-              <label class="metal-card">
-                <input type="radio" name="metal_choice" value="18K Imperial Rose Gold">
-                <span class="metal-swatch rose-swatch"></span>
-                <div class="metal-text">
-                  <span class="metal-name">18K Imperial Rose Gold</span>
-                  <span class="metal-meta">High-Copper Mineral Resonance</span>
+                <!-- Name Input (Alphabets Only) -->
+                <div class="input-wrap" id="nameGroup">
+                  <label for="commName" class="field-sublabel">Your Full Name *</label>
+                  <input type="text" id="commName" name="full_name" class="luxury-field"
+                    placeholder="e.g. Raman Harikrishnan" autocomplete="off">
+                  <span class="validation-msg" id="nameError"></span>
                 </div>
-              </label>
-            </div>
-          </div>
 
-          <!-- Step 4: Client Credentials & Contact with Validation -->
-          <div class="spec-block">
-            <label class="spec-block-title">
-              <span class="step-num">04</span>
-              <span>Client Credentials &amp; Contact</span>
-            </label>
-            <div class="form-inputs-grid">
-              
-              <!-- Name Input (Alphabets Only) -->
-              <div class="input-wrap" id="nameGroup">
-                <label for="commName" class="field-sublabel">Your Full Name *</label>
-                <input type="text" id="commName" name="full_name" class="luxury-field" placeholder="e.g. Raman Harikrishnan" autocomplete="off">
-                <span class="validation-msg" id="nameError"></span>
+                <!-- Phone Input (Proper Mobile Only) -->
+                <div class="input-wrap" id="phoneGroup">
+                  <label for="commPhone" class="field-sublabel">Mobile Number *</label>
+                  <input type="tel" id="commPhone" name="telephone" class="luxury-field"
+                    placeholder="e.g. 9842712345 or +91 9842712345" autocomplete="off">
+                  <span class="validation-msg" id="phoneError"></span>
+                </div>
+
+                <!-- Email Input (Valid Mail ID Only) -->
+                <div class="input-wrap full-span" id="emailGroup">
+                  <label for="commEmail" class="field-sublabel">Confidential Email Address *</label>
+                  <input type="email" id="commEmail" name="email_address" class="luxury-field"
+                    placeholder="e.g. client@sovereign-vault.com" autocomplete="off">
+                  <span class="validation-msg" id="emailError"></span>
+                </div>
+
+                <!-- Aesthetic Notes -->
+                <div class="input-wrap full-span">
+                  <label for="commNotes" class="field-sublabel">Bespoke Design Narrative / Aesthetic Notes</label>
+                  <textarea id="commNotes" name="narrative" class="luxury-textarea" rows="3"
+                    placeholder="Describe preferred cut geometry, vintage filigree motifs, prongs or secret gallery diamonds..."></textarea>
+                </div>
+
               </div>
-
-              <!-- Phone Input (Proper Mobile Only) -->
-              <div class="input-wrap" id="phoneGroup">
-                <label for="commPhone" class="field-sublabel">Mobile Number *</label>
-                <input type="tel" id="commPhone" name="telephone" class="luxury-field" placeholder="e.g. 9842712345 or +91 9842712345" autocomplete="off">
-                <span class="validation-msg" id="phoneError"></span>
-              </div>
-
-              <!-- Email Input (Valid Mail ID Only) -->
-              <div class="input-wrap full-span" id="emailGroup">
-                <label for="commEmail" class="field-sublabel">Confidential Email Address *</label>
-                <input type="email" id="commEmail" name="email_address" class="luxury-field" placeholder="e.g. client@sovereign-vault.com" autocomplete="off">
-                <span class="validation-msg" id="emailError"></span>
-              </div>
-
-              <!-- Aesthetic Notes -->
-              <div class="input-wrap full-span">
-                <label for="commNotes" class="field-sublabel">Bespoke Design Narrative / Aesthetic Notes</label>
-                <textarea id="commNotes" name="narrative" class="luxury-textarea" rows="3" placeholder="Describe preferred cut geometry, vintage filigree motifs, prongs or secret gallery diamonds..."></textarea>
-              </div>
-
             </div>
-          </div>
 
-          <button type="submit" class="btn btn-gold btn-stage-submit" id="submitCommissionBtn">
-            <span>Transmit Specification Dossier</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
+            <button type="submit" class="btn btn-gold btn-stage-submit" id="submitCommissionBtn">
+              <span>Transmit Specification Dossier</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
 
-        </form>
-      </div>
-
-      <!-- Right: Live Real-Time Specimen Ledger Summary Card -->
-      <aside class="stage-summary-panel">
-        <div class="summary-vault-card">
-          <div class="card-filigree-outline" aria-hidden="true"></div>
-
-          <div class="summary-card-head">
-            <div class="summary-serial-badge">
-              <span class="summary-dot"></span>
-              <span id="summaryId">REF // AT-2026-902</span>
-            </div>
-            <span class="summary-status-tag">Draft Dossier</span>
-          </div>
-
-          <h3 class="summary-card-title">Specification Ledger</h3>
-          <p class="summary-card-sub">
-            This live summary will be converted into a signed cryptographic proposal counter-reviewed by our chief metallurgical designer.
-          </p>
-
-          <div class="summary-ledger-list">
-            <div class="ledger-entry">
-              <span class="entry-label">Creation Category</span>
-              <span class="entry-val" id="summaryCategory">Solitaire Ring</span>
-            </div>
-            <div class="ledger-entry">
-              <span class="entry-label">Primary Specimen</span>
-              <span class="entry-val" id="summaryStone">Type IIa Diamond (D Flawless)</span>
-            </div>
-            <div class="ledger-entry">
-              <span class="entry-label">Carat Benchmark</span>
-              <span class="entry-val" id="summaryCarat">3.50 - 5.00 ct</span>
-            </div>
-            <div class="ledger-entry">
-              <span class="entry-label">Forged Metallurgy</span>
-              <span class="entry-val" id="summaryMetal">950 Solid Platinum</span>
-            </div>
-            <div class="ledger-entry">
-              <span class="entry-label">Laboratory Seal</span>
-              <span class="entry-val gold-accent">Dual GIA &bull; Gübelin Dossier</span>
-            </div>
-            <div class="ledger-entry">
-              <span class="entry-label">Transit Protocol</span>
-              <span class="entry-val">Malca-Amit 100% Insured</span>
-            </div>
-          </div>
-
-          <div class="summary-timeline-box">
-            <div class="timeline-header">
-              <i class="fa-solid fa-hourglass-half"></i>
-              <span>Atelier Fabrication Cycle</span>
-            </div>
-            <p class="timeline-detail">
-              Estimated 4 to 6 weeks from 3D CAD master approval to laser hallmarking in our Erode bench.
-            </p>
-          </div>
-
-          <div class="summary-card-footer">
-            <i class="fa-solid fa-lock"></i>
-            <span>Encrypted under ISO/IEC 27001 Atelier Confidentiality</span>
-          </div>
-
-        </div>
-      </aside>
-
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-
-<section class="curators-section" id="masterCurators">
-  <div class="curators-ambient-radial" aria-hidden="true"></div>
-
-  <div class="curators-container">
-    
-    <!-- Section Header -->
-    <header class="curators-header">
-      <span class="curators-badge">Certified Atelier Masters</span>
-      <h2 class="curators-title">The Master Gemologists &amp; Curators</h2>
-      <p class="curators-subtitle">
-        Your private commission is guided exclusively by seasoned gemological scientists and third-generation master goldsmiths accredited by GIA, Gübelin, and the Swiss Gemmological Institute.
-      </p>
-    </header>
-
-    <!-- 3-Column Luxury Curators Grid -->
-    <div class="curators-grid">
-
-      <!-- Curator 01 -->
-      <article class="curator-card">
-        <div class="curator-filigree-outline" aria-hidden="true"></div>
-        
-        <div class="curator-portrait-wrap">
-          <img 
-            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85" 
-            alt="Elena Vane &bull; Chief Gemological Appraiser" 
-            class="curator-img"
-          />
-          <div class="portrait-tint"></div>
-          <div class="curator-seal-pill">
-            <span class="seal-dot"></span>
-            <span>GIA Graduate &bull; Antwerp</span>
-          </div>
-        </div>
-
-        <div class="curator-details">
-          <span class="curator-specialty">Rough Allocation &bull; Spectroscopy</span>
-          <h3 class="curator-name">Dr. Elena Vane</h3>
-          <p class="curator-bio">
-            Former senior evaluator at the Antwerp Diamond Bourse, specializing in Type IIa atomic crystal lattice verification and origin passports for untreated Colombian emeralds.
-          </p>
-
-          <div class="curator-stats-strip">
-            <div class="c-stat">
-              <span class="stat-num">18+</span>
-              <span class="stat-lbl">Years Atelier</span>
-            </div>
-            <div class="c-stat-sep" aria-hidden="true"></div>
-            <div class="c-stat">
-              <span class="stat-num">3,400+</span>
-              <span class="stat-lbl">Stones Certified</span>
-            </div>
-          </div>
-
-          <div class="curator-action-row">
-            <a href="#bespokeCommissionForm" class="btn btn-secondary btn-curator-connect">
-              <i class="fa-regular fa-calendar-check"></i>
-              <span>Consult Elena</span>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Curator 02 (Featured Center) -->
-      <article class="curator-card curator-featured">
-        <div class="curator-filigree-outline" aria-hidden="true"></div>
-        
-        <div class="curator-portrait-wrap">
-          <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=85" 
-            alt="Marcus Aurelius Sterling &bull; Chief Metallurgical Master" 
-            class="curator-img"
-          />
-          <div class="portrait-tint"></div>
-          <div class="curator-seal-pill gold-pill">
-            <span class="seal-dot gold-dot"></span>
-            <span>Master Goldsmith &bull; Geneva</span>
-          </div>
-        </div>
-
-        <div class="curator-details">
-          <span class="curator-specialty gold-text">Solid 950 Pt &bull; Vacuum Induction</span>
-          <h3 class="curator-name">Marcus Sterling</h3>
-          <p class="curator-bio">
-            Head of metallurgy at our Erode bench. Directs vacuum induction casting, tension settings, and micro-claw tolerances calibrated to 0.38mm under high-magnification stereomicroscopes.
-          </p>
-
-          <div class="curator-stats-strip">
-            <div class="c-stat">
-              <span class="stat-num">24+</span>
-              <span class="stat-lbl">Years Metallurgy</span>
-            </div>
-            <div class="c-stat-sep" aria-hidden="true"></div>
-            <div class="c-stat">
-              <span class="stat-num">1,200+</span>
-              <span class="stat-lbl">Bespoke Cradles</span>
-            </div>
-          </div>
-
-          <div class="curator-action-row">
-            <a href="#bespokeCommissionForm" class="btn btn-gold btn-curator-connect">
-              <i class="fa-regular fa-calendar-check"></i>
-              <span>Consult Marcus</span>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Curator 03 -->
-      <article class="curator-card">
-        <div class="curator-filigree-outline" aria-hidden="true"></div>
-        
-        <div class="curator-portrait-wrap">
-          <img 
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85" 
-            alt="Ananya Sundaram &bull; Archival Parure Historian" 
-            class="curator-img"
-          />
-          <div class="portrait-tint"></div>
-          <div class="curator-seal-pill">
-            <span class="seal-dot"></span>
-            <span>FGA &bull; Gübelin Fellow</span>
-          </div>
-        </div>
-
-        <div class="curator-details">
-          <span class="curator-specialty">Temple Filigree &bull; Provenance</span>
-          <h3 class="curator-name">Ananya Sundaram</h3>
-          <p class="curator-bio">
-            Preserves ancient Chola metallurgical motifs and Dravidian temple jewelry traditions. Consults on aristocratic family parure restorations, safe custody, and heirloom redesign.
-          </p>
-
-          <div class="curator-stats-strip">
-            <div class="c-stat">
-              <span class="stat-num">15+</span>
-              <span class="stat-lbl">Years Archival</span>
-            </div>
-            <div class="c-stat-sep" aria-hidden="true"></div>
-            <div class="c-stat">
-              <span class="stat-num">850+</span>
-              <span class="stat-lbl">Heirlooms Saved</span>
-            </div>
-          </div>
-
-          <div class="curator-action-row">
-            <a href="#bespokeCommissionForm" class="btn btn-secondary btn-curator-connect">
-              <i class="fa-regular fa-calendar-check"></i>
-              <span>Consult Ananya</span>
-            </a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- Curator Discretion Banner -->
-    <div class="curator-discretion-strip">
-      <i class="fa-solid fa-user-lock"></i>
-      <span>All consultations remain strictly one-on-one and covered under our sovereign non-disclosure framework</span>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-<section class="registry-section" id="archivalRegistry">
-  <div class="registry-ambient-lens" aria-hidden="true"></div>
-
-  <div class="registry-container">
-    
-    <!-- Section Header -->
-    <header class="registry-header">
-      <span class="registry-badge">Permanent Heritage Ledger</span>
-      <h2 class="registry-title">The Archival Registry &amp; Vault Dossier</h2>
-      <p class="registry-subtitle">
-        Every sovereign jewel forged in our Erode bench is inscribed into an immutable cryptographic register, verifying multi-generational ownership, metallurgical assays, and Swiss gemological reports.
-      </p>
-    </header>
-
-    <!-- 2-Column Responsive Ledger Grid -->
-    <div class="registry-grid">
-
-      <!-- Left Column: Interactive Certificate & Passkey Lookup -->
-      <div class="registry-lookup-col">
-        <div class="registry-card">
-          <div class="card-filigree-outline" aria-hidden="true"></div>
-
-          <div class="card-header-row">
-            <div class="register-badge-pod">
-              <i class="fa-solid fa-stamp"></i>
-            </div>
-            <div>
-              <span class="reg-kicker">Atelier Master Hallmark</span>
-              <h3 class="reg-title">Verify Inscribed Provenance</h3>
-            </div>
-          </div>
-
-          <p class="reg-blurb">
-            Enter the 10-digit laser girdle inscription or cryptographic serial punched alongside the BIS 916 / 950 Pt hallmark to review origin credentials.
-          </p>
-
-          <form class="registry-search-form" id="vaultRegistryForm" onsubmit="event.preventDefault();">
-            <div class="search-input-wrap">
-              <i class="fa-solid fa-barcode search-glyph"></i>
-              <input 
-                type="text" 
-                id="registrySerialInput" 
-                class="registry-search-field" 
-                placeholder="e.g. GIA-749201-ERD" 
-                value="GIA-749201-ERD" 
-                autocomplete="off"
-              />
-              <button type="button" class="btn btn-gold btn-verify-action" id="verifyCertBtn">
-                <span>Authenticate</span>
-                <i class="fa-solid fa-shield-halved"></i>
-              </button>
-            </div>
           </form>
-
-          <!-- Verified Specimen Snapshot Card -->
-          <div class="specimen-result-dossier" id="specimenDossier">
-            <div class="dossier-top">
-              <div class="specimen-id-block">
-                <span class="specimen-live-dot"></span>
-                <span class="specimen-code">RECORD // GIA-749201-ERD</span>
-              </div>
-              <span class="specimen-badge">Type IIa Verified</span>
-            </div>
-
-            <div class="specimen-data-grid">
-              <div class="data-cell">
-                <span class="data-key">Mineral Species</span>
-                <span class="data-val">Natural Diamond &bull; D / FL</span>
-              </div>
-              <div class="data-cell">
-                <span class="data-key">Weight Benchmark</span>
-                <span class="data-val">5.20 ct Oval Modified</span>
-              </div>
-              <div class="data-cell">
-                <span class="data-key">Forged Mount</span>
-                <span class="data-val">950 Solid Platinum</span>
-              </div>
-              <div class="data-cell">
-                <span class="data-key">Atelier Bench</span>
-                <span class="data-val">Erode Master Salon IV</span>
-              </div>
-            </div>
-
-            <div class="dossier-footer-bar">
-              <div class="custody-seal">
-                <i class="fa-solid fa-fingerprint"></i>
-                <span>Biometric Ledger Counter-Signed &bull; In Good Standing</span>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-      <!-- Right Column: The 4 Tenets of Custody -->
-      <div class="registry-tenets-col">
-        
-        <article class="tenet-card">
-          <div class="tenet-num">01</div>
-          <div class="tenet-content">
-            <h4 class="tenet-heading">Immutable Laser Micro-Punch</h4>
-            <p class="tenet-desc">
-              Every diamond girdle and platinum gallery is etched with a 0.04mm alphanumeric registry number readable only under 40x gemological stereomicroscopes.
-            </p>
-            <div class="tenet-tag">Optical Cold Laser Standard</div>
-          </div>
-        </article>
+        <!-- Right: Live Real-Time Specimen Ledger Summary Card -->
+        <aside class="stage-summary-panel">
+          <div class="summary-vault-card">
+            <div class="card-filigree-outline" aria-hidden="true"></div>
 
-        <article class="tenet-card">
-          <div class="tenet-num">02</div>
-          <div class="tenet-content">
-            <h4 class="tenet-heading">Dual Laboratory Cross-Validation</h4>
-            <p class="tenet-desc">
-              Archival acquisitions feature matching physical dossiers sealed by GIA (Carlsbad/Antwerp) and Gübelin (Lucerne) bound in full-grain Moroccan leather folios.
-            </p>
-            <div class="tenet-tag">Swiss Spectroscopic Passports</div>
-          </div>
-        </article>
+            <div class="summary-card-head">
+              <div class="summary-serial-badge">
+                <span class="summary-dot"></span>
+                <span id="summaryId">REF // AT-2026-902</span>
+              </div>
+              <span class="summary-status-tag">Draft Dossier</span>
+            </div>
 
-        <article class="tenet-card">
-          <div class="tenet-num">03</div>
-          <div class="tenet-content">
-            <h4 class="tenet-heading">Cryptographic Ownership Transfer</h4>
-            <p class="tenet-desc">
-              When passing heirlooms down through generations, title and custody transfers are recorded in our confidential client ledger with notarized atelier assent.
+            <h3 class="summary-card-title">Specification Ledger</h3>
+            <p class="summary-card-sub">
+              This live summary will be converted into a signed cryptographic proposal counter-reviewed by our chief
+              metallurgical designer.
             </p>
-            <div class="tenet-tag">Multi-Generational Provenance</div>
+
+            <div class="summary-ledger-list">
+              <div class="ledger-entry">
+                <span class="entry-label">Creation Category</span>
+                <span class="entry-val" id="summaryCategory">Solitaire Ring</span>
+              </div>
+              <div class="ledger-entry">
+                <span class="entry-label">Primary Specimen</span>
+                <span class="entry-val" id="summaryStone">Type IIa Diamond (D Flawless)</span>
+              </div>
+              <div class="ledger-entry">
+                <span class="entry-label">Carat Benchmark</span>
+                <span class="entry-val" id="summaryCarat">3.50 - 5.00 ct</span>
+              </div>
+              <div class="ledger-entry">
+                <span class="entry-label">Forged Metallurgy</span>
+                <span class="entry-val" id="summaryMetal">950 Solid Platinum</span>
+              </div>
+              <div class="ledger-entry">
+                <span class="entry-label">Laboratory Seal</span>
+                <span class="entry-val gold-accent">Dual GIA &bull; Gübelin Dossier</span>
+              </div>
+              <div class="ledger-entry">
+                <span class="entry-label">Transit Protocol</span>
+                <span class="entry-val">Malca-Amit 100% Insured</span>
+              </div>
+            </div>
+
+            <div class="summary-timeline-box">
+              <div class="timeline-header">
+                <i class="fa-solid fa-hourglass-half"></i>
+                <span>Atelier Fabrication Cycle</span>
+              </div>
+              <p class="timeline-detail">
+                Estimated 4 to 6 weeks from 3D CAD master approval to laser hallmarking in our Erode bench.
+              </p>
+            </div>
+
+            <div class="summary-card-footer">
+              <i class="fa-solid fa-lock"></i>
+              <span>Encrypted under ISO/IEC 27001 Atelier Confidentiality</span>
+            </div>
+
           </div>
-        </article>
+        </aside>
 
       </div>
 
     </div>
-
-    <!-- Assurance Ledger Ribbon -->
-    <div class="registry-assurance-strip">
-      <div class="assure-item">
-        <i class="fa-solid fa-vault"></i>
-        <span>Archival records sealed indefinitely within temperature-controlled underground safes</span>
-      </div>
-      <div class="assure-sep" aria-hidden="true"></div>
-      <div class="assure-item">
-        <i class="fa-solid fa-lock"></i>
-        <span>Zero cloud data sharing: physical safe-deposit redundancy protocols</span>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
 
 
 
 
-<section class="vault-cta-section" id="privateSalonDispatch">
-  <div class="vault-cta-glow-mesh" aria-hidden="true"></div>
 
-  <div class="vault-cta-container">
-    <div class="vault-dispatch-card">
-      
-      <!-- Ornate Metallic Inner Framing -->
-      <div class="vault-filigree-border" aria-hidden="true"></div>
-      <span class="vault-corner-stud stud-tl" aria-hidden="true"></span>
-      <span class="vault-corner-stud stud-tr" aria-hidden="true"></span>
-      <span class="vault-corner-stud stud-bl" aria-hidden="true"></span>
-      <span class="vault-corner-stud stud-br" aria-hidden="true"></span>
+  <section class="curators-section" id="masterCurators">
+    <div class="curators-ambient-radial" aria-hidden="true"></div>
 
-      <div class="vault-dispatch-inner">
-        
-        <div class="vault-seal-badge">
-          <span class="seal-spark">✦</span>
-          <span>Bespoke Commission Protocol &bull; 2026/27</span>
-          <span class="seal-spark">✦</span>
-        </div>
+    <div class="curators-container">
 
-        <h2 class="vault-dispatch-title">
-          <span>Commission Your Private</span>
-          <span class="text-gold-gradient">Imperial Masterpiece</span>
-        </h2>
-
-        <p class="vault-dispatch-summary">
-          Direct liaison with our master gemologists in Erode or encrypted digital salon viewing. We source untreated Type IIa rough diamonds, Muzo emeralds, and forge solid 950 platinum with bespoke GIA laser credentials.
+      <!-- Section Header -->
+      <header class="curators-header">
+        <span class="curators-badge">Certified Atelier Masters</span>
+        <h2 class="curators-title">The Master Gemologists &amp; Curators</h2>
+        <p class="curators-subtitle">
+          Your private commission is guided exclusively by seasoned gemological scientists and third-generation master
+          goldsmiths accredited by GIA, Gübelin, and the Swiss Gemmological Institute.
         </p>
+      </header>
 
-        <!-- Dynamic Holographic Ledger Pills -->
-        <div class="vault-credentials-grid">
-          <div class="cred-pill">
-            <i class="fa-solid fa-gem cred-icon"></i>
-            <div class="cred-text">
-              <span class="cred-val">Type IIa Certified</span>
-              <span class="cred-sub">Nitrogen-Free Lattice</span>
+      <!-- 3-Column Luxury Curators Grid -->
+      <div class="curators-grid">
+
+        <!-- Curator 01 -->
+        <article class="curator-card">
+          <div class="curator-filigree-outline" aria-hidden="true"></div>
+
+          <div class="curator-portrait-wrap">
+            <img src="./assets/girl 4.webp"
+              alt="Elena Vane &bull; Chief Gemological Appraiser" class="curator-img" />
+            <div class="portrait-tint"></div>
+            <div class="curator-seal-pill">
+              <span class="seal-dot"></span>
+              <span>GIA Graduate &bull; Antwerp</span>
             </div>
           </div>
 
-          <div class="cred-pill">
-            <i class="fa-solid fa-stamp cred-icon"></i>
-            <div class="cred-text">
-              <span class="cred-val">BIS 916 &bull; 950 Pt</span>
-              <span class="cred-sub">Vacuum Cast Metallurgy</span>
+          <div class="curator-details">
+            <span class="curator-specialty">Rough Allocation &bull; Spectroscopy</span>
+            <h3 class="curator-name">Dr. Elena Vane</h3>
+            <p class="curator-bio">
+              Former senior evaluator at the Antwerp Diamond Bourse, specializing in Type IIa atomic crystal lattice
+              verification and origin passports for untreated Colombian emeralds.
+            </p>
+
+            <div class="curator-stats-strip">
+              <div class="c-stat">
+                <span class="stat-num">18+</span>
+                <span class="stat-lbl">Years Atelier</span>
+              </div>
+              <div class="c-stat-sep" aria-hidden="true"></div>
+              <div class="c-stat">
+                <span class="stat-num">3,400+</span>
+                <span class="stat-lbl">Stones Certified</span>
+              </div>
+            </div>
+
+            <div class="curator-action-row">
+              <a href="#bespokeCommissionForm" class="btn btn-secondary btn-curator-connect">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Consult Elena</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Curator 02 (Featured Center) -->
+        <article class="curator-card curator-featured">
+          <div class="curator-filigree-outline" aria-hidden="true"></div>
+
+          <div class="curator-portrait-wrap">
+            <img src="./assets/boy 12.webp"
+              alt="Marcus Aurelius Sterling &bull; Chief Metallurgical Master" class="curator-img" />
+            <div class="portrait-tint"></div>
+            <div class="curator-seal-pill gold-pill">
+              <span class="seal-dot gold-dot"></span>
+              <span>Master Goldsmith &bull; Geneva</span>
             </div>
           </div>
 
-          <div class="cred-pill">
-            <i class="fa-solid fa-shield-halved cred-icon"></i>
-            <div class="cred-text">
-              <span class="cred-val">Armored Transit</span>
-              <span class="cred-sub">Malca-Amit 100% Insured</span>
+          <div class="curator-details">
+            <span class="curator-specialty gold-text">Solid 950 Pt &bull; Vacuum Induction</span>
+            <h3 class="curator-name">Marcus Sterling</h3>
+            <p class="curator-bio">
+              Head of metallurgy at our Erode bench. Directs vacuum induction casting, tension settings, and micro-claw
+              tolerances calibrated to 0.38mm under high-magnification stereomicroscopes.
+            </p>
+
+            <div class="curator-stats-strip">
+              <div class="c-stat">
+                <span class="stat-num">24+</span>
+                <span class="stat-lbl">Years Metallurgy</span>
+              </div>
+              <div class="c-stat-sep" aria-hidden="true"></div>
+              <div class="c-stat">
+                <span class="stat-num">1,200+</span>
+                <span class="stat-lbl">Bespoke Cradles</span>
+              </div>
             </div>
+
+            <div class="curator-action-row">
+              <a href="#bespokeCommissionForm" class="btn btn-gold btn-curator-connect">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Consult Marcus</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Curator 03 -->
+        <article class="curator-card">
+          <div class="curator-filigree-outline" aria-hidden="true"></div>
+
+          <div class="curator-portrait-wrap">
+            <img src="./assets/girl 9.webp"
+              alt="Ananya Sundaram &bull; Archival Parure Historian" class="curator-img" />
+            <div class="portrait-tint"></div>
+            <div class="curator-seal-pill">
+              <span class="seal-dot"></span>
+              <span>FGA &bull; Gübelin Fellow</span>
+            </div>
+          </div>
+
+          <div class="curator-details">
+            <span class="curator-specialty">Temple Filigree &bull; Provenance</span>
+            <h3 class="curator-name">Ananya Sundaram</h3>
+            <p class="curator-bio">
+              Preserves ancient Chola metallurgical motifs and Dravidian temple jewelry traditions. Consults on
+              aristocratic family parure restorations, safe custody, and heirloom redesign.
+            </p>
+
+            <div class="curator-stats-strip">
+              <div class="c-stat">
+                <span class="stat-num">15+</span>
+                <span class="stat-lbl">Years Archival</span>
+              </div>
+              <div class="c-stat-sep" aria-hidden="true"></div>
+              <div class="c-stat">
+                <span class="stat-num">850+</span>
+                <span class="stat-lbl">Heirlooms Saved</span>
+              </div>
+            </div>
+
+            <div class="curator-action-row">
+              <a href="#bespokeCommissionForm" class="btn btn-secondary btn-curator-connect">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Consult Ananya</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Curator Discretion Banner -->
+      <div class="curator-discretion-strip">
+        <i class="fa-solid fa-user-lock"></i>
+        <span>All consultations remain strictly one-on-one and covered under our sovereign non-disclosure
+          framework</span>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section class="registry-section" id="archivalRegistry">
+    <div class="registry-ambient-lens" aria-hidden="true"></div>
+
+    <div class="registry-container">
+
+      <!-- Section Header -->
+      <header class="registry-header">
+        <span class="registry-badge">Permanent Heritage Ledger</span>
+        <h2 class="registry-title">The Archival Registry &amp; Vault Dossier</h2>
+        <p class="registry-subtitle">
+          Every sovereign jewel forged in our Erode bench is inscribed into an immutable cryptographic register,
+          verifying multi-generational ownership, metallurgical assays, and Swiss gemological reports.
+        </p>
+      </header>
+
+      <!-- 2-Column Responsive Ledger Grid -->
+      <div class="registry-grid">
+
+        <!-- Left Column: Interactive Certificate & Passkey Lookup -->
+        <div class="registry-lookup-col">
+          <div class="registry-card">
+            <div class="card-filigree-outline" aria-hidden="true"></div>
+
+            <div class="card-header-row">
+              <div class="register-badge-pod">
+                <i class="fa-solid fa-stamp"></i>
+              </div>
+              <div>
+                <span class="reg-kicker">Atelier Master Hallmark</span>
+                <h3 class="reg-title">Verify Inscribed Provenance</h3>
+              </div>
+            </div>
+
+            <p class="reg-blurb">
+              Enter the 10-digit laser girdle inscription or cryptographic serial punched alongside the BIS 916 / 950 Pt
+              hallmark to review origin credentials.
+            </p>
+
+            <form class="registry-search-form" id="vaultRegistryForm" onsubmit="event.preventDefault();">
+              <div class="search-input-wrap">
+                <i class="fa-solid fa-barcode search-glyph"></i>
+                <input type="text" id="registrySerialInput" class="registry-search-field"
+                  placeholder="e.g. GIA-749201-ERD" value="GIA-749201-ERD" autocomplete="off" />
+                <button type="button" class="btn btn-gold btn-verify-action" id="verifyCertBtn">
+                  <span>Authenticate</span>
+                  <i class="fa-solid fa-shield-halved"></i>
+                </button>
+              </div>
+            </form>
+
+            <!-- Verified Specimen Snapshot Card -->
+            <div class="specimen-result-dossier" id="specimenDossier">
+              <div class="dossier-top">
+                <div class="specimen-id-block">
+                  <span class="specimen-live-dot"></span>
+                  <span class="specimen-code">RECORD // GIA-749201-ERD</span>
+                </div>
+                <span class="specimen-badge">Type IIa Verified</span>
+              </div>
+
+              <div class="specimen-data-grid">
+                <div class="data-cell">
+                  <span class="data-key">Mineral Species</span>
+                  <span class="data-val">Natural Diamond &bull; D / FL</span>
+                </div>
+                <div class="data-cell">
+                  <span class="data-key">Weight Benchmark</span>
+                  <span class="data-val">5.20 ct Oval Modified</span>
+                </div>
+                <div class="data-cell">
+                  <span class="data-key">Forged Mount</span>
+                  <span class="data-val">950 Solid Platinum</span>
+                </div>
+                <div class="data-cell">
+                  <span class="data-key">Atelier Bench</span>
+                  <span class="data-val">Erode Master Salon IV</span>
+                </div>
+              </div>
+
+              <div class="dossier-footer-bar">
+                <div class="custody-seal">
+                  <i class="fa-solid fa-fingerprint"></i>
+                  <span>Biometric Ledger Counter-Signed &bull; In Good Standing</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Action Dispatch Bar -->
-        <div class="vault-action-bar">
-          <a href="#appointmentForm" class="btn btn-gold btn-vault-primary">
-            <i class="fa-regular fa-calendar-check btn-glyph"></i>
-            <span>Reserve Salon Consultation</span>
-          </a>
-          <a href="tel:+914242220000" class="btn btn-secondary btn-vault-secondary">
-            <i class="fa-solid fa-phone-volume btn-glyph"></i>
-            <span>Direct Concierge Desk</span>
-          </a>
-        </div>
+        <!-- Right Column: The 4 Tenets of Custody -->
+        <div class="registry-tenets-col">
 
-        <div class="vault-nda-footer">
-          <i class="fa-solid fa-lock"></i>
-          <span>Counter-signed Non-Disclosure Agreement (NDA) executed prior to rare stone presentation</span>
+          <article class="tenet-card">
+            <div class="tenet-num">01</div>
+            <div class="tenet-content">
+              <h4 class="tenet-heading">Immutable Laser Micro-Punch</h4>
+              <p class="tenet-desc">
+                Every diamond girdle and platinum gallery is etched with a 0.04mm alphanumeric registry number readable
+                only under 40x gemological stereomicroscopes.
+              </p>
+              <div class="tenet-tag">Optical Cold Laser Standard</div>
+            </div>
+          </article>
+
+          <article class="tenet-card">
+            <div class="tenet-num">02</div>
+            <div class="tenet-content">
+              <h4 class="tenet-heading">Dual Laboratory Cross-Validation</h4>
+              <p class="tenet-desc">
+                Archival acquisitions feature matching physical dossiers sealed by GIA (Carlsbad/Antwerp) and Gübelin
+                (Lucerne) bound in full-grain Moroccan leather folios.
+              </p>
+              <div class="tenet-tag">Swiss Spectroscopic Passports</div>
+            </div>
+          </article>
+
+          <article class="tenet-card">
+            <div class="tenet-num">03</div>
+            <div class="tenet-content">
+              <h4 class="tenet-heading">Cryptographic Ownership Transfer</h4>
+              <p class="tenet-desc">
+                When passing heirlooms down through generations, title and custody transfers are recorded in our
+                confidential client ledger with notarized atelier assent.
+              </p>
+              <div class="tenet-tag">Multi-Generational Provenance</div>
+            </div>
+          </article>
+
         </div>
 
       </div>
+
+      <!-- Assurance Ledger Ribbon -->
+      <div class="registry-assurance-strip">
+        <div class="assure-item">
+          <i class="fa-solid fa-vault"></i>
+          <span>Archival records sealed indefinitely within temperature-controlled underground safes</span>
+        </div>
+        <div class="assure-sep" aria-hidden="true"></div>
+        <div class="assure-item">
+          <i class="fa-solid fa-lock"></i>
+          <span>Zero cloud data sharing: physical safe-deposit redundancy protocols</span>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
+
+
+
+
+
+
+  <section class="vault-cta-section" id="privateSalonDispatch">
+    <div class="vault-cta-glow-mesh" aria-hidden="true"></div>
+
+    <div class="vault-cta-container">
+      <div class="vault-dispatch-card">
+
+        <!-- Ornate Metallic Inner Framing -->
+        <div class="vault-filigree-border" aria-hidden="true"></div>
+        <span class="vault-corner-stud stud-tl" aria-hidden="true"></span>
+        <span class="vault-corner-stud stud-tr" aria-hidden="true"></span>
+        <span class="vault-corner-stud stud-bl" aria-hidden="true"></span>
+        <span class="vault-corner-stud stud-br" aria-hidden="true"></span>
+
+        <div class="vault-dispatch-inner">
+
+          <div class="vault-seal-badge">
+            <span class="seal-spark">✦</span>
+            <span>Bespoke Commission Protocol &bull; 2026/27</span>
+            <span class="seal-spark">✦</span>
+          </div>
+
+          <h2 class="vault-dispatch-title">
+            <span>Commission Your Private</span>
+            <span class="text-gold-gradient">Imperial Masterpiece</span>
+          </h2>
+
+          <p class="vault-dispatch-summary">
+            Direct liaison with our master gemologists in Erode or encrypted digital salon viewing. We source untreated
+            Type IIa rough diamonds, Muzo emeralds, and forge solid 950 platinum with bespoke GIA laser credentials.
+          </p>
+
+          <!-- Dynamic Holographic Ledger Pills -->
+          <div class="vault-credentials-grid">
+            <div class="cred-pill">
+              <i class="fa-solid fa-gem cred-icon"></i>
+              <div class="cred-text">
+                <span class="cred-val">Type IIa Certified</span>
+                <span class="cred-sub">Nitrogen-Free Lattice</span>
+              </div>
+            </div>
+
+            <div class="cred-pill">
+              <i class="fa-solid fa-stamp cred-icon"></i>
+              <div class="cred-text">
+                <span class="cred-val">BIS 916 &bull; 950 Pt</span>
+                <span class="cred-sub">Vacuum Cast Metallurgy</span>
+              </div>
+            </div>
+
+            <div class="cred-pill">
+              <i class="fa-solid fa-shield-halved cred-icon"></i>
+              <div class="cred-text">
+                <span class="cred-val">Armored Transit</span>
+                <span class="cred-sub">Malca-Amit 100% Insured</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Dispatch Bar -->
+          <div class="vault-action-bar">
+            <a href="#appointmentForm" class="btn btn-gold btn-vault-primary">
+              <i class="fa-regular fa-calendar-check btn-glyph"></i>
+              <span>Reserve Salon Consultation</span>
+            </a>
+            <a href="error.html" class="btn btn-secondary btn-vault-secondary">
+              <i class="fa-solid fa-phone-volume btn-glyph"></i>
+              <span>Direct Concierge Desk</span>
+            </a>
+          </div>
+
+          <div class="vault-nda-footer">
+            <i class="fa-solid fa-lock"></i>
+            <span>Counter-signed Non-Disclosure Agreement (NDA) executed prior to rare stone presentation</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -857,107 +874,108 @@
 
 
   <!-- ================= LUXURY FOOTER ================= -->
-<footer class="site-footer">
-  <!-- Subtle Top Gold Glow Divider -->
-  <div class="footer-divider-glow" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <!-- Subtle Top Gold Glow Divider -->
+    <div class="footer-divider-glow" aria-hidden="true"></div>
 
-  <div class="footer-container">
-    
-    <!-- Top Row: Brand & Multi-Column Navigation -->
-    <div class="footer-grid">
-      
-      <!-- Brand Column -->
-      <div class="footer-col footer-col-brand">
-        <a href="index.html" class="footer-logo">
-          <img src="./assets/logo 10.webp" alt="Aurelia High Jewelry" height="48" width="144">
-        </a>
-        <p class="footer-tagline">
-          Handcrafting rare solitaires, certified diamonds, and bespoke heirloom jewelry since 1994. Every gemstone is ethically sourced and masterfully set.
-        </p>
+    <div class="footer-container">
 
-        <!-- Social Media Icons (Routing to error.html) -->
-        <div class="footer-social-links" aria-label="Social Media Channels">
-          <a href="error.html" class="social-icon" aria-label="Follow us on Instagram" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
+      <!-- Top Row: Brand & Multi-Column Navigation -->
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="./assets/logo 10.webp" alt="Aurelia High Jewelry" height="48" width="144">
           </a>
-          <a href="error.html" class="social-icon" aria-label="Follow us on Facebook" title="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="error.html" class="social-icon" aria-label="Follow us on Pinterest" title="Pinterest">
-            <i class="fa-brands fa-pinterest-p"></i>
-          </a>
-          <a href="error.html" class="social-icon" aria-label="Follow us on X" title="X (Twitter)">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a href="error.html" class="social-icon" aria-label="Follow us on YouTube" title="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
+          <p class="footer-tagline">
+            Handcrafting rare solitaires, certified diamonds, and bespoke heirloom jewelry since 1994. Every gemstone is
+            ethically sourced and masterfully set.
+          </p>
+
+          <!-- Social Media Icons (Routing to error.html) -->
+          <div class="footer-social-links" aria-label="Social Media Channels">
+            <a href="error.html" class="social-icon" aria-label="Follow us on Instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on Facebook" title="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on Pinterest" title="Pinterest">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on X" title="X (Twitter)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on YouTube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
         </div>
+
+        <!-- Quick Navigation Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="collection.html" class="footer-link">Collections</a></li>
+            <li><a href="high.html" class="footer-link">High Jewelry</a></li>
+            <li><a href="heritage.html" class="footer-link">Heritage</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Atelier & Client Services Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="error.html" class="footer-link">Bespoke Commissions</a></li>
+            <li><a href="error.html" class="footer-link">Gemological Certification</a></li>
+            <li><a href="error.html" class="footer-link">Heirloom Restoration</a></li>
+            <li><a href="error.html" class="footer-link">Private Salon Booking</a></li>
+            <li><a href="error.html" class="footer-link">Appraisal & Valuations</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Atelier Presence Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Atelier</h4>
+          <div class="footer-contact-items">
+            <p class="contact-entry">
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <span>Bespoke Salon, Erode, Tamil Nadu, India</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <span>+91 (0) 424 222 0000</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-solid fa-envelope contact-icon"></i>
+              <span>concierge@aureliajewelry.com</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-regular fa-clock contact-icon"></i>
+              <span>Mon &ndash; Sat: 10:00 AM &ndash; 8:00 PM</span>
+            </p>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Quick Navigation Column -->
-      <div class="footer-col">
-        <h4 class="footer-heading">Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="collection.html" class="footer-link">Collections</a></li>
-          <li><a href="high.html" class="footer-link">High Jewelry</a></li>
-          <li><a href="heritage.html" class="footer-link">Heritage</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Atelier & Client Services Column -->
-      <div class="footer-col">
-        <h4 class="footer-heading">Services</h4>
-        <ul class="footer-links">
-          <li><a href="error.html" class="footer-link">Bespoke Commissions</a></li>
-          <li><a href="error.html" class="footer-link">Gemological Certification</a></li>
-          <li><a href="error.html" class="footer-link">Heirloom Restoration</a></li>
-          <li><a href="error.html" class="footer-link">Private Salon Booking</a></li>
-          <li><a href="error.html" class="footer-link">Appraisal & Valuations</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact & Atelier Presence Column -->
-      <div class="footer-col">
-        <h4 class="footer-heading">Atelier</h4>
-        <div class="footer-contact-items">
-          <p class="contact-entry">
-            <i class="fa-solid fa-location-dot contact-icon"></i>
-            <span>Bespoke Salon, Erode, Tamil Nadu, India</span>
-          </p>
-          <p class="contact-entry">
-            <i class="fa-solid fa-phone contact-icon"></i>
-            <span>+91 (0) 424 222 0000</span>
-          </p>
-          <p class="contact-entry">
-            <i class="fa-solid fa-envelope contact-icon"></i>
-            <span>concierge@aureliajewelry.com</span>
-          </p>
-          <p class="contact-entry">
-            <i class="fa-regular fa-clock contact-icon"></i>
-            <span>Mon &ndash; Sat: 10:00 AM &ndash; 8:00 PM</span>
-          </p>
+      <!-- Bottom Row: Legal & Copyright -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 AURELIA High Jewelry Atelier. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="error.html" class="legal-link">Privacy Policy</a>
+          <span class="legal-separator">&bull;</span>
+          <a href="error.html" class="legal-link">Terms of Service</a>
+          <span class="legal-separator">&bull;</span>
+          <a href="error.html" class="legal-link">Conflict-Free Diamond Sourcing</a>
         </div>
       </div>
 
     </div>
-
-    <!-- Bottom Row: Legal & Copyright -->
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 AURELIA High Jewelry Atelier. All rights reserved.</p>
-      <div class="footer-legal-links">
-        <a href="error.html" class="legal-link">Privacy Policy</a>
-        <span class="legal-separator">&bull;</span>
-        <a href="error.html" class="legal-link">Terms of Service</a>
-        <span class="legal-separator">&bull;</span>
-        <a href="error.html" class="legal-link">Conflict-Free Diamond Sourcing</a>
-      </div>
-    </div>
-
-  </div>
-</footer>
+  </footer>
 
 
 
@@ -965,8 +983,9 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
-    <script src="contact.js"></script>
+  <script src="contact.js"></script>
 
 
 </body>
+
 </html>

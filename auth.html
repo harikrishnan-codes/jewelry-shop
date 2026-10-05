@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Atelier Access &bull; Authentication</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="root.css">
+  <!-- <link rel="stylesheet" href="auth.css"> -->
+
+
+
+</head>
+<body class="auth-body">
+
+  <div class="auth-ambient-radial" aria-hidden="true"></div>
+
+  <header class="auth-nav-strip">
+    <a href="index.html" class="auth-brand-logo">
+      <i class="fa-solid fa-gem brand-icon"></i>
+      <span class="brand-text">STACKLY</span>
+    </a>
+    <a href="index.html" class="btn-go-back">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Return to Boutique</span>
+    </a>
+  </header>
+
+  <main class="auth-viewport-wrapper">
+    <div class="auth-monolith-card">
+      <div class="card-filigree-rim" aria-hidden="true"></div>
+
+      <!-- 1. SIGNUP PANE (Initially Visible) -->
+      <section class="auth-pane active" id="signupPane">
+        <div class="pane-header">
+          <span class="pane-badge">Confidential Protocol</span>
+          <h1 class="pane-title">Create Atelier Credentials</h1>
+          <p class="pane-sub">Register for private vault access and imperial bespoke commissions.</p>
+        </div>
+
+        <form class="auth-form" id="signupForm" novalidate>
+          
+          <!-- Custom User Tier Selector (No native <select>) -->
+          <div class="form-group">
+            <span class="field-sublabel">Credential Access Level</span>
+            <input type="hidden" name="user_role" id="signupRoleInput" value="client">
+            <div class="role-selector-wrap">
+              <div class="role-chip active" data-role="client" tabindex="0" role="button">
+                <i class="fa-solid fa-crown role-icon"></i>
+                <div class="role-meta">
+                  <span class="role-title">Private Client</span>
+                  <span class="role-desc">Vault Viewings &bull; Commissions</span>
+                </div>
+              </div>
+              <div class="role-chip" data-role="admin" tabindex="0" role="button">
+                <i class="fa-solid fa-shield-halved role-icon"></i>
+                <div class="role-meta">
+                  <span class="role-title">Atelier Master</span>
+                  <span class="role-desc">Bench Management &bull; Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Name Field (Alphabets Only) -->
+          <div class="form-group" id="signupNameGroup">
+            <label for="signupName" class="field-sublabel">Full Name *</label>
+            <div class="input-glow-frame">
+              <i class="fa-regular fa-user field-icon"></i>
+              <input type="text" id="signupName" class="luxury-auth-input" placeholder="e.g. Raman Harikrishnan" autocomplete="off">
+            </div>
+            <span class="auth-error-msg" id="signupNameError"></span>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group" id="signupEmailGroup">
+            <label for="signupEmail" class="field-sublabel">Confidential Email *</label>
+            <div class="input-glow-frame">
+              <i class="fa-regular fa-envelope field-icon"></i>
+              <input type="email" id="signupEmail" class="luxury-auth-input" placeholder="client@privatevault.com" autocomplete="off">
+            </div>
+            <span class="auth-error-msg" id="signupEmailError"></span>
+          </div>
+
+          <!-- Password Field with Toggle Eye -->
+          <div class="form-group" id="signupPassGroup">
+            <label for="signupPassword" class="field-sublabel">Master Passkey (Min. 6 Digits) *</label>
+            <div class="input-glow-frame">
+              <i class="fa-solid fa-lock-keyhole field-icon"></i>
+              <input type="password" id="signupPassword" class="luxury-auth-input" placeholder="••••••••" autocomplete="new-password">
+              <button type="button" class="eye-toggle-btn" aria-label="Toggle password visibility">
+                <i class="fa-regular fa-eye eye-glyph"></i>
+              </button>
+            </div>
+            <span class="auth-error-msg" id="signupPassError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-auth-submit">
+            <span>Register Archival Account</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <div class="pane-switch-footer">
+            <span>Already hold registered credentials?</span>
+            <button type="button" class="switch-link" id="linkToLogin">Sign In to Vault</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- 2. LOGIN PANE -->
+      <section class="auth-pane" id="loginPane">
+        <div class="pane-header">
+          <span class="pane-badge">Direct Access Liaison</span>
+          <h2 class="pane-title">Vault Authentication</h2>
+          <p class="pane-sub">Verify your encrypted identity to unlock your tailored salon dashboard.</p>
+        </div>
+
+        <form class="auth-form" id="loginForm" novalidate>
+          
+          <!-- Name Field (Alphabets Only) -->
+          <div class="form-group" id="loginNameGroup">
+            <label for="loginName" class="field-sublabel">Account Holder Name *</label>
+            <div class="input-glow-frame">
+              <i class="fa-regular fa-user field-icon"></i>
+              <input type="text" id="loginName" class="luxury-auth-input" placeholder="e.g. Raman Harikrishnan" autocomplete="off">
+            </div>
+            <span class="auth-error-msg" id="loginNameError"></span>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group" id="loginEmailGroup">
+            <label for="loginEmail" class="field-sublabel">Registered Email *</label>
+            <div class="input-glow-frame">
+              <i class="fa-regular fa-envelope field-icon"></i>
+              <input type="email" id="loginEmail" class="luxury-auth-input" placeholder="client@privatevault.com" autocomplete="off">
+            </div>
+            <span class="auth-error-msg" id="loginEmailError"></span>
+          </div>
+
+          <!-- Password Field with Toggle Eye -->
+          <div class="form-group" id="loginPassGroup">
+            <div class="field-label-split">
+              <label for="loginPassword" class="field-sublabel">Master Passkey *</label>
+              <button type="button" class="switch-link link-forgot" id="linkToForgot">Forgot Passkey?</button>
+            </div>
+            <div class="input-glow-frame">
+              <i class="fa-solid fa-lock-keyhole field-icon"></i>
+              <input type="password" id="loginPassword" class="luxury-auth-input" placeholder="••••••••" autocomplete="current-password">
+              <button type="button" class="eye-toggle-btn" aria-label="Toggle password visibility">
+                <i class="fa-regular fa-eye eye-glyph"></i>
+              </button>
+            </div>
+            <span class="auth-error-msg" id="loginPassError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-auth-submit">
+            <span>Authenticate &bull; Enter Dashboard</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <div class="pane-switch-footer">
+            <span>Requiring first-time salon access?</span>
+            <button type="button" class="switch-link" id="linkToSignup">Create Credentials</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- 3. FORGOT PASSWORD PANE -->
+      <section class="auth-pane" id="forgotPane">
+        <div class="pane-header">
+          <span class="pane-badge">Security Recovery</span>
+          <h2 class="pane-title">Passkey Restoration</h2>
+          <p class="pane-sub">Transmit your registered email to request an encrypted recovery token.</p>
+        </div>
+
+        <form class="auth-form" id="forgotForm" novalidate>
+          
+          <div class="form-group" id="forgotEmailGroup">
+            <label for="forgotEmail" class="field-sublabel">Registered Email Address *</label>
+            <div class="input-glow-frame">
+              <i class="fa-regular fa-envelope field-icon"></i>
+              <input type="email" id="forgotEmail" class="luxury-auth-input" placeholder="client@privatevault.com" autocomplete="off">
+            </div>
+            <span class="auth-error-msg" id="forgotEmailError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-auth-submit">
+            <span>Transmit Recovery Request</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <div class="pane-switch-footer">
+            <span>Remembered your master credentials?</span>
+            <button type="button" class="switch-link" id="linkBackToLogin">Back to Sign In</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Navigation & Panes
+  const signupPane = document.getElementById('signupPane');
+  const loginPane = document.getElementById('loginPane');
+  const forgotPane = document.getElementById('forgotPane');
+
+  const linkToLogin = document.getElementById('linkToLogin');
+  const linkToSignup = document.getElementById('linkToSignup');
+  const linkToForgot = document.getElementById('linkToForgot');
+  const linkBackToLogin = document.getElementById('linkBackToLogin');
+
+  function showPane(paneToShow) {
+    [signupPane, loginPane, forgotPane].forEach(p => p.classList.remove('active'));
+    paneToShow.classList.add('active');
+  }
+
+  if (linkToLogin) linkToLogin.addEventListener('click', () => showPane(loginPane));
+  if (linkToSignup) linkToSignup.addEventListener('click', () => showPane(signupPane));
+  if (linkToForgot) linkToForgot.addEventListener('click', () => showPane(forgotPane));
+  if (linkBackToLogin) linkBackToLogin.addEventListener('click', () => showPane(loginPane));
+
+  // Role Selector Logic (Signup)
+  const roleChips = document.querySelectorAll('.role-chip');
+  const roleInput = document.getElementById('signupRoleInput');
+
+  roleChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      roleChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const selectedRole = chip.getAttribute('data-role');
+      if (roleInput) roleInput.value = selectedRole;
+    });
+  });
+
+  // Password Visibility Toggle Eye
+  const eyeButtons = document.querySelectorAll('.eye-toggle-btn');
+  eyeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const input = btn.previousElementSibling;
+      const icon = btn.querySelector('.eye-glyph');
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    });
+  });
+
+  // Validation Helpers
+  const alphaRegex = /^[A-Za-z\s]{2,50}$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  function setErr(group, errElem, msg) {
+    group.classList.add('has-error');
+    errElem.textContent = msg;
+  }
+
+  function clrErr(group, errElem) {
+    group.classList.remove('has-error');
+    errElem.textContent = '';
+  }
+
+  // 1. SIGNUP VALIDATION & TRANSITION TO LOGIN
+  const signupForm = document.getElementById('signupForm');
+  const signupName = document.getElementById('signupName');
+  const signupEmail = document.getElementById('signupEmail');
+  const signupPass = document.getElementById('signupPassword');
+
+  const sNameGroup = document.getElementById('signupNameGroup');
+  const sEmailGroup = document.getElementById('signupEmailGroup');
+  const sPassGroup = document.getElementById('signupPassGroup');
+
+  const sNameErr = document.getElementById('signupNameError');
+  const sEmailErr = document.getElementById('signupEmailError');
+  const sPassErr = document.getElementById('signupPassError');
+
+  signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let isValid = true;
+
+    // Validate Name (Alphabets only)
+    const nameVal = signupName.value.trim();
+    if (!nameVal) {
+      setErr(sNameGroup, sNameErr, 'Full name is required.');
+      isValid = false;
+    } else if (!alphaRegex.test(nameVal)) {
+      setErr(sNameGroup, sNameErr, 'Name must contain alphabets only (no numbers or symbols).');
+      isValid = false;
+    } else {
+      clrErr(sNameGroup, sNameErr);
+    }
+
+    // Validate Email
+    const emailVal = signupEmail.value.trim();
+    if (!emailVal) {
+      setErr(sEmailGroup, sEmailErr, 'Email address is required.');
+      isValid = false;
+    } else if (!emailRegex.test(emailVal)) {
+      setErr(sEmailGroup, sEmailErr, 'Please enter a valid email address.');
+      isValid = false;
+    } else {
+      clrErr(sEmailGroup, sEmailErr);
+    }
+
+    // Validate Password (min 6 digits)
+    const passVal = signupPass.value;
+    if (!passVal) {
+      setErr(sPassGroup, sPassErr, 'Master passkey is required.');
+      isValid = false;
+    } else if (passVal.length < 6) {
+      setErr(sPassGroup, sPassErr, 'Passkey must contain a minimum of 6 characters.');
+      isValid = false;
+    } else {
+      clrErr(sPassGroup, sPassErr);
+    }
+
+    if (!isValid) return;
+
+    // Save registered user credentials into localStorage
+    const chosenRole = roleInput ? roleInput.value : 'client';
+    const registeredAccount = {
+      name: nameVal,
+      email: emailVal,
+      pass: passVal,
+      role: chosenRole
+    };
+    localStorage.setItem('registeredJewelryUser', JSON.stringify(registeredAccount));
+
+    // Clear inputs automatically
+    signupName.value = '';
+    signupEmail.value = '';
+    signupPass.value = '';
+
+    // Switch smoothly to Login Pane
+    showPane(loginPane);
+
+    // Pre-fill registered credentials in Login for seamless UX
+    const loginNameField = document.getElementById('loginName');
+    const loginEmailField = document.getElementById('loginEmail');
+    if (loginNameField) loginNameField.value = nameVal;
+    if (loginEmailField) loginEmailField.value = emailVal;
+  });
+
+  // 2. LOGIN VALIDATION & DASHBOARD REDIRECTION
+  const loginForm = document.getElementById('loginForm');
+  const loginName = document.getElementById('loginName');
+  const loginEmail = document.getElementById('loginEmail');
+  const loginPass = document.getElementById('loginPassword');
+
+  const lNameGroup = document.getElementById('loginNameGroup');
+  const lEmailGroup = document.getElementById('loginEmailGroup');
+  const lPassGroup = document.getElementById('loginPassGroup');
+
+  const lNameErr = document.getElementById('loginNameError');
+  const lEmailErr = document.getElementById('loginEmailError');
+  const lPassErr = document.getElementById('loginPassError');
+
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let isValid = true;
+
+    // Validate Name (Alphabets only)
+    const nameVal = loginName.value.trim();
+    if (!nameVal) {
+      setErr(lNameGroup, lNameErr, 'Account name is required.');
+      isValid = false;
+    } else if (!alphaRegex.test(nameVal)) {
+      setErr(lNameGroup, lNameErr, 'Account name must contain alphabets only.');
+      isValid = false;
+    } else {
+      clrErr(lNameGroup, lNameErr);
+    }
+
+    // Validate Email
+    const emailVal = loginEmail.value.trim();
+    if (!emailVal) {
+      setErr(lEmailGroup, lEmailErr, 'Email address is required.');
+      isValid = false;
+    } else if (!emailRegex.test(emailVal)) {
+      setErr(lEmailGroup, lEmailErr, 'Please enter a valid email address.');
+      isValid = false;
+    } else {
+      clrErr(lEmailGroup, lEmailErr);
+    }
+
+    // Validate Password (min 6 digits)
+    const passVal = loginPass.value;
+    if (!passVal) {
+      setErr(lPassGroup, lPassErr, 'Master passkey is required.');
+      isValid = false;
+    } else if (passVal.length < 6) {
+      setErr(lPassGroup, lPassErr, 'Passkey must contain a minimum of 6 characters.');
+      isValid = false;
+    } else {
+      clrErr(lPassGroup, lPassErr);
+    }
+
+    if (!isValid) return;
+
+    // Save active session email & role for dashboard displays
+    sessionStorage.setItem('activeJewelryUserEmail', emailVal);
+    sessionStorage.setItem('activeJewelryUserName', nameVal);
+
+    // Determine target dashboard based on registered role
+    let targetRole = 'client';
+    const storedUser = localStorage.getItem('registeredJewelryUser');
+    if (storedUser) {
+      try {
+        const parsed = JSON.parse(storedUser);
+        if (parsed.email === emailVal && parsed.role) {
+          targetRole = parsed.role;
+        }
+      } catch (err) {}
+    }
+
+    // Clear inputs automatically
+    loginName.value = '';
+    loginEmail.value = '';
+    loginPass.value = '';
+
+    // Redirect to respective dashboard with email param
+    if (targetRole === 'admin') {
+      window.location.href = `admin.html?email=${encodeURIComponent(emailVal)}`;
+    } else {
+      window.location.href = `client.html?email=${encodeURIComponent(emailVal)}`;
+    }
+  });
+
+  // 3. FORGOT PASSWORD VALIDATION & REDIRECT TO ERROR.HTML
+  const forgotForm = document.getElementById('forgotForm');
+  const forgotEmail = document.getElementById('forgotEmail');
+  const fEmailGroup = document.getElementById('forgotEmailGroup');
+  const fEmailErr = document.getElementById('forgotEmailError');
+
+  forgotForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailVal = forgotEmail.value.trim();
+
+    if (!emailVal) {
+      setErr(fEmailGroup, fEmailErr, 'Email address is required.');
+      return;
+    } else if (!emailRegex.test(emailVal)) {
+      setErr(fEmailGroup, fEmailErr, 'Please enter a valid registered email address.');
+      return;
+    }
+
+    clrErr(fEmailGroup, fEmailErr);
+
+    // Clear inputs automatically
+    forgotEmail.value = '';
+
+    // Redirect to existing error.html page as specified
+    window.location.href = 'error.html';
+  });
+
+  // Real-time clearance of error states on input
+  [signupName, loginName].forEach(input => {
+    input.addEventListener('input', () => {
+      const group = input.closest('.form-group');
+      const err = group.querySelector('.auth-error-msg');
+      if (group.classList.contains('has-error')) clrErr(group, err);
+    });
+  });
+
+  [signupEmail, loginEmail, forgotEmail].forEach(input => {
+    input.addEventListener('input', () => {
+      const group = input.closest('.form-group');
+      const err = group.querySelector('.auth-error-msg');
+      if (group.classList.contains('has-error')) clrErr(group, err);
+    });
+  });
+
+  [signupPass, loginPass].forEach(input => {
+    input.addEventListener('input', () => {
+      const group = input.closest('.form-group');
+      const err = group.querySelector('.auth-error-msg');
+      if (group.classList.contains('has-error')) clrErr(group, err);
+    });
+  });
+});
+
+  </script>
+
+
+</body>
+</html>

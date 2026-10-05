@@ -1,0 +1,305 @@
+/* =========================================
+   PAGE CANVAS & AMBIENT ATMOSPHERE
+   ========================================= */
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+/* Atmospheric Ambient Orbs */
+.glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+  animation: orbDrift 14s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.22), transparent 70%);
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orb-2 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(200, 122, 84, 0.15), transparent 70%);
+  bottom: 5%;
+  right: 10%;
+  animation-delay: -5s;
+}
+
+@keyframes orbDrift {
+  0% { transform: translate(-50%, 0) scale(1); }
+  50% { transform: translate(-45%, 30px) scale(1.1); }
+  100% { transform: translate(-55%, -20px) scale(0.95); }
+}
+
+/* =========================================
+   MINIMAL HEADER & FOOTER
+   ========================================= */
+.error-header {
+  position: relative;
+  z-index: 10;
+  padding: 2.2rem 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-logo {
+  display: inline-block;
+  transition: transform var(--transition-smooth), opacity var(--transition-fast);
+}
+
+.brand-logo:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.brand-logo img {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+}
+
+.error-footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.error-footer p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 0;
+}
+
+/* =========================================
+   ERROR STAGE & 404 DISPLAY
+   ========================================= */
+.error-wrapper {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.error-container {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gem-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  perspective: 1000px;
+}
+
+/* Glowing Aura Behind Gem */
+.stage-halo {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.05) 50%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(28px);
+  animation: haloBreath 4s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes haloBreath {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.25); opacity: 1; }
+}
+
+.error-code-display {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+/* "4" Digits in Serpentine Gold */
+.digit {
+  font-family: var(--font-heading);
+  font-size: clamp(6.5rem, 15vw, 11rem);
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(180deg, var(--text-primary) 0%, var(--gold-light) 40%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+
+/* Floating Gemstone in Place of "0" */
+.gem-crystal {
+  width: clamp(90px, 16vw, 140px);
+  height: clamp(90px, 16vw, 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: gemLevitate 6s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 14px 28px rgba(212, 175, 55, 0.35));
+}
+
+.diamond-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+@keyframes gemLevitate {
+  0% {
+    transform: translateY(0px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(-6px) rotate(-2deg);
+  }
+}
+
+/* Twinkle Sparkles */
+.sparkle {
+  animation: sparkleTwinkle 3s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.sparkle-2 {
+  animation-delay: 1.5s;
+}
+
+@keyframes sparkleTwinkle {
+  0%, 20% { transform: scale(0.3) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.1) rotate(90deg); opacity: 1; }
+  80%, 100% { transform: scale(0.4) rotate(180deg); opacity: 0.2; }
+}
+
+/* =========================================
+   TEXT CONTENT & STATUS BADGE
+   ========================================= */
+.error-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid var(--border-gold);
+  border-radius: 9999px;
+  padding: 0.4rem 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.error-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.error-text {
+  font-size: var(--fs-p);
+  color: var(--text-secondary);
+  line-height: var(--lh-body);
+  max-width: 580px;
+  margin: 0 auto 2.25rem auto;
+}
+
+.error-actions {
+  justify-content: center;
+}
+
+/* =========================================
+   STRICT 768px MEDIA QUERY
+   ========================================= */
+@media (max-width: 768px) {
+  .error-header {
+    padding: 1.5rem 1.25rem 0;
+  }
+
+  .brand-logo img {
+    height: 40px;
+  }
+
+  .error-wrapper {
+    padding: 2rem 1.25rem;
+  }
+
+  .error-code-display {
+    gap: 0.75rem;
+  }
+
+  .digit {
+    font-size: 6.25rem;
+  }
+
+  .gem-crystal {
+    width: 82px;
+    height: 82px;
+  }
+
+  .stage-halo {
+    width: 170px;
+    height: 170px;
+  }
+
+  .error-badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.95rem;
+  }
+
+  .error-title {
+    font-size: 1.85rem;
+  }
+
+  .error-text {
+    font-size: 0.935rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Full-width stacked buttons for comfortable mobile touch */
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .error-actions .btn {
+    width: 100%;
+    padding: 0.95rem 1.5rem;
+  }
+}

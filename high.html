@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURELIA | Luxury Jewelry</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="./assets/logo.webp">
+
+  <link rel="stylesheet" href="root.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="high.css">
+
+
+</head>
+
+<body>
+
+  <!-- ================= LUXURY HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo (Always visible above drawers) -->
+      <a href="index.html" class="brand-logo">
+        <img src="./assets/logo 10.webp" alt="Aurelia Jewelry Logo" height="50" width="150">
+      </a>
+
+      <!-- Desktop Navigation (> 768px) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="desktop-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="collection.html" class="nav-link">Collections</a></li>
+          <li><a href="high.html" class="nav-link">High Jewelry</a></li>
+          <li><a href="heritage.html" class="nav-link">Heritage</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Sign In & Mobile Toggle) -->
+      <div class="header-actions">
+        <a href="signin.html" class="btn btn-gold btn-signin-desktop">
+          <i class="fa-regular fa-user"></i>
+          <span>Sign In</span>
+        </a>
+
+        <!-- Hamburger Button (<= 768px only) -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer (<= 768px only) -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-inner">
+      <ul class="mobile-menu">
+        <li><a href="index.html" class="mobile-nav-link active"><span class="link-num">01</span>Home</a></li>
+        <li><a href="collection.html" class="mobile-nav-link"><span class="link-num">02</span>Collections</a></li>
+        <li><a href="high.html" class="mobile-nav-link"><span class="link-num">03</span>High Jewelry</a></li>
+        <li><a href="heritage.html" class="mobile-nav-link"><span class="link-num">04</span>Heritage</a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span class="link-num">05</span>Contact</a></li>
+      </ul>
+
+      <!-- Replaced drawer CTA with Sign In -->
+      <div class="drawer-footer">
+        <a href="signin.html" class="btn btn-gold drawer-cta">
+          <i class="fa-regular fa-user"></i>
+          <span>Sign In</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <section class="high-hero-section" id="highJewelryHero">
+    <div class="high-ambient-glow" aria-hidden="true"></div>
+
+    <div class="high-hero-container">
+      <nav class="high-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" class="crumb-link">Home</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">Haute Joaillerie Atelier</span>
+      </nav>
+
+      <div class="high-hero-content">
+        <div class="high-badge">
+          <span class="badge-sparkle">✦</span>
+          <span>One-of-a-Kind Imperial Commissions &bull; 2026</span>
+          <span class="badge-sparkle">✦</span>
+        </div>
+
+        <h1 class="high-hero-title">
+          <span>The Pinnacle of</span>
+          <span class="text-gold-gradient">High Jewelry Artistry</span>
+        </h1>
+
+        <p class="high-hero-desc">
+          Rare untreated Muzo emeralds, unheated Ceylon royal sapphires, and Type IIA Golconda solitaires, sculpted
+          exclusively in cold-forged 950 platinum and 24-karat solid gold.
+        </p>
+
+        <div class="high-credentials-bar">
+          <div class="credential-item">
+            <span class="credential-val">Pièce Unique</span>
+            <span class="credential-lbl">Numbered Works</span>
+          </div>
+          <div class="credential-divider"></div>
+          <div class="credential-item">
+            <span class="credential-val">GIA &bull; Gübelin</span>
+            <span class="credential-lbl">Swiss Origin Dossiers</span>
+          </div>
+          <div class="credential-divider"></div>
+          <div class="credential-item">
+            <span class="credential-val">0.38mm</span>
+            <span class="credential-lbl">Optical Micro-Pavé</span>
+          </div>
+        </div>
+
+        <div class="high-hero-actions">
+          <a href="contact.html" class="btn btn-gold btn-high-primary">
+            <i class="fa-regular fa-calendar-check btn-icon"></i>
+            <span>Commission Private Creation</span>
+          </a>
+          <a href="#masterpieces" class="btn btn-secondary btn-high-secondary">
+            <i class="fa-solid fa-gem btn-icon"></i>
+            <span>Explore 2026 Vault</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="matrix-section" id="gemologicalMatrix">
+    <div class="matrix-ambient-glow" aria-hidden="true"></div>
+
+    <div class="matrix-container">
+      <div class="matrix-header">
+        <span class="matrix-badge">Gemological Classification</span>
+        <h2 class="matrix-title">Imperial Gemstone Matrix</h2>
+        <p class="matrix-subtitle">
+          Examine the rare mineralogical specimens curated for our 2026 High Jewelry suite, categorized by crystal
+          structure and origin credentials.
+        </p>
+      </div>
+
+      <!-- Segmented Control Bar -->
+      <div class="matrix-tabs-wrapper">
+        <div class="matrix-segmented-control" role="tablist" aria-label="Gemstone categories">
+          <div class="tab-indicator" id="tabIndicator" aria-hidden="true"></div>
+          <button class="matrix-tab-btn active" role="tab" aria-selected="true" aria-controls="panel-diamonds"
+            id="tab-diamonds" data-target="diamonds">
+            <i class="fa-regular fa-gem tab-icon"></i>
+            <span>Type IIa Solitaires</span>
+          </button>
+          <button class="matrix-tab-btn" role="tab" aria-selected="false" aria-controls="panel-emeralds"
+            id="tab-emeralds" data-target="emeralds">
+            <i class="fa-solid fa-gem tab-icon"></i>
+            <span>Muzo Emeralds</span>
+          </button>
+          <button class="matrix-tab-btn" role="tab" aria-selected="false" aria-controls="panel-sapphires"
+            id="tab-sapphires" data-target="sapphires">
+            <i class="fa-solid fa-circle-dot tab-icon"></i>
+            <span>Ceylon Sapphires</span>
+          </button>
+          <button class="matrix-tab-btn" role="tab" aria-selected="false" aria-controls="panel-rubies" id="tab-rubies"
+            data-target="rubies">
+            <i class="fa-solid fa-certificate tab-icon"></i>
+            <span>Burmese Rubies</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Panels Container -->
+      <div class="matrix-panels-stage">
+
+        <!-- Panel 1: Diamonds -->
+        <div class="matrix-panel active" id="panel-diamonds" role="tabpanel" aria-labelledby="tab-diamonds">
+          <div class="matrix-card-grid">
+            <div class="matrix-visual-col">
+              <div class="matrix-image-viewport">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80"
+                  alt="Type IIa Golconda Solitaire" class="matrix-panel-img">
+                <div class="matrix-specimen-pill">GIA #7492019482</div>
+              </div>
+            </div>
+            <div class="matrix-data-col">
+              <div class="matrix-data-header">
+                <span class="matrix-origin-tag">Golconda Sourced &bull; D Flawless</span>
+                <h3 class="matrix-stone-title">The Sovereign Radiant Solitaire</h3>
+                <p class="matrix-stone-desc">
+                  Possessing complete optical clarity with zero nitrogen impurities. Sourced through direct Antwerp
+                  syndicates and set in hand-forged 950 platinum prongs.
+                </p>
+              </div>
+              <div class="matrix-spec-matrix">
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Carat Weight</span>
+                  <span class="cell-val">5.42 ct</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Optical Cut</span>
+                  <span class="cell-val">Triple Excellent</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Fluorescence</span>
+                  <span class="cell-val">None (Inert)</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Refractive Index</span>
+                  <span class="cell-val">2.417</span>
+                </div>
+              </div>
+              <div class="matrix-card-footer">
+                <div class="matrix-valuation">
+                  <span class="val-caption">Salon Valuation</span>
+                  <span class="val-number">₹42,00,000</span>
+                </div>
+                <a href="contact.html" class="btn btn-gold matrix-cta-btn">
+                  <span>Request Private Viewing</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Emeralds -->
+        <div class="matrix-panel" id="panel-emeralds" role="tabpanel" aria-labelledby="tab-emeralds">
+          <div class="matrix-card-grid">
+            <div class="matrix-visual-col">
+              <div class="matrix-image-viewport">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=80"
+                  alt="Muzo Colombian Emerald" class="matrix-panel-img">
+                <div class="matrix-specimen-pill">Gübelin #EM-8402</div>
+              </div>
+            </div>
+            <div class="matrix-data-col">
+              <div class="matrix-data-header">
+                <span class="matrix-origin-tag">Boyacá &bull; Muzo Mine Colombia</span>
+                <h3 class="matrix-stone-title">Verdant Imperial Octagon</h3>
+                <p class="matrix-stone-desc">
+                  Showcasing the coveted velvety 'warm garden' inclusion network with minor traditional cedar oil
+                  clarity enhancement, framed by calibrated baguette solitaires.
+                </p>
+              </div>
+              <div class="matrix-spec-matrix">
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Carat Weight</span>
+                  <span class="cell-val">6.18 ct</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Color Saturation</span>
+                  <span class="cell-val">Vivid Royal Green</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Clarity Grade</span>
+                  <span class="cell-val">Jardin Natural</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Metal Framing</span>
+                  <span class="cell-val">24K Gold &bull; 950 Pt</span>
+                </div>
+              </div>
+              <div class="matrix-card-footer">
+                <div class="matrix-valuation">
+                  <span class="val-caption">Salon Valuation</span>
+                  <span class="val-number">₹58,50,000</span>
+                </div>
+                <a href="contact.html" class="btn btn-gold matrix-cta-btn">
+                  <span>Request Private Viewing</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Sapphires -->
+        <div class="matrix-panel" id="panel-sapphires" role="tabpanel" aria-labelledby="tab-sapphires">
+          <div class="matrix-card-grid">
+            <div class="matrix-visual-col">
+              <div class="matrix-image-viewport">
+                <img src="https://images.unsplash.com/photo-1611591475879-1144a2b952b2?auto=format&fit=crop&w=1000&q=80"
+                  alt="Royal Ceylon Sapphire" class="matrix-panel-img">
+                <div class="matrix-specimen-pill">SSEF #SA-3918</div>
+              </div>
+            </div>
+            <div class="matrix-data-col">
+              <div class="matrix-data-header">
+                <span class="matrix-origin-tag">Ratnapura &bull; Sri Lanka Origin</span>
+                <h3 class="matrix-stone-title">Cornflower Sovereign Cushion</h3>
+                <p class="matrix-stone-desc">
+                  Certified unheated corundum with natural silk inclusions that impart a velvety cornflower blue
+                  luminescence in ambient candlelight and daylight.
+                </p>
+              </div>
+              <div class="matrix-spec-matrix">
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Carat Weight</span>
+                  <span class="cell-val">7.84 ct</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Thermal Treatment</span>
+                  <span class="cell-val">No Indications (Unheated)</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Hue Tone</span>
+                  <span class="cell-val">Royal Cornflower</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Crystal Hardness</span>
+                  <span class="cell-val">9.0 Mohs</span>
+                </div>
+              </div>
+              <div class="matrix-card-footer">
+                <div class="matrix-valuation">
+                  <span class="val-caption">Salon Valuation</span>
+                  <span class="val-number">₹38,00,000</span>
+                </div>
+                <a href="contact.html" class="btn btn-gold matrix-cta-btn">
+                  <span>Request Private Viewing</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: Rubies -->
+        <div class="matrix-panel" id="panel-rubies" role="tabpanel" aria-labelledby="tab-rubies">
+          <div class="matrix-card-grid">
+            <div class="matrix-visual-col">
+              <div class="matrix-image-viewport">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80"
+                  alt="Pigeon Blood Burmese Ruby" class="matrix-panel-img">
+                <div class="matrix-specimen-pill">GRS #RU-9271</div>
+              </div>
+            </div>
+            <div class="matrix-data-col">
+              <div class="matrix-data-header">
+                <span class="matrix-origin-tag">Mogok Stone Tract &bull; Burma</span>
+                <h3 class="matrix-stone-title">The Mogok Crimson Solitaire</h3>
+                <p class="matrix-stone-desc">
+                  An extraordinary unheated gem exhibiting the fabled "Pigeon's Blood" red hue with natural chromium
+                  fluorescence, illuminating from within under UV rays.
+                </p>
+              </div>
+              <div class="matrix-spec-matrix">
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Carat Weight</span>
+                  <span class="cell-val">4.35 ct</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Color Grade</span>
+                  <span class="cell-val">Pigeon's Blood Red</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Origin Proof</span>
+                  <span class="cell-val">Mogok Valley (GRS)</span>
+                </div>
+                <div class="matrix-spec-cell">
+                  <span class="cell-label">Setting Type</span>
+                  <span class="cell-val">18K Solid Rose Gold</span>
+                </div>
+              </div>
+              <div class="matrix-card-footer">
+                <div class="matrix-valuation">
+                  <span class="val-caption">Salon Valuation</span>
+                  <span class="val-number">₹64,00,000</span>
+                </div>
+                <a href="contact.html" class="btn btn-gold matrix-cta-btn">
+                  <span>Request Private Viewing</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="skeuo-craft-section" id="benchworkAtelier">
+    <div class="skeuo-radial-ambient" aria-hidden="true"></div>
+
+    <div class="skeuo-container">
+      <div class="skeuo-header">
+        <span class="skeuo-badge">Precision Goldsmithing</span>
+        <h2 class="skeuo-title">The Master Craftsman’s Bench</h2>
+        <p class="skeuo-subtitle">
+          Hover over each benchwork phase to inspect the corresponding specimen, metallurgy specs, and hallmark
+          credentials in the safe tray.
+        </p>
+      </div>
+
+      <div class="skeuo-workspace-grid">
+
+        <!-- Left: Dynamic Specimen Tray (Updates on hover) -->
+        <div class="skeuo-tray-card">
+          <div class="tray-outer-rim">
+            <div class="tray-leather-bed">
+
+              <div class="tray-screws">
+                <span class="brass-screw screw-tl"></span>
+                <span class="brass-screw screw-tr"></span>
+                <span class="brass-screw screw-bl"></span>
+                <span class="brass-screw screw-br"></span>
+              </div>
+
+              <div class="tray-specimen-header">
+                <span class="specimen-serial" id="traySerial">ARCHIVE #AU-950-IF</span>
+                <span class="specimen-status">Bench Inspection</span>
+              </div>
+
+              <div class="tray-gem-stage">
+                <div class="stage-cushion">
+                  <div class="stage-spotlight"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80"
+                    alt="Solitaire Diamond Setting Inspection" class="stage-diamond-img" id="activeSpecimenImg" />
+                </div>
+              </div>
+
+              <!-- Dynamic Heavy Brass Plate -->
+              <div class="tray-brass-plate">
+                <div class="plate-inner-bevel">
+                  <span class="plate-title" id="plateTitle">Type IIa 5.42ct Radiant Solitaire</span>
+                  <span class="plate-specs" id="plateSpecs">Cold-Forged 950 Platinum &bull; 0.38mm Micro-Claw</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Cards (Hover Triggers) -->
+        <div class="skeuo-controls-panel">
+
+          <div class="skeuo-instrument-card active" data-step="1" data-serial="ARCHIVE #AU-950-IF"
+            data-title="Type IIa 5.42ct Radiant Solitaire"
+            data-specs="Cold-Forged 950 Platinum &bull; 0.38mm Micro-Claw"
+            data-img="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80">
+            <div class="instrument-meter">
+              <span class="meter-dial">01</span>
+              <span class="meter-unit">Phase</span>
+            </div>
+            <div class="instrument-details">
+              <h3 class="instrument-heading">Acoustic Microscope Seat Calibration</h3>
+              <p class="instrument-desc">
+                Each claw is carved under 40x optical stereomicroscopes with 0.38mm surgical steel burnishers, ensuring
+                light enters without shadow.
+              </p>
+            </div>
+            <div class="instrument-status-light"></div>
+          </div>
+
+          <div class="skeuo-instrument-card" data-step="2" data-serial="ARCHIVE #MZ-784-COL"
+            data-title="Royal Muzó 6.18ct Emerald Pendant" data-specs="24K Yellow Gold Under-Gallery &bull; Tension Bar"
+            data-img="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80">
+            <div class="instrument-meter">
+              <span class="meter-dial">02</span>
+              <span class="meter-unit">Phase</span>
+            </div>
+            <div class="instrument-details">
+              <h3 class="instrument-heading">Vacuum Cold-Forged 950 Platinum</h3>
+              <p class="instrument-desc">
+                Platinum alloys are cast under vacuum induction at 1,768°C to eliminate micro-porosity, producing
+                ultra-dense non-warping metal walls.
+              </p>
+            </div>
+            <div class="instrument-status-light"></div>
+          </div>
+
+          <div class="skeuo-instrument-card" data-step="3" data-serial="ARCHIVE #CY-912-SAP"
+            data-title="Ceylon Cornflower 7.84ct Sapphire Cuff"
+            data-specs="Solid Platinum Channels &bull; Laser Seal GIA"
+            data-img="https://images.unsplash.com/photo-1611591475879-1144a2b952b2?auto=format&fit=crop&w=900&q=80">
+            <div class="instrument-meter">
+              <span class="meter-dial">03</span>
+              <span class="meter-unit">Phase</span>
+            </div>
+            <div class="instrument-details">
+              <h3 class="instrument-heading">Micro-Laser Hallmark Authentication</h3>
+              <p class="instrument-desc">
+                Every piece receives laser-inscribed serials on the girdle, finished with BIS 916 and master goldsmith
+                hallmark punches.
+              </p>
+            </div>
+            <div class="instrument-status-light"></div>
+          </div>
+
+          <div class="skeuo-footer-bar">
+            <div class="skeuo-seal-stamp">
+              <i class="fa-solid fa-stamp stamp-icon"></i>
+              <div class="stamp-copy">
+                <span class="stamp-head">BIS 916 &bull; GIA PASSPORT</span>
+                <span class="stamp-sub">Archival Provenance Guaranteed</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-gold btn-craft-cta">
+              <span>Commission Bespoke</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <section class="kinetic-stack-section" id="kineticStacking">
+    <div class="kinetic-ambient-glow" aria-hidden="true"></div>
+
+    <div class="kinetic-container">
+      <div class="kinetic-header">
+        <span class="kinetic-badge">Haute Joaillerie Curations</span>
+        <h2 class="kinetic-title">The Masterwork Folio</h2>
+        <p class="kinetic-subtitle">
+          Scroll through an overlapping stack of private acquisitions, featuring untreated museum-grade stones and
+          registered platinum architecture.
+        </p>
+      </div>
+
+      <div class="kinetic-stack-stage" id="kineticStage">
+
+        <!-- Card 01 -->
+        <article class="kinetic-card" data-card="1">
+          <div class="kinetic-card-inner">
+            <div class="card-left-visual">
+              <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80"
+                alt="Type IIa 4.85ct Oval Solitaire" class="kinetic-img" />
+              <div class="kinetic-card-tag">Plate No. 01</div>
+            </div>
+            <div class="card-right-narrative">
+              <span class="kinetic-meta">Solitaire Diamond &bull; D Color &bull; Flawless</span>
+              <h3 class="kinetic-card-heading">The Luminary Oval Brilliant</h3>
+              <p class="kinetic-card-desc">
+                Precision-cut from an untreated 11.2-carat rough crystal. Mounted on an eight-prong cold-forged 950
+                platinum shank with hidden micropavé bridges.
+              </p>
+              <div class="kinetic-spec-strip">
+                <div class="spec-cell">
+                  <span class="spec-label">Weight</span>
+                  <span class="spec-value">4.85 ct</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Clarity</span>
+                  <span class="spec-value">IF Grade</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Laser Seal</span>
+                  <span class="spec-value">GIA #748921</span>
+                </div>
+              </div>
+              <div class="kinetic-card-foot">
+                <span class="kinetic-price">₹28,50,000</span>
+                <a href="contact.html" class="btn btn-gold btn-kinetic-action">
+                  <span>Inquire Acquisition</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 02 -->
+        <article class="kinetic-card" data-card="2">
+          <div class="kinetic-card-inner">
+            <div class="card-left-visual">
+              <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80"
+                alt="Muzo Colombian Emerald Pendant" class="kinetic-img" />
+              <div class="card-card-tag">Plate No. 02</div>
+            </div>
+            <div class="card-right-narrative">
+              <span class="kinetic-meta">Muzo Origin &bull; Untreated Emerald</span>
+              <h3 class="kinetic-card-heading">Verdant Sovereign Collier</h3>
+              <p class="kinetic-card-desc">
+                An octagonal emerald bearing classic Muzo garden inclusions. Set within an articulated 24K solid yellow
+                gold frame lined with tapered baguette solitaires.
+              </p>
+              <div class="kinetic-spec-strip">
+                <div class="spec-cell">
+                  <span class="spec-label">Weight</span>
+                  <span class="spec-value">6.12 ct</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Accent Cut</span>
+                  <span class="spec-value">Baguette D-F</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Origin Passport</span>
+                  <span class="spec-value">Gübelin Dossier</span>
+                </div>
+              </div>
+              <div class="kinetic-card-foot">
+                <span class="kinetic-price">₹44,00,000</span>
+                <a href="contact.html" class="btn btn-gold btn-kinetic-action">
+                  <span>Inquire Acquisition</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 03 -->
+        <article class="kinetic-card" data-card="3">
+          <div class="kinetic-card-inner">
+            <div class="card-left-visual">
+              <img src="https://images.unsplash.com/photo-1611591475879-1144a2b952b2?auto=format&fit=crop&w=900&q=80"
+                alt="Ceylon Royal Sapphire Cuff" class="kinetic-img" />
+              <div class="kinetic-card-tag">Plate No. 03</div>
+            </div>
+            <div class="card-right-narrative">
+              <span class="kinetic-meta">Ratnapura Valley &bull; Royal Blue Sapphire</span>
+              <h3 class="kinetic-card-heading">Imperial Sapphire Torc</h3>
+              <p class="kinetic-card-desc">
+                Featuring cornflower sapphire cushions tension-fitted into hand-chiseled platinum and solid gold torque
+                cuffs, engineered for anatomical wrist balance.
+              </p>
+              <div class="kinetic-spec-strip">
+                <div class="spec-cell">
+                  <span class="spec-label">Weight</span>
+                  <span class="spec-value">8.40 ct Total</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Thermal Index</span>
+                  <span class="spec-value">Unheated</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Metallurgy</span>
+                  <span class="spec-value">950 Pt / 24K</span>
+                </div>
+              </div>
+              <div class="kinetic-card-foot">
+                <span class="kinetic-price">₹36,20,000</span>
+                <a href="contact.html" class="btn btn-gold btn-kinetic-action">
+                  <span>Inquire Acquisition</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 04 -->
+        <article class="kinetic-card" data-card="4">
+          <div class="kinetic-card-inner">
+            <div class="card-left-visual">
+              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=80"
+                alt="Burmese Pigeon Blood Ruby Cascade" class="kinetic-img" />
+              <div class="kinetic-card-tag">Plate No. 04</div>
+            </div>
+            <div class="card-right-narrative">
+              <span class="kinetic-meta">Mogok Tract &bull; Pigeon Blood Red</span>
+              <h3 class="kinetic-card-heading">Seraphina Crimson Drops</h3>
+              <p class="kinetic-card-desc">
+                Matched teardrop ruby studs articulating into double-tiered pavé cascades. Alloyed in custom rose gold
+                that complements high-chromium mineral fluorescence.
+              </p>
+              <div class="kinetic-spec-strip">
+                <div class="spec-cell">
+                  <span class="spec-label">Weight</span>
+                  <span class="spec-value">5.18 ct</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Setting</span>
+                  <span class="spec-value">Kinetic Joint</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Certification</span>
+                  <span class="spec-value">GRS Swiss Reg</span>
+                </div>
+              </div>
+              <div class="kinetic-card-foot">
+                <span class="kinetic-price">₹52,00,000</span>
+                <a href="contact.html" class="btn btn-gold btn-kinetic-action">
+                  <span>Inquire Acquisition</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <section class="loupe-section" id="gemInspection">
+    <div class="loupe-radial-glow" aria-hidden="true"></div>
+
+    <div class="loupe-container">
+      <div class="loupe-header">
+        <span class="loupe-badge">Microscopic Provenance</span>
+        <h2 class="loupe-title">The Gemological Inspection Loupe</h2>
+        <p class="loupe-subtitle">
+          Hover across the specimen to activate 2.5x optical refraction magnification. Inspect girdle facets, light
+          return, and laser hallmarks.
+        </p>
+      </div>
+
+      <div class="loupe-workspace-grid">
+
+        <!-- Interactive Optical Loupe Viewer -->
+        <div class="loupe-display-panel">
+          <div class="loupe-bezel-frame">
+            <div class="loupe-stage-viewer" id="loupeStage">
+              <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85"
+                alt="Flawless D-Color Solitaire" class="loupe-base-img" id="loupeBaseImg" />
+
+              <!-- Magnifying Glass Reticle -->
+              <div class="optical-lens" id="opticalLens">
+                <div class="lens-crosshair" aria-hidden="true"></div>
+                <div class="lens-zoom-content" id="lensZoomContent"></div>
+              </div>
+
+              <div class="optical-hud-tag">
+                <span class="hud-dot"></span>
+                <span>2.5x Calibrated Loupe</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="loupe-hints-bar">
+            <i class="fa-solid fa-arrows-up-down-left-right hint-icon"></i>
+            <span>Hover or drag your cursor across the gemstone to inspect internal clarity</span>
+          </div>
+        </div>
+
+        <!-- Specimen Dossier & Technical Ledger -->
+        <div class="loupe-dossier-panel">
+          <div class="dossier-vault-card">
+            <div class="dossier-header-row">
+              <span class="dossier-ref">Dossier Ref &bull; GIA-74920</span>
+              <span class="dossier-origin-pill">Antwerp Rough</span>
+            </div>
+
+            <h3 class="dossier-title">5.42ct Type IIa Oval Brilliant</h3>
+            <p class="dossier-desc">
+              Classified within the top 0.02% of diamonds exhibiting no measurable nitrogen impurities, yielding
+              unmatched chemical transparency and refractive fire.
+            </p>
+
+            <div class="dossier-specs-list">
+              <div class="dossier-row">
+                <span class="row-label">Color &amp; Clarity</span>
+                <span class="row-val">D Grade &bull; Internally Flawless (IF)</span>
+              </div>
+              <div class="dossier-row">
+                <span class="row-label">Polish &amp; Symmetry</span>
+                <span class="row-val">Triple Excellent &bull; Ideal Cut</span>
+              </div>
+              <div class="dossier-row">
+                <span class="row-label">Fluorescence</span>
+                <span class="row-val">Inert &bull; None</span>
+              </div>
+              <div class="dossier-row">
+                <span class="row-label">Metallurgy Cradle</span>
+                <span class="row-val">Cold-Forged 950 Solid Platinum</span>
+              </div>
+            </div>
+
+            <div class="dossier-action-bar">
+              <div class="valuation-meta">
+                <span class="val-lbl">Acquisition Value</span>
+                <span class="val-num">₹38,50,000</span>
+              </div>
+              <a href="contact.html" class="btn btn-gold btn-dossier">
+                <span>Book Salon Inspection</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <section class="banner-cta-section" id="privateCommission">
+  <!-- Immersive Background Image Container -->
+  <div class="banner-cta-bg-wrap">
+    <img 
+      src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2200&q=85" 
+      alt="Haute Joaillerie Atelier Goldsmithing" 
+      class="banner-cta-bg-img"
+    />
+    <div class="banner-cta-vignette"></div>
+    <div class="banner-cta-radial-overlay"></div>
+  </div>
+
+  <div class="banner-cta-container">
+    <div class="banner-cta-frame">
+      <div class="banner-cta-inner">
+        
+        <div class="banner-cta-badge">
+          <span class="badge-gem-glow">✦</span>
+          <span>By Confidential Appointment Only</span>
+          <span class="badge-gem-glow">✦</span>
+        </div>
+
+        <h2 class="banner-cta-title">
+          <span>Commission Your Legacy In</span>
+          <span class="text-gold-gradient">Untamed Brilliance</span>
+        </h2>
+
+        <p class="banner-cta-desc">
+          Enter our confidential salon chambers or connect via encrypted digital salon with a senior gemologist to acquire rare certified solitaires and bespoke imperial creations.
+        </p>
+
+        <!-- Metric Highlight Bar -->
+        <div class="banner-cta-stats">
+          <div class="cta-stat-item">
+            <span class="cta-stat-val">Type IIa</span>
+            <span class="cta-stat-lbl">Golconda Diamond Purity</span>
+          </div>
+          <div class="cta-stat-divider" aria-hidden="true"></div>
+          <div class="cta-stat-item">
+            <span class="cta-stat-val">0.38<small>mm</small></span>
+            <span class="cta-stat-lbl">Micro-Pavé Precision</span>
+          </div>
+          <div class="cta-stat-divider" aria-hidden="true"></div>
+          <div class="cta-stat-item">
+            <span class="cta-stat-val">GIA &bull; Gübelin</span>
+            <span class="cta-stat-lbl">Dual Swiss Provenance</span>
+          </div>
+        </div>
+
+        <div class="banner-cta-actions">
+          <a href="contact.html" class="btn btn-gold btn-banner-primary">
+            <i class="fa-regular fa-calendar-check btn-icon"></i>
+            <span>Reserve Private Atelier Viewing</span>
+          </a>
+          <a href="tel:+914242220000" class="btn btn-secondary btn-banner-secondary">
+            <i class="fa-solid fa-phone-volume btn-icon"></i>
+            <span>Direct Concierge Desk</span>
+          </a>
+        </div>
+
+        <div class="banner-cta-disclaimer">
+          <i class="fa-solid fa-shield-halved disclaimer-icon"></i>
+          <span>Armored, fully insured worldwide transit via Malca-Amit &bull; Lifetime Atelier Certificate</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- ================= LUXURY FOOTER ================= -->
+  <footer class="site-footer">
+    <!-- Subtle Top Gold Glow Divider -->
+    <div class="footer-divider-glow" aria-hidden="true"></div>
+
+    <div class="footer-container">
+
+      <!-- Top Row: Brand & Multi-Column Navigation -->
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="./assets/logo 10.webp" alt="Aurelia High Jewelry" height="48" width="144">
+          </a>
+          <p class="footer-tagline">
+            Handcrafting rare solitaires, certified diamonds, and bespoke heirloom jewelry since 1994. Every gemstone is
+            ethically sourced and masterfully set.
+          </p>
+
+          <!-- Social Media Icons (Routing to error.html) -->
+          <div class="footer-social-links" aria-label="Social Media Channels">
+            <a href="error.html" class="social-icon" aria-label="Follow us on Instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on Facebook" title="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on Pinterest" title="Pinterest">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on X" title="X (Twitter)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on YouTube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Navigation Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="collection.html" class="footer-link">Collections</a></li>
+            <li><a href="high.html" class="footer-link">High Jewelry</a></li>
+            <li><a href="heritage.html" class="footer-link">Heritage</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Atelier & Client Services Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="error.html" class="footer-link">Bespoke Commissions</a></li>
+            <li><a href="error.html" class="footer-link">Gemological Certification</a></li>
+            <li><a href="error.html" class="footer-link">Heirloom Restoration</a></li>
+            <li><a href="error.html" class="footer-link">Private Salon Booking</a></li>
+            <li><a href="error.html" class="footer-link">Appraisal & Valuations</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Atelier Presence Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Atelier</h4>
+          <div class="footer-contact-items">
+            <p class="contact-entry">
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <span>Bespoke Salon, Erode, Tamil Nadu, India</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <span>+91 (0) 424 222 0000</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-solid fa-envelope contact-icon"></i>
+              <span>concierge@aureliajewelry.com</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-regular fa-clock contact-icon"></i>
+              <span>Mon &ndash; Sat: 10:00 AM &ndash; 8:00 PM</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Row: Legal & Copyright -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 AURELIA High Jewelry Atelier. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="error.html" class="legal-link">Privacy Policy</a>
+          <span class="legal-separator">&bull;</span>
+          <a href="error.html" class="legal-link">Terms of Service</a>
+          <span class="legal-separator">&bull;</span>
+          <a href="error.html" class="legal-link">Conflict-Free Diamond Sourcing</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- GSAP Core & ScrollTrigger CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <script src="high.js"></script>
+
+
+</body>
+
+</html>

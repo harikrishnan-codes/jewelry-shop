@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | AURELIA Fine Jewelry</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <link rel="stylesheet" href="root.css">
+  <link rel="stylesheet" href="error.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+
+  <!-- Minimal Brand Header -->
+  <header class="error-header">
+    <a href="index.html" class="brand-logo">
+      <img src="./assets/logo 10.webp" alt="AURELIA Fine Jewelry Logo" height="70px" width="150px">
+    </a>
+  </header>
+
+  <!-- Main Error Experience -->
+  <main class="error-wrapper">
+    <div class="error-container">
+      
+      <!-- Visual Luxury Gemstone & 404 Stage -->
+      <div class="gem-stage" id="gemStage">
+        <!-- Background Radial Pulse -->
+        <div class="stage-halo" aria-hidden="true"></div>
+
+        <!-- 404 Typography with Floating Faceted Gemstone in Place of '0' -->
+        <div class="error-code-display">
+          <span class="digit digit-left">4</span>
+
+          <div class="gem-crystal" aria-label="Faceted Solitaire Diamond">
+            <!-- Custom Geometric Solitaire Diamond SVG -->
+            <svg class="diamond-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="goldSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--gold-light)" />
+                  <stop offset="50%" stop-color="var(--gold-primary)" />
+                  <stop offset="100%" stop-color="var(--gold-dark)" />
+                </linearGradient>
+                <linearGradient id="facetReflection" x1="20%" y1="0%" x2="80%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(243, 229, 171, 0.45)" />
+                  <stop offset="50%" stop-color="rgba(212, 175, 55, 0.15)" />
+                  <stop offset="100%" stop-color="rgba(11, 12, 16, 0.6)" />
+                </linearGradient>
+              </defs>
+
+              <!-- Facet Layers -->
+              <polygon points="80,18 126,48 80,68 34,48" fill="url(#facetReflection)" stroke="url(#goldSheen)" stroke-width="1.5" />
+              <polygon points="34,48 80,68 80,142 18,64" fill="url(#facetReflection)" stroke="url(#goldSheen)" stroke-width="1.5" opacity="0.85" />
+              <polygon points="126,48 80,68 80,142 142,64" fill="url(#facetReflection)" stroke="url(#goldSheen)" stroke-width="1.5" opacity="0.95" />
+              <polygon points="18,64 34,48 80,18" stroke="url(#goldSheen)" stroke-width="1.2" />
+              <polygon points="142,64 126,48 80,18" stroke="url(#goldSheen)" stroke-width="1.2" />
+              <polygon points="18,64 80,142 142,64" stroke="url(#goldSheen)" stroke-width="1.5" />
+
+              <!-- Twinkle Star Sparkle -->
+              <g class="sparkle sparkle-1">
+                <path d="M42 36 Q42 46 32 46 Q42 46 42 56 Q42 46 52 46 Q42 46 42 36 Z" fill="var(--gold-light)" />
+              </g>
+              <g class="sparkle sparkle-2">
+                <path d="M118 78 Q118 84 112 84 Q118 84 118 90 Q118 84 124 84 Q118 84 118 78 Z" fill="var(--platinum)" />
+              </g>
+            </svg>
+          </div>
+
+          <span class="digit digit-right">4</span>
+        </div>
+      </div>
+
+      <!-- Luxury Message -->
+      <div class="error-content">
+        <span class="error-badge">Flawless Imperfection</span>
+        <h1 class="error-title">This Jewel Cannot Be Located</h1>
+        <p class="error-text">
+          The piece you are seeking may have been retired, placed into a private vault, or never existed in our collection. Let our concierge guide you back to our ateliers.
+        </p>
+
+        <!-- Action Links -->
+        <div class="btn-group error-actions">
+          <a href="index.html" class="btn btn-primary">
+            <i class="fa-solid fa-gem btn-icon"></i>
+            Return to Home
+          </a>
+          <a href="javascript:history.back()" class="btn btn-secondary">
+            Go Back
+            <i class="fa-solid fa-arrow-right btn-icon"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Subtle Footer -->
+  <footer class="error-footer">
+    <p>&copy; 2026 Aurelia High Jewelry. All rights reserved.</p>
+  </footer>
+
+  <script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const gemStage = document.getElementById('gemStage');
+  const gemCrystal = document.querySelector('.gem-crystal');
+
+  // Subtle interactive parallax effect on desktop
+  if (window.matchMedia('(min-width: 769px)').matches && gemStage && gemCrystal) {
+    gemStage.addEventListener('mousemove', (e) => {
+      const rect = gemStage.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      const tiltX = (y / (rect.height / 2)) * -14;
+      const tiltY = (x / (rect.width / 2)) * 14;
+
+      gemCrystal.style.transform = `perspective(600px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.08)`;
+      gemCrystal.style.transition = 'transform 0.1s ease-out';
+    });
+
+    gemStage.addEventListener('mouseleave', () => {
+      gemCrystal.style.transform = '';
+      gemCrystal.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    });
+  }
+});
+
+  </script>
+</body>
+</html>

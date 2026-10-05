@@ -1,0 +1,246 @@
+:root {
+  /* =========================================
+     DARK BACKGROUND ELEVATIONS
+     ========================================= */
+  --bg-primary: #0b0c10;          /* Deepest obsidian / Base canvas */
+  --bg-secondary: #12141a;        /* Card containers & product tiles */
+  --bg-surface: #181b22;          /* Hover states & dropdown panels */
+  --bg-surface-elevated: #222631; /* Modals, tooltips, sticky navigation */
+
+  /* Legacy/Semantic Aliases */
+  --bg-main: var(--bg-primary);
+
+  /* =========================================
+     METALLIC ACCENTS & PRECIOUS METALS
+     ========================================= */
+  --gold-primary: #d4af37;        /* Classic metallic gold / Primary CTA */
+  --gold-light: #f3e5ab;          /* Soft champagne gold / Highlights & active states */
+  --gold-dark: #aa820a;           /* Deep antique gold / Borders & pressed states */
+  --rose-gold: #e0a899;           /* Secondary metallic / Limited collection tags */
+  --platinum: #e5e8ec;            /* Cool silver-platinum accent */
+  --accent-copper: #c87a54;        /* Warm copper accent */
+  --accent-blush-soft: rgba(224, 168, 153, 0.12); /* Subtle rose-gold tint */
+
+  /* Primary Brand Aliases */
+  --primary: var(--gold-primary);
+  --primary-deep: var(--gold-dark);
+
+  /* =========================================
+     TYPOGRAPHY & CONTENT
+     ========================================= */
+  --text-primary: #f8f9fa;        /* Clean diamond white for main headings */
+  --text-secondary: #b8bcc8;      /* Soft platinum gray for descriptions */
+  --text-muted: #6c7280;          /* Subdued text for metadata & SKU codes */
+  --text-inverse: #0b0c10;        /* Dark text on gold buttons */
+
+  /* Semantic Typography Aliases */
+  --text-heading: var(--text-primary);
+  --text-body: var(--text-secondary);
+
+  /* =========================================
+     BORDERS, DIVIDERS & GLASS EFFECT
+     ========================================= */
+  --border-subtle: rgba(255, 255, 255, 0.08);     /* Subtle section dividers */
+  --border-gold: rgba(212, 175, 55, 0.35);        /* Featured product card borders */
+  --glass-bg: rgba(18, 20, 26, 0.65);             /* Glassmorphic backdrop */
+  --glass-border: rgba(212, 175, 55, 0.18);       /* Delicate gold rim */
+
+  /* =========================================
+     GEMSTONE STATUS & UTILITY TOKENS
+     ========================================= */
+  --gem-emerald: #10b981;         /* In-stock badge / Success states */
+  --gem-ruby: #e11d48;            /* Sale badge / Low stock alert */
+  --gem-sapphire: #3b82f6;        /* Certified appraisal / Information */
+
+  /* =========================================
+     ELEVATION, SHADOWS & GLOW EFFECTS
+     ========================================= */
+  --gold-glow: 0 0 24px rgba(212, 175, 55, 0.25);
+  --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.65);
+
+  /* =========================================
+     TYPOGRAPHY & ANIMATION TOKENS
+     ========================================= */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --fs-h1: clamp(2.5rem, 5vw, 4rem);
+  --fs-h2: clamp(1.85rem, 3.5vw, 2.5rem);
+  --fs-h3: clamp(1.35rem, 2vw, 1.75rem);
+  --fs-p: 1rem;
+  --lh-body: 1.65;
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =========================================
+   BASE RESETS & GLOBAL ELEMENTS
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background-color: var(--bg-main);
+  overflow-x: hidden;
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  border-left: 4px solid var(--accent-copper);
+  padding-left: 15px;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  font-size: var(--fs-p);
+  line-height: var(--lh-body);
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+}
+
+/* =========================================
+   BUTTON SYSTEMS & INTERACTION
+   ========================================= */
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-p);
+  font-weight: 600;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  outline: none;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn .btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-deep);
+  box-shadow: var(--shadow-lg), var(--gold-glow);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--primary);
+  border-color: var(--border-subtle);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-blush-soft);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary:hover .btn-icon {
+  transform: rotate(45deg);
+}
+
+/* Luxury Gold Variant */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+  color: var(--text-inverse);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: var(--gold-glow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+}
+
+/* =========================================
+   CARDS & CONTAINERS
+   ========================================= */
+.jewelry-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-gold);
+  color: var(--text-primary);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+}
+
+.jewelry-card:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-4px);
+}

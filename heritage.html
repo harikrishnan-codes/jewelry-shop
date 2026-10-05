@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURELIA | Luxury Jewelry</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="./assets/logo.webp">
+  
+  <link rel="stylesheet" href="root.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="heritage.css">
+
+
+</head>
+<body>
+
+  <!-- ================= LUXURY HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- Brand Logo (Always visible above drawers) -->
+      <a href="index.html" class="brand-logo">
+        <img src="./assets/logo 10.webp" alt="Aurelia Jewelry Logo" height="50" width="150">
+      </a>
+
+      <!-- Desktop Navigation (> 768px) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="desktop-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="collection.html" class="nav-link">Collections</a></li>
+          <li><a href="high.html" class="nav-link">High Jewelry</a></li>
+          <li><a href="heritage.html" class="nav-link">Heritage</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Sign In & Mobile Toggle) -->
+      <div class="header-actions">
+        <a href="signin.html" class="btn btn-gold btn-signin-desktop">
+          <i class="fa-regular fa-user"></i>
+          <span>Sign In</span>
+        </a>
+        
+        <!-- Hamburger Button (<= 768px only) -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer (<= 768px only) -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-inner">
+      <ul class="mobile-menu">
+        <li><a href="index.html" class="mobile-nav-link active"><span class="link-num">01</span>Home</a></li>
+        <li><a href="collection.html" class="mobile-nav-link"><span class="link-num">02</span>Collections</a></li>
+        <li><a href="high.html" class="mobile-nav-link"><span class="link-num">03</span>High Jewelry</a></li>
+        <li><a href="heritage.html" class="mobile-nav-link"><span class="link-num">04</span>Heritage</a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span class="link-num">05</span>Contact</a></li>
+      </ul>
+
+      <!-- Replaced drawer CTA with Sign In -->
+      <div class="drawer-footer">
+        <a href="signin.html" class="btn btn-gold drawer-cta">
+          <i class="fa-regular fa-user"></i>
+          <span>Sign In</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <section class="heritage-hero-section" id="heritageHero">
+  <!-- Immersive Archival Background Layer -->
+  <div class="heritage-hero-bg-wrapper">
+    <img 
+      src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2200&q=85" 
+      alt="Antique Goldsmith Atelier and Heritage Gemstones" 
+      class="heritage-hero-bg-img"
+    />
+    <div class="heritage-hero-vignette"></div>
+    <div class="heritage-hero-grain"></div>
+  </div>
+
+  <div class="heritage-hero-container">
+    <!-- Top Breadcrumb -->
+    <nav class="heritage-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" class="crumb-link">Home</a>
+      <span class="crumb-sep">/</span>
+      <span class="crumb-current">Our Heritage</span>
+    </nav>
+
+    <!-- Main Hero Text Overlay -->
+    <div class="heritage-hero-content">
+      <div class="heritage-hero-badge">
+        <span class="badge-star">✧</span>
+        <span>Atelier Provenance &bull; Est. 1994</span>
+        <span class="badge-star">✧</span>
+      </div>
+
+      <h1 class="heritage-hero-title">
+        <span>Three Decades of</span>
+        <span class="text-gold-gradient">Imperial Goldsmithing</span>
+      </h1>
+
+      <p class="heritage-hero-desc">
+        Born on a singular hand-carving bench in Erode, our maison unites classical temple filigree, antique Chola metallurgical traditions, and modern high-precision micro-pavé artistry across generations.
+      </p>
+
+      <!-- Archival Milestone Counter Strip -->
+      <div class="heritage-hero-metrics">
+        <div class="metric-item">
+          <span class="metric-number">1994</span>
+          <span class="metric-label">Foundation Year</span>
+        </div>
+        <div class="metric-sep" aria-hidden="true"></div>
+        <div class="metric-item">
+          <span class="metric-number">30+</span>
+          <span class="metric-label">Years of Mastery</span>
+        </div>
+        <div class="metric-sep" aria-hidden="true"></div>
+        <div class="metric-item">
+          <span class="metric-number">BIS 916</span>
+          <span class="metric-label">Hallmark Legacy</span>
+        </div>
+        <div class="metric-sep" aria-hidden="true"></div>
+        <div class="metric-item">
+          <span class="metric-number">100%</span>
+          <span class="metric-label">Conflict-Free</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="heritage-hero-actions">
+        <a href="#timeline" class="btn btn-gold btn-heritage-hero">
+          <i class="fa-solid fa-hourglass-half btn-icon"></i>
+          <span>Explore Timeline</span>
+        </a>
+        <a href="contact.html" class="btn btn-secondary btn-heritage-hero">
+          <i class="fa-regular fa-calendar-check btn-icon"></i>
+          <span>Visit Heritage Salon</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="motion-bench-section" id="microMotionBench">
+  <div class="motion-ambient-glow" aria-hidden="true"></div>
+
+  <div class="motion-container">
+    <div class="motion-header">
+      <span class="motion-badge">Kinetic Gemological Lab</span>
+      <h2 class="motion-title">Refractive Precision Controls</h2>
+      <p class="motion-subtitle">
+        Interact with dynamic refractive dispersion, surface reflection physics, and precision micro-laser prong seating in real time.
+      </p>
+    </div>
+
+    <div class="motion-lab-grid">
+      
+      <!-- Interactive 3D Refractive Gem Card -->
+      <div class="kinetic-specimen-card" id="refractiveCard" data-tilt>
+        <div class="prismatic-sheen" id="prismaticSheen" aria-hidden="true"></div>
+        <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+
+        <div class="specimen-stage">
+          <div class="gem-spotlight-halo"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=80" 
+            alt="Solitaire Diamond Scintillation Model" 
+            class="gem-kinetic-img" 
+            id="gemInteractiveImg"
+          />
+        </div>
+
+        <div class="specimen-hud-bar">
+          <div class="hud-item">
+            <span class="hud-label">Facet Scintillation</span>
+            <span class="hud-val" id="scintillationVal">98.4%</span>
+          </div>
+          <div class="hud-sep"></div>
+          <div class="hud-item">
+            <span class="hud-label">Critical Angle</span>
+            <span class="hud-val">24.4°</span>
+          </div>
+          <div class="hud-sep"></div>
+          <div class="hud-item">
+            <span class="hud-label">Refractive Power</span>
+            <span class="hud-val">2.417 η</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Micro-Interactive Control Modules -->
+      <div class="motion-controls-panel">
+        
+        <!-- Module 1: Dispersion Angle Toggle & Slider -->
+        <div class="motion-tool-card active" data-tool="dispersion">
+          <div class="tool-header">
+            <div class="tool-icon-wrap">
+              <i class="fa-solid fa-wand-magic-sparkles tool-icon"></i>
+            </div>
+            <div class="tool-info">
+              <h3 class="tool-title">Spectral Light Dispersion</h3>
+              <p class="tool-desc">Modulate prism wavelength refraction across crown angles.</p>
+            </div>
+          </div>
+          <div class="tool-interactive-area">
+            <div class="slider-row">
+              <span class="slider-tag">Prism Flare Angle</span>
+              <span class="slider-val-tag" id="dispersionVal">45°</span>
+            </div>
+            <div class="range-slider-track">
+              <input type="range" min="0" max="360" value="45" class="luxury-range" id="dispersionSlider" aria-label="Dispersion Angle Slider">
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2: Prongs Micro-Tension Toggle Buttons -->
+        <div class="motion-tool-card" data-tool="claws">
+          <div class="tool-header">
+            <div class="tool-icon-wrap">
+              <i class="fa-solid fa-microscope tool-icon"></i>
+            </div>
+            <div class="tool-info">
+              <h3 class="tool-title">Laser Claw Pressure Seat</h3>
+              <p class="tool-desc">Micro-tension alignment calibrated to 0.38mm tolerances.</p>
+            </div>
+          </div>
+          <div class="tool-interactive-area">
+            <div class="chip-toggle-group" id="clawToggleGroup">
+              <button class="tool-chip active" data-prong="8">
+                <span>8-Prong Vault</span>
+              </button>
+              <button class="tool-chip" data-prong="6">
+                <span>6-Prong Crown</span>
+              </button>
+              <button class="tool-chip" data-prong="4">
+                <span>4-Prong Minimalist</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3: Diamond Color Grade Shifter -->
+        <div class="motion-tool-card" data-tool="luminescence">
+          <div class="tool-header">
+            <div class="tool-icon-wrap">
+              <i class="fa-solid fa-gem tool-icon"></i>
+            </div>
+            <div class="tool-info">
+              <h3 class="tool-title">Photoluminescence Spectrum</h3>
+              <p class="tool-desc">Simulate ambient daylight, candlelight, and ultraviolet radiation.</p>
+            </div>
+          </div>
+          <div class="tool-interactive-area">
+            <div class="spectrum-swatch-row" id="lightSwatches">
+              <button class="spectrum-swatch active" data-light="daylight" title="Daylight 5500K">
+                <span class="swatch-color daylight-dot"></span>
+                <span class="swatch-name">Daylight</span>
+              </button>
+              <button class="spectrum-swatch" data-light="candle" title="Candlelight 2200K">
+                <span class="swatch-color candle-dot"></span>
+                <span class="swatch-name">Candle</span>
+              </button>
+              <button class="spectrum-swatch" data-light="uv" title="UV Chamber 365nm">
+                <span class="swatch-color uv-dot"></span>
+                <span class="swatch-name">UV Glow</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="motion-panel-cta">
+          <a href="contact.html" class="btn btn-gold btn-motion-submit">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Book Salon Gemological Session</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="clay-section" id="clayVaultSuite">
+  <div class="clay-ambient-glow" aria-hidden="true"></div>
+
+  <div class="clay-container">
+    <div class="clay-header">
+      <span class="clay-badge">Sculpted Tactile Vault</span>
+      <h2 class="clay-title">The Four Pillars of Longevity</h2>
+      <p class="clay-subtitle">
+        Soft volumetric depth meets obsidian luxury: tactile chambers engineered with multi-layered inner ambient light, inflated radii, and certified precious metals.
+      </p>
+    </div>
+
+    <div class="clay-grid">
+      
+      <!-- Clay Card 01 -->
+      <article class="clay-card">
+        <div class="clay-icon-pod">
+          <i class="fa-solid fa-gem clay-icon"></i>
+        </div>
+        <div class="clay-body">
+          <span class="clay-kicker">Pillar I &bull; Carbon Purity</span>
+          <h3 class="clay-card-title">Type IIa Selection</h3>
+          <p class="clay-desc">
+            Less than 1.8% of global diamonds meet our nitrogen-free criteria, delivering total water-transparency and raw optical fire.
+          </p>
+        </div>
+        <div class="clay-footer-pill">
+          <span class="clay-pill-dot"></span>
+          <span class="clay-pill-text">100% Conflict-Free GIA</span>
+        </div>
+      </article>
+
+      <!-- Clay Card 02 (Featured) -->
+      <article class="clay-card clay-card-featured">
+        <div class="clay-featured-badge">Atelier Signature</div>
+        <div class="clay-icon-pod clay-icon-gold">
+          <i class="fa-solid fa-fire-burner clay-icon"></i>
+        </div>
+        <div class="clay-body">
+          <span class="clay-kicker">Pillar II &bull; Metallurgy</span>
+          <h3 class="clay-card-title">Vacuum Induction 950 Pt</h3>
+          <p class="clay-desc">
+            Cold-forged at 1,768°C in zero-oxygen induction crucibles, producing ultra-dense, non-porous galleries that resist deformation.
+          </p>
+        </div>
+        <div class="clay-footer-pill">
+          <span class="clay-pill-dot"></span>
+          <span class="clay-pill-text">BIS 916 &bull; Hallmarked 950</span>
+        </div>
+      </article>
+
+      <!-- Clay Card 03 -->
+      <article class="clay-card">
+        <div class="clay-icon-pod">
+          <i class="fa-solid fa-microscope clay-icon"></i>
+        </div>
+        <div class="clay-body">
+          <span class="clay-kicker">Pillar III &bull; Tolerances</span>
+          <h3 class="clay-card-title">0.38mm Laser Claw Seats</h3>
+          <p class="clay-desc">
+            Prongs are sculpted under 40x optical stereomicroscopes to ensure zero shadow interference into the diamond pavilion.
+          </p>
+        </div>
+        <div class="clay-footer-pill">
+          <span class="clay-pill-dot"></span>
+          <span class="clay-pill-text">Micrometric Stability</span>
+        </div>
+      </article>
+
+      <!-- Clay Card 04 -->
+      <article class="clay-card">
+        <div class="clay-icon-pod">
+          <i class="fa-solid fa-shield-halved clay-icon"></i>
+        </div>
+        <div class="clay-body">
+          <span class="clay-kicker">Pillar IV &bull; Provenance</span>
+          <h3 class="clay-card-title">Dual Swiss Passports</h3>
+          <p class="clay-desc">
+            Every major stone carries independent certification dossiers from GIA and Gübelin, sealed in archival laser vaults.
+          </p>
+        </div>
+        <div class="clay-footer-pill">
+          <span class="clay-pill-dot"></span>
+          <span class="clay-pill-text">Lifetime Atelier Registry</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="mono-section" id="monochromeAtelier">
+  <div class="mono-grid-pattern" aria-hidden="true"></div>
+
+  <div class="mono-container">
+    
+    <!-- Editorial Asymmetrical Header -->
+    <header class="mono-header">
+      <div class="mono-kicker">
+        <span class="mono-kicker-num">04</span>
+        <span class="mono-kicker-line"></span>
+        <span class="mono-kicker-title">Black Standard &bull; Archival Edition</span>
+      </div>
+
+      <div class="mono-headline-row">
+        <h2 class="mono-title">
+          <span>Obsidian</span>
+          <span class="mono-accent-text">Sovereignty</span>
+        </h2>
+        <div class="mono-lead-wrap">
+          <p class="mono-lead-text">
+            Stripping jewelry of superfluous ornamentation to expose raw mineral geometry, ultra-dense platinum planes, and vacuum-cast black ruthenium accents.
+          </p>
+          <div class="mono-meta-stamp">
+            <span>DIN 950 PT</span>
+            <span class="meta-dot">&bull;</span>
+            <span>TYPE IIA</span>
+            <span class="meta-dot">&bull;</span>
+            <span>CHOLA COLD-HAMMER</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3-Column Minimalist High-Contrast Grid -->
+    <div class="mono-grid">
+
+      <!-- Column 01 -->
+      <article class="mono-card">
+        <div class="mono-card-head">
+          <span class="mono-serial">NO. 001 // RUTHENIUM</span>
+          <span class="mono-arrow">&nearr;</span>
+        </div>
+        <div class="mono-media-frame">
+          <img 
+            src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85" 
+            alt="Ruthenium Matte Solitaire" 
+            class="mono-img"
+          />
+          <div class="mono-img-overlay"></div>
+        </div>
+        <div class="mono-card-info">
+          <div class="mono-stone-class">5.20ct D Flawless</div>
+          <h3 class="mono-card-name">The Monolith Pavilion</h3>
+          <p class="mono-card-summary">
+            Mirror-polished natural titanium girdle held in place with razor-profile tension jaws, eliminating bezel shadow return completely.
+          </p>
+          <div class="mono-footer-metrics">
+            <span class="mono-metric-val">2.417 η</span>
+            <span class="mono-metric-key">Refractive Index</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Column 02 (Inverted Centerpiece) -->
+      <article class="mono-card mono-card-inverted">
+        <div class="mono-card-head">
+          <span class="mono-serial">NO. 002 // OBSIDIAN GOLD</span>
+          <span class="mono-arrow">&nearr;</span>
+        </div>
+        <div class="mono-media-frame">
+          <img 
+            src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85" 
+            alt="Black Rhodium Colombian Emerald" 
+            class="mono-img"
+          />
+          <div class="mono-img-overlay"></div>
+        </div>
+        <div class="mono-card-info">
+          <div class="mono-stone-class">6.45ct Muzo Octagon</div>
+          <h3 class="mono-card-name">Verdant Eclipse</h3>
+          <p class="mono-card-summary">
+            High-contrast dark rhodium plating directly over forged 950 platinum, illuminating intense untreated Colombian crystal saturation.
+          </p>
+          <div class="mono-footer-metrics">
+            <span class="mono-metric-val">1,768°C</span>
+            <span class="mono-metric-key">Induction Casting</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Column 03 -->
+      <article class="mono-card">
+        <div class="mono-card-head">
+          <span class="mono-serial">NO. 003 // SOLID PLATINUM</span>
+          <span class="mono-arrow">&nearr;</span>
+        </div>
+        <div class="mono-media-frame">
+          <img 
+            src="https://images.unsplash.com/photo-1611591475879-1144a2b952b2?auto=format&fit=crop&w=1000&q=85" 
+            alt="Cold-Forged Solid Platinum Band" 
+            class="mono-img"
+          />
+          <div class="mono-img-overlay"></div>
+        </div>
+        <div class="mono-card-info">
+          <div class="mono-stone-class">8.10ct Royal Blue</div>
+          <h3 class="mono-card-name">The Ceylon Ingot</h3>
+          <p class="mono-card-summary">
+            Architectural brutalist form sculpted from a single solid billet of cold-worked platinum, featuring a tension-suspended cushion sapphire.
+          </p>
+          <div class="mono-footer-metrics">
+            <span class="mono-metric-val">9.0 Mohs</span>
+            <span class="mono-metric-key">Corundum Purity</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Editorial Bottom Strip -->
+    <div class="mono-ledger-strip">
+      <div class="mono-ledger-col">
+        <span class="ledger-num">01</span>
+        <div class="ledger-desc">
+          <strong>Cold Vacuum Forging</strong>
+          <span>Zero-oxygen crystallization removes structural micro-voids completely.</span>
+        </div>
+      </div>
+      <div class="mono-ledger-col">
+        <span class="ledger-num">02</span>
+        <div class="ledger-desc">
+          <strong>Optical Girdle Laser</strong>
+          <span>GIA serials microscopic inscriptions directly on diamond edge lines.</span>
+        </div>
+      </div>
+      <div class="mono-ledger-col">
+        <span class="ledger-num">03</span>
+        <div class="ledger-desc">
+          <strong>Archival Provenance</strong>
+          <span>Encrypted cryptographic dossier delivered with each single acquisition.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="provenance-section" id="curatedProvenance">
+  <div class="prov-ambient-radial" aria-hidden="true"></div>
+
+  <div class="prov-container">
+    
+    <!-- Section Header -->
+    <header class="prov-header">
+      <span class="prov-badge">Archival Credentials</span>
+      <h2 class="prov-title">The Gemological Provenance Vault</h2>
+      <p class="prov-subtitle">
+        Every high jewelry creation is accompanied by an unbroken chain of custody, geological verification, and dual Swiss laboratory passports.
+      </p>
+    </header>
+
+    <div class="prov-accordion-layout">
+      
+      <!-- Left: Interactive Vertical Expansion Stack -->
+      <div class="prov-accordion-group" id="provenanceAccordion">
+
+        <!-- Item 01 (Active Default) -->
+        <article class="prov-card active" data-index="0" data-img="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85">
+          <div class="prov-card-header">
+            <div class="prov-index-block">
+              <span class="prov-num">01</span>
+              <span class="prov-category">Dual Swiss Certification</span>
+            </div>
+            <h3 class="prov-heading">GIA &amp; Gübelin Dossiers</h3>
+            <span class="prov-toggle-glyph" aria-hidden="true"></span>
+          </div>
+          <div class="prov-card-drawer">
+            <div class="prov-drawer-inner">
+              <p class="prov-desc">
+                Solitaires exceeding 3 carats undergo parallel spectroscopic analysis in Antwerp and Lucerne to certify natural color origin, Type IIa atomic purity, and zero thermal or chemical enhancement.
+              </p>
+              <div class="prov-tags">
+                <span class="prov-tag">Spectroscopy Report</span>
+                <span class="prov-tag">Nitrogen-Free Lattice</span>
+                <span class="prov-tag">Dual Passport</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 02 -->
+        <article class="prov-card" data-index="1" data-img="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85">
+          <div class="prov-card-header">
+            <div class="prov-index-block">
+              <span class="prov-num">02</span>
+              <span class="prov-category">Geographic Origin</span>
+            </div>
+            <h3 class="prov-heading">Boyacá &amp; Mogok Mine Protocols</h3>
+            <span class="prov-toggle-glyph" aria-hidden="true"></span>
+          </div>
+          <div class="prov-card-drawer">
+            <div class="prov-drawer-inner">
+              <p class="prov-desc">
+                Untreated Colombian emeralds and Burmese rubies are secured exclusively from documented veins, preserving classical geographic crystal traits like the velvety Muzo jardin and chromium glow.
+              </p>
+              <div class="prov-tags">
+                <span class="prov-tag">Single-Source Vein</span>
+                <span class="prov-tag">Untreated Corundum</span>
+                <span class="prov-tag">Chivor / Muzo Origin</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 03 -->
+        <article class="prov-card" data-index="2" data-img="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=85">
+          <div class="prov-card-header">
+            <div class="prov-index-block">
+              <span class="prov-num">03</span>
+              <span class="prov-category">National Standards</span>
+            </div>
+            <h3 class="prov-heading">BIS 916 &amp; 950 Platinum Hallmark</h3>
+            <span class="prov-toggle-glyph" aria-hidden="true"></span>
+          </div>
+          <div class="prov-card-drawer">
+            <div class="prov-drawer-inner">
+              <p class="prov-desc">
+                Solid precious metals carry microscopic government laser punches alongside our atelier master hallmark, confirming genuine alloy density, hypoallergenic traits, and zero porosity.
+              </p>
+              <div class="prov-tags">
+                <span class="prov-tag">BIS 916 Sovereign</span>
+                <span class="prov-tag">950 Pure Platinum</span>
+                <span class="prov-tag">Induction Cast</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 04 -->
+        <article class="prov-card" data-index="3" data-img="https://images.unsplash.com/photo-1611591475879-1144a2b952b2?auto=format&fit=crop&w=1200&q=85">
+          <div class="prov-card-header">
+            <div class="prov-index-block">
+              <span class="prov-num">04</span>
+              <span class="prov-category">Security &amp; Logistics</span>
+            </div>
+            <h3 class="prov-heading">Armored Malca-Amit Courier</h3>
+            <span class="prov-toggle-glyph" aria-hidden="true"></span>
+          </div>
+          <div class="prov-card-drawer">
+            <div class="prov-drawer-inner">
+              <p class="prov-desc">
+                From our bench to your residence or private bank vault, consignments travel under 100% Lloyd's insured custody with biometric escort hand-off and tamper-evident cryptographic seals.
+              </p>
+              <div class="prov-tags">
+                <span class="prov-tag">Armored Escort</span>
+                <span class="prov-tag">100% Insured</span>
+                <span class="prov-tag">Bank Vault Hand-Off</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Right: Responsive Dynamic Visual Showcase Frame -->
+      <div class="prov-showcase-panel">
+        <div class="prov-frame-border" aria-hidden="true"></div>
+        <div class="prov-media-wrapper">
+          <img 
+            src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85" 
+            alt="Provenance Documentation and Certified Solitaire" 
+            class="prov-active-img" 
+            id="provMainImage"
+          />
+          <div class="prov-vignette-layer"></div>
+
+          <!-- Bottom Provenance Badge -->
+          <div class="prov-status-floating">
+            <span class="prov-status-dot"></span>
+            <span class="prov-status-text" id="provStatusLabel">Verified Dossier &bull; Archive GIA #749201</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="heritage-cta-section" id="heritageSalonCta">
+  <div class="heritage-cta-radial-glow" aria-hidden="true"></div>
+
+  <div class="heritage-cta-container">
+    <div class="heritage-cta-monolith">
+      <!-- Decorative Ornate Inner Border -->
+      <div class="monolith-inner-frame" aria-hidden="true"></div>
+      
+      <!-- Corner Accents -->
+      <span class="corner-bracket top-left" aria-hidden="true"></span>
+      <span class="corner-bracket top-right" aria-hidden="true"></span>
+      <span class="corner-bracket bottom-left" aria-hidden="true"></span>
+      <span class="corner-bracket bottom-right" aria-hidden="true"></span>
+
+      <div class="heritage-cta-content">
+        <div class="heritage-cta-kicker">
+          <span class="kicker-star">✧</span>
+          <span>Private Salon Consultation &bull; Erode &bull; Geneva</span>
+          <span class="kicker-star">✧</span>
+        </div>
+
+        <h2 class="heritage-cta-heading">
+          <span>Inscribe Your Name In</span>
+          <span class="text-gold-gradient">Our Living Chronicle</span>
+        </h2>
+
+        <p class="heritage-cta-summary">
+          Whether commissioning a bespoke bridal parure rooted in ancestral Dravidian goldsmithing or acquiring an investment-grade Golconda solitaire, our master craftsmen await your vision.
+        </p>
+
+        <!-- Trust Badges Row -->
+        <div class="heritage-cta-badges">
+          <div class="badge-item">
+            <i class="fa-solid fa-certificate badge-icon"></i>
+            <span class="badge-label">BIS 916 &amp; 950 Pt Certified</span>
+          </div>
+          <div class="badge-separator" aria-hidden="true"></div>
+          <div class="badge-item">
+            <i class="fa-solid fa-gem badge-icon"></i>
+            <span class="badge-label">GIA &bull; Gübelin Provenance</span>
+          </div>
+          <div class="badge-separator" aria-hidden="true"></div>
+          <div class="badge-item">
+            <i class="fa-solid fa-shield-halved badge-icon"></i>
+            <span class="badge-label">Malca-Amit Insured Transit</span>
+          </div>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="heritage-cta-actions">
+          <a href="contact.html" class="btn btn-gold btn-cta-primary">
+            <i class="fa-regular fa-calendar-check btn-icon"></i>
+            <span>Schedule Private Viewing</span>
+          </a>
+          <a href="tel:+914242220000" class="btn btn-secondary btn-cta-secondary">
+            <i class="fa-solid fa-phone-volume btn-icon"></i>
+            <span>Call Master Goldsmith</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- ================= LUXURY FOOTER ================= -->
+<footer class="site-footer">
+  <!-- Subtle Top Gold Glow Divider -->
+  <div class="footer-divider-glow" aria-hidden="true"></div>
+
+  <div class="footer-container">
+    
+    <!-- Top Row: Brand & Multi-Column Navigation -->
+    <div class="footer-grid">
+      
+      <!-- Brand Column -->
+      <div class="footer-col footer-col-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="./assets/logo 10.webp" alt="Aurelia High Jewelry" height="48" width="144">
+        </a>
+        <p class="footer-tagline">
+          Handcrafting rare solitaires, certified diamonds, and bespoke heirloom jewelry since 1994. Every gemstone is ethically sourced and masterfully set.
+        </p>
+
+        <!-- Social Media Icons (Routing to error.html) -->
+        <div class="footer-social-links" aria-label="Social Media Channels">
+          <a href="error.html" class="social-icon" aria-label="Follow us on Instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="error.html" class="social-icon" aria-label="Follow us on Facebook" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="error.html" class="social-icon" aria-label="Follow us on Pinterest" title="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+          <a href="error.html" class="social-icon" aria-label="Follow us on X" title="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="error.html" class="social-icon" aria-label="Follow us on YouTube" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Navigation Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="collection.html" class="footer-link">Collections</a></li>
+          <li><a href="high.html" class="footer-link">High Jewelry</a></li>
+          <li><a href="heritage.html" class="footer-link">Heritage</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Atelier & Client Services Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="error.html" class="footer-link">Bespoke Commissions</a></li>
+          <li><a href="error.html" class="footer-link">Gemological Certification</a></li>
+          <li><a href="error.html" class="footer-link">Heirloom Restoration</a></li>
+          <li><a href="error.html" class="footer-link">Private Salon Booking</a></li>
+          <li><a href="error.html" class="footer-link">Appraisal & Valuations</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Atelier Presence Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Atelier</h4>
+        <div class="footer-contact-items">
+          <p class="contact-entry">
+            <i class="fa-solid fa-location-dot contact-icon"></i>
+            <span>Bespoke Salon, Erode, Tamil Nadu, India</span>
+          </p>
+          <p class="contact-entry">
+            <i class="fa-solid fa-phone contact-icon"></i>
+            <span>+91 (0) 424 222 0000</span>
+          </p>
+          <p class="contact-entry">
+            <i class="fa-solid fa-envelope contact-icon"></i>
+            <span>concierge@aureliajewelry.com</span>
+          </p>
+          <p class="contact-entry">
+            <i class="fa-regular fa-clock contact-icon"></i>
+            <span>Mon &ndash; Sat: 10:00 AM &ndash; 8:00 PM</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Row: Legal & Copyright -->
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 AURELIA High Jewelry Atelier. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="error.html" class="legal-link">Privacy Policy</a>
+        <span class="legal-separator">&bull;</span>
+        <a href="error.html" class="legal-link">Terms of Service</a>
+        <span class="legal-separator">&bull;</span>
+        <a href="error.html" class="legal-link">Conflict-Free Diamond Sourcing</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+   <!-- GSAP Core & ScrollTrigger CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+    <script src="heritage.js"></script>
+
+</body>
+</html>

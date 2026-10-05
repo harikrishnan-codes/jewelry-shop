@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Aurum &bull; Atelier Master Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* DARK BACKGROUND ELEVATIONS */
+      --bg-primary: #0b0c10;
+      --bg-secondary: #12141a;
+      --bg-surface: #181b22;
+      --bg-surface-elevated: #222631;
+      --bg-main: var(--bg-primary);
+
+      /* METALLIC ACCENTS & PRECIOUS METALS */
+      --gold-primary: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-dark: #aa820a;
+      --rose-gold: #e0a899;
+      --platinum: #e5e8ec;
+      --accent-copper: #c87a54;
+      --accent-blush-soft: rgba(224, 168, 153, 0.12);
+
+      --primary: var(--gold-primary);
+      --primary-deep: var(--gold-dark);
+
+      /* TYPOGRAPHY & CONTENT */
+      --text-primary: #f8f9fa;
+      --text-secondary: #b8bcc8;
+      --text-muted: #6c7280;
+      --text-inverse: #0b0c10;
+      --text-heading: var(--text-primary);
+      --text-body: var(--text-secondary);
+
+      /* BORDERS & GLASS */
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(212, 175, 55, 0.35);
+      --glass-bg: rgba(18, 20, 26, 0.75);
+      --glass-border: rgba(212, 175, 55, 0.18);
+
+      /* GEMSTONE STATUS */
+      --gem-emerald: #10b981;
+      --gem-ruby: #e11d48;
+      --gem-sapphire: #3b82f6;
+
+      /* SHADOWS */
+      --gold-glow: 0 0 24px rgba(212, 175, 55, 0.25);
+      --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+      --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.45);
+      --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.65);
+
+      /* FONTS */
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: 0.2s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      background-color: var(--bg-main);
+      color: var(--text-body);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Background Scroll Lock for Mobile Menu */
+    body.drawer-locked {
+      overflow: hidden !important;
+      touch-action: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Ambient Lighting */
+    .dashboard-ambient-glow {
+      position: fixed;
+      top: -10%;
+      right: -5%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* MAIN LAYOUT WRAPPER */
+    .app-layout {
+      display: flex;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    /* DESKTOP SIDEBAR */
+    .desktop-sidebar {
+      width: 280px;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .brand-area {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .brand-icon {
+      font-size: 1.5rem;
+      color: var(--gold-primary);
+    }
+
+    .brand-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-primary);
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .nav-item-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid transparent;
+      width: 100%;
+      text-align: left;
+      transition: var(--transition-fast);
+    }
+
+    .nav-item-btn:hover {
+      background: var(--bg-surface);
+      color: var(--gold-light);
+      border-color: var(--border-subtle);
+    }
+
+    .nav-item-btn.active {
+      background: rgba(212, 175, 55, 0.12);
+      border-color: var(--border-gold);
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .nav-item-btn i {
+      font-size: 1.05rem;
+      width: 20px;
+      text-align: center;
+      color: var(--gold-primary);
+    }
+
+    /* MAIN CONTENT AREA */
+    .main-viewport {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      width: 100%;
+    }
+
+    /* TOPBAR CONTAINER */
+    .topbar {
+      height: 80px;
+      background: rgba(11, 12, 16, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      min-width: 0;
+    }
+
+    .hamburger-btn {
+      display: none;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--gold-primary);
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.15rem;
+      transition: var(--transition-fast);
+    }
+
+    .hamburger-btn:hover {
+      border-color: var(--gold-primary);
+      background: var(--bg-surface-elevated);
+    }
+
+    .view-title-wrap {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .view-breadcrumb {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-copper);
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .view-heading {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* USER EMAIL BADGE */
+    .user-email-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-gold);
+      padding: 0.45rem 0.95rem;
+      border-radius: 9999px;
+      max-width: 260px;
+    }
+
+    .status-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gem-emerald);
+      box-shadow: 0 0 8px var(--gem-emerald);
+      flex-shrink: 0;
+    }
+
+    .active-email-text {
+      font-size: 0.8rem;
+      color: var(--gold-light);
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      direction: rtl;
+      text-align: left;
+    }
+
+    .btn-icon-round {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      transition: var(--transition-fast);
+      flex-shrink: 0;
+    }
+
+    .btn-icon-round:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+
+    .notification-dot {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gem-ruby);
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.65rem 1.25rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      outline: none;
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+      color: var(--text-inverse);
+      box-shadow: var(--gold-glow);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 28px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface);
+      color: var(--gold-light);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-blush-soft);
+      border-color: var(--gold-primary);
+      transform: translateY(-2px);
+    }
+
+    /* CONTENT SECTIONS WRAPPER */
+    .dashboard-content-body {
+      padding: 2rem;
+      flex: 1;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .content-panel {
+      display: none;
+    }
+
+    .content-panel.active {
+      display: block;
+      animation: fadeInPanel 0.35s ease;
+    }
+
+    @keyframes fadeInPanel {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* KPI METRICS GRID */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+
+    .jewelry-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-gold);
+      color: var(--text-primary);
+      border-radius: 8px;
+      box-shadow: var(--card-shadow);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 0;
+    }
+
+    .kpi-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .kpi-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .kpi-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .kpi-value {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .kpi-subtext {
+      font-size: 0.76rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+    }
+
+    .text-emerald { color: var(--gem-emerald); font-weight: 600; }
+    .text-gold { color: var(--gold-light); font-weight: 600; }
+
+    /* TABLE SECTION */
+    .table-container-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      box-shadow: var(--card-shadow);
+      padding: 1.75rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .card-title-header {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .card-title-header h2 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      border-left: 4px solid var(--accent-copper);
+      padding-left: 12px;
+      color: var(--text-primary);
+    }
+
+    .card-title-header p {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    /* HORIZONTAL TABLE WRAPPER WITH SCROLL SHIELD */
+    .table-responsive-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .custom-admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 640px; /* Clean min-width to trigger clean horizontal scroll inside card */
+    }
+
+    .custom-admin-table th {
+      background: var(--bg-surface);
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 1rem;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .custom-admin-table td {
+      padding: 1rem;
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+    }
+
+    .custom-admin-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .custom-admin-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-in-vault {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--gem-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-dispatch {
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--gold-light);
+      border: 1px solid var(--border-gold);
+    }
+
+    /* MOBILE SLIDE-OUT DRAWER */
+    .mobile-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: min(85vw, 320px);
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border-gold);
+      z-index: 1000;
+      transform: translateX(-100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem 1.5rem;
+      box-shadow: 10px 0 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .mobile-drawer.active {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
+    .drawer-close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.35rem;
+      cursor: pointer;
+    }
+
+    .drawer-user-info {
+      padding: 1rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .drawer-user-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+
+    .drawer-user-email {
+      font-size: 0.82rem;
+      color: var(--gold-light);
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    /* RESPONSIVE BREAKPOINT - 768px */
+    @media (max-width: 768px) {
+      .desktop-sidebar {
+        display: none;
+      }
+
+      .hamburger-btn {
+        display: inline-flex;
+      }
+
+      .topbar {
+        padding: 0 1rem;
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        gap: 0.6rem;
+      }
+
+      .topbar-left {
+        gap: 0.75rem;
+        flex: 1 1 auto;
+      }
+
+      .view-heading {
+        font-size: 1.15rem;
+      }
+
+      .view-breadcrumb {
+        font-size: 0.62rem;
+      }
+
+      .topbar-right {
+        gap: 0.5rem;
+      }
+
+      /* Compact email pill on mobile */
+      .user-email-pill {
+        max-width: 140px;
+        padding: 0.35rem 0.65rem;
+      }
+
+      .active-email-text {
+        font-size: 0.72rem;
+      }
+
+      .btn-new-commission {
+        display: none; /* Accessible in mobile drawer and fast actions */
+      }
+
+      .dashboard-content-body {
+        padding: 1.25rem 1rem;
+      }
+
+      .kpi-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .jewelry-card {
+        padding: 1.25rem;
+      }
+
+      .table-container-card {
+        padding: 1.25rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard-ambient-glow" aria-hidden="true"></div>
+
+  <!-- MOBILE SLIDE-OUT DRAWER -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="drawer-header">
+        <div class="brand-area" style="margin-bottom: 0;">
+          <i class="fa-solid fa-gem brand-icon"></i>
+          <span class="brand-title">STACKLY</span>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Navigation">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-user-info">
+        <div class="drawer-user-label">Authenticated Master</div>
+        <div class="drawer-user-email logged-in-email-display">director@maison-aurum.com</div>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <button class="nav-item-btn active" data-target="overview">
+              <i class="fa-solid fa-chart-pie"></i>
+              <span>Dashboard Overview</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" data-target="inventory">
+              <i class="fa-solid fa-ring"></i>
+              <span>High Jewelry Vault</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" data-target="orders">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Bespoke Orders</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" data-target="clients">
+              <i class="fa-solid fa-chess-queen"></i>
+              <span>Patron Portfolio</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="error.html" class="btn btn-gold" style="width: 100%;">
+        <i class="fa-solid fa-plus"></i>
+        <span>New Commission</span>
+      </a>
+      <a href="auth.html" class="btn btn-secondary" style="width: 100%;">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <span>Lock Vault & Sign Out</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- APP VIEWPORT -->
+  <div class="app-layout">
+    
+    <!-- DESKTOP SIDEBAR -->
+    <aside class="desktop-sidebar">
+      <div>
+        <div class="brand-area">
+          <i class="fa-solid fa-gem brand-icon"></i>
+          <span class="brand-title">STACKLY</span>
+        </div>
+
+        <nav>
+          <ul class="nav-menu">
+            <li>
+              <button class="nav-item-btn active" data-target="overview">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard Overview</span>
+              </button>
+            </li>
+            <li>
+              <button class="nav-item-btn" data-target="inventory">
+                <i class="fa-solid fa-ring"></i>
+                <span>High Jewelry Vault</span>
+              </button>
+            </li>
+            <li>
+              <button class="nav-item-btn" data-target="orders">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Bespoke Orders</span>
+              </button>
+            </li>
+            <li>
+              <button class="nav-item-btn" data-target="clients">
+                <i class="fa-solid fa-chess-queen"></i>
+                <span>Patron Portfolio</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+        <a href="auth.html" class="btn btn-secondary" style="width: 100%;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Secure Sign Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN VIEWPORT -->
+    <main class="main-viewport">
+      
+      <!-- TOPBAR NAVIGATION -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="hamburger-btn" id="drawerOpenBtn" aria-label="Open Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          
+          <div class="view-title-wrap">
+            <span class="view-breadcrumb">Maison Aurum / Paris Atelier</span>
+            <h1 class="view-heading" id="currentViewHeading">Dashboard Overview</h1>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Real-Time Logged-in Email Pill -->
+          <div class="user-email-pill" title="Active Authenticated Session">
+            <span class="status-pulse"></span>
+            <span class="active-email-text logged-in-email-display">director@maison-aurum.com</span>
+          </div>
+
+          <a href="error.html" class="btn-icon-round" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-dot"></span>
+          </a>
+
+          <a href="error.html" class="btn btn-gold btn-new-commission">
+            <i class="fa-solid fa-plus"></i>
+            <span>New Commission</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- CONTENT SECTIONS -->
+      <div class="dashboard-content-body">
+        
+        <!-- SECTION 1: OVERVIEW -->
+        <section class="content-panel active" id="overviewPanel">
+          <div class="kpi-grid">
+            <div class="jewelry-card">
+              <div class="kpi-header">
+                <span class="kpi-label">Valuation On Bench</span>
+                <div class="kpi-icon-box"><i class="fa-solid fa-coins"></i></div>
+              </div>
+              <div class="kpi-value">&euro; 1,482,900</div>
+              <div class="kpi-subtext text-emerald">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <span>+14.6% vs. Paris target</span>
+              </div>
+            </div>
+
+            <div class="jewelry-card">
+              <div class="kpi-header">
+                <span class="kpi-label">Certified Solitaires</span>
+                <div class="kpi-icon-box"><i class="fa-regular fa-gem"></i></div>
+              </div>
+              <div class="kpi-value">64 Stones</div>
+              <div class="kpi-subtext text-gold">
+                <span>GIA / HRD Sealed in Vault</span>
+              </div>
+            </div>
+
+            <div class="jewelry-card">
+              <div class="kpi-header">
+                <span class="kpi-label">Active Bespoke Orders</span>
+                <div class="kpi-icon-box"><i class="fa-regular fa-clock"></i></div>
+              </div>
+              <div class="kpi-value">12 Pieces</div>
+              <div class="kpi-subtext">
+                <span class="text-emerald">&bull; 4 Hand Setting</span>
+                <span>8 In Wax Casting</span>
+              </div>
+            </div>
+
+            <div class="jewelry-card">
+              <div class="kpi-header">
+                <span class="kpi-label">VIP Client Portfolio</span>
+                <div class="kpi-icon-box"><i class="fa-regular fa-user"></i></div>
+              </div>
+              <div class="kpi-value">189 Patrons</div>
+              <div class="kpi-subtext text-gold">
+                <span>HNW Tier 1 Concierge</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RECENT DISPATCHES TABLE -->
+          <div class="table-container-card">
+            <div class="card-title-header">
+              <h2>Recent High Jewelry Dispatches</h2>
+              <p>Verified GIA certifications & private courier manifests</p>
+            </div>
+
+            <!-- Responsive Wrapper Prevents Mobile Table Overflow -->
+            <div class="table-responsive-wrapper">
+              <table class="custom-admin-table">
+                <thead>
+                  <tr>
+                    <th>SKU & Piece Name</th>
+                    <th>Client</th>
+                    <th>Precious Metal</th>
+                    <th>Total Carat</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div style="font-weight: 600; color: var(--text-primary);">Solitaire Royale Noir</div>
+                      <div style="font-size: 0.72rem; color: var(--text-muted);">SKU-AU-8891</div>
+                    </td>
+                    <td>
+                      <div>Baroness von Heller</div>
+                      <div style="font-size: 0.72rem; color: var(--text-muted);">Vienna, AT</div>
+                    </td>
+                    <td>18K Rose Gold</td>
+                    <td>3.45 ct (VVS1)</td>
+                    <td><span class="badge-status badge-dispatch">In Transit</span></td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Manifest</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="font-weight: 600; color: var(--text-primary);">Imperial Emerald Cascade</div>
+                      <div style="font-size: 0.72rem; color: var(--text-muted);">SKU-EM-3042</div>
+                    </td>
+                    <td>
+                      <div>Lord Sterling Vance</div>
+                      <div style="font-size: 0.72rem; color: var(--text-muted);">London, UK</div>
+                    </td>
+                    <td>Platinum 950</td>
+                    <td>7.80 ct Colombian</td>
+                    <td><span class="badge-status badge-in-vault">Vault Sealed</span></td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Inspect</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="font-weight: 600; color: var(--text-primary);">Aurum Celestial Tiara</div>
+                      <div style="font-size: 0.72rem; color: var(--text-muted);">SKU-TI-0019</div>
+                    </td>
+                    <td>
+                      <div>Princess Diane d'Orsay</div>
+                      <div style="font-size: 0.72rem; color: var(--text-muted);">Monaco, MC</div>
+                    </td>
+                    <td>24K Yellow Gold</td>
+                    <td>12.20 ct D-Flawless</td>
+                    <td><span class="badge-status badge-in-vault">Secured</span></td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Inspect</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: INVENTORY -->
+        <section class="content-panel" id="inventoryPanel">
+          <div class="table-container-card">
+            <div class="card-title-header">
+              <h2>High Jewelry Vault Reserve</h2>
+              <p>Certified loose diamonds, colored gemstones, and bullion ingots</p>
+            </div>
+            <div class="table-responsive-wrapper">
+              <table class="custom-admin-table">
+                <thead>
+                  <tr>
+                    <th>Gem / Metal Ref</th>
+                    <th>Cut & Clarity</th>
+                    <th>Origin</th>
+                    <th>Carat / Grams</th>
+                    <th>Appraisal</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>D-Color Cushion Solitaire</strong></td>
+                    <td>Excellent / IF</td>
+                    <td>Kimberley Mine, ZA</td>
+                    <td>4.12 ct</td>
+                    <td>&euro; 185,000</td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Details</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Royal Blue Burmese Sapphire</strong></td>
+                    <td>Cushion Mixed / VVS</td>
+                    <td>Mogok Valley, MM</td>
+                    <td>6.50 ct</td>
+                    <td>&euro; 94,000</td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Details</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pure 999.9 Gold Bullion Ingot</strong></td>
+                    <td>Good Delivery Bar</td>
+                    <td>Argor-Heraeus, CH</td>
+                    <td>1,000 g</td>
+                    <td>&euro; 71,200</td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Details</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: BESPOKE ORDERS -->
+        <section class="content-panel" id="ordersPanel">
+          <div class="table-container-card">
+            <div class="card-title-header">
+              <h2>Bespoke Commissions & Bench Queue</h2>
+              <p>Active workshop assignments under master goldsmith inspection</p>
+            </div>
+            <div class="table-responsive-wrapper">
+              <table class="custom-admin-table">
+                <thead>
+                  <tr>
+                    <th>Commission Order</th>
+                    <th>Master Jeweler</th>
+                    <th>Phase</th>
+                    <th>Delivery Deadline</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Art Deco Oval Pavé Setting</strong></td>
+                    <td>Jean-Luc Mercier</td>
+                    <td><span class="badge-status badge-dispatch">Micro-Pavé Setting</span></td>
+                    <td>Oct 18, 2026</td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Timeline</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Solitaire Engagement Platinum Ring</strong></td>
+                    <td>Antoine Renaud</td>
+                    <td><span class="badge-status badge-in-vault">Laser Engraving</span></td>
+                    <td>Oct 24, 2026</td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Timeline</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: PATRONS -->
+        <section class="content-panel" id="clientsPanel">
+          <div class="table-container-card">
+            <div class="card-title-header">
+              <h2>Private Client Liaison Portfolio</h2>
+              <p>Direct communication channels for salon consultations</p>
+            </div>
+            <div class="table-responsive-wrapper">
+              <table class="custom-admin-table">
+                <thead>
+                  <tr>
+                    <th>Patron Name</th>
+                    <th>Tier</th>
+                    <th>Primary Residence</th>
+                    <th>Total Acquisitions</th>
+                    <th>Liaison</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Baroness von Heller</strong></td>
+                    <td>Imperial Tier 1</td>
+                    <td>Vienna, Austria</td>
+                    <td>&euro; 420,000</td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Connect</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lord Sterling Vance</strong></td>
+                    <td>Imperial Tier 1</td>
+                    <td>Mayfair, London</td>
+                    <td>&euro; 310,000</td>
+                    <td><a href="error.html" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.72rem;">Connect</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. EXTRACT & DISPLAY LOGGED-IN EMAIL DYNAMICALLY
+      function getLoggedInUserEmail() {
+        // Priority 1: Check URL Parameters (?email=...)
+        const params = new URLSearchParams(window.location.search);
+        const emailParam = params.get('email');
+        if (emailParam && emailParam.trim() !== '') {
+          return decodeURIComponent(emailParam.trim());
+        }
+
+        // Priority 2: Check sessionStorage set by your login script
+        const sessionEmail = sessionStorage.getItem('activeJewelryUserEmail');
+        if (sessionEmail && sessionEmail.trim() !== '') {
+          return sessionEmail.trim();
+        }
+
+        // Priority 3: Check registered user in localStorage
+        const localUser = localStorage.getItem('registeredJewelryUser');
+        if (localUser) {
+          try {
+            const parsed = JSON.parse(localUser);
+            if (parsed.email) return parsed.email.trim();
+          } catch (e) {}
+        }
+
+        // Fallback default
+        return 'director@maison-aurum.com';
+      }
+
+      const activeEmail = getLoggedInUserEmail();
+      document.querySelectorAll('.logged-in-email-display').forEach(el => {
+        el.textContent = activeEmail;
+      });
+
+      // 2. MOBILE HAMBURGER MENU & BACKGROUND SCROLL LOCK
+      const drawerOpenBtn = document.getElementById('drawerOpenBtn');
+      const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const drawerOverlay = document.getElementById('drawerOverlay');
+
+      function openDrawer() {
+        mobileDrawer.classList.add('active');
+        drawerOverlay.classList.add('active');
+        document.body.classList.add('drawer-locked'); // Locks body scroll completely
+      }
+
+      function closeDrawer() {
+        mobileDrawer.classList.remove('active');
+        drawerOverlay.classList.remove('active');
+        document.body.classList.remove('drawer-locked'); // Restores body scroll
+      }
+
+      if (drawerOpenBtn) drawerOpenBtn.addEventListener('click', openDrawer);
+      if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+      if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+
+      // 3. TAB VIEW SWITCHING FOR DESKTOP & MOBILE NAV LINKS
+      const navButtons = document.querySelectorAll('.nav-item-btn');
+      const panels = {
+        overview: document.getElementById('overviewPanel'),
+        inventory: document.getElementById('inventoryPanel'),
+        orders: document.getElementById('ordersPanel'),
+        clients: document.getElementById('clientsPanel')
+      };
+
+      const headingMap = {
+        overview: 'Dashboard Overview',
+        inventory: 'High Jewelry Vault Reserve',
+        orders: 'Bespoke Commissions & Bench Queue',
+        clients: 'Private Client Liaison Portfolio'
+      };
+
+      navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-target');
+          if (!target || !panels[target]) return;
+
+          // Sync active class on all nav buttons (both desktop and mobile)
+          navButtons.forEach(b => {
+            if (b.getAttribute('data-target') === target) {
+              b.classList.add('active');
+            } else {
+              b.classList.remove('active');
+            }
+          });
+
+          // Switch panel visibility
+          Object.values(panels).forEach(panel => {
+            if (panel) panel.classList.remove('active');
+          });
+          panels[target].classList.add('active');
+
+          // Update header title text
+          const headingElem = document.getElementById('currentViewHeading');
+          if (headingElem && headingMap[target]) {
+            headingElem.textContent = headingMap[target];
+          }
+
+          // Auto-close mobile drawer & unlock background scroll
+          closeDrawer();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

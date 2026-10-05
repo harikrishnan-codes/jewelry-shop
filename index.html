@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURELIA | Luxury Jewelry</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="./assets/logo.webp">
+
+  <link rel="stylesheet" href="root.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= LUXURY HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo (Always visible above drawers) -->
+      <a href="index.html" class="brand-logo">
+        <img src="./assets/logo 10.webp" alt="Aurelia Jewelry Logo" height="50" width="150">
+      </a>
+
+      <!-- Desktop Navigation (> 768px) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="desktop-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="collection.html" class="nav-link">Collections</a></li>
+          <li><a href="high.html" class="nav-link">High Jewelry</a></li>
+          <li><a href="heritage.html" class="nav-link">Heritage</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Sign In & Mobile Toggle) -->
+      <div class="header-actions">
+        <a href="auth.html" class="btn btn-gold btn-signin-desktop">
+          <i class="fa-regular fa-user"></i>
+          <span>Sign In</span>
+        </a>
+
+        <!-- Hamburger Button (<= 768px only) -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer (<= 768px only) -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-inner">
+      <ul class="mobile-menu">
+        <li><a href="index.html" class="mobile-nav-link active"><span class="link-num">01</span>Home</a></li>
+        <li><a href="collection.html" class="mobile-nav-link"><span class="link-num">02</span>Collections</a></li>
+        <li><a href="high.html" class="mobile-nav-link"><span class="link-num">03</span>High Jewelry</a></li>
+        <li><a href="heritage.html" class="mobile-nav-link"><span class="link-num">04</span>Heritage</a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><span class="link-num">05</span>Contact</a></li>
+      </ul>
+
+      <!-- Replaced drawer CTA with Sign In -->
+      <div class="drawer-footer">
+        <a href="auth.html" class="btn btn-gold drawer-cta">
+          <i class="fa-regular fa-user"></i>
+          <span>Sign In</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <section class="hero-section" id="hero">
+    <div class="hero-video-wrapper">
+      <video class="hero-video" autoplay muted loop playsinline
+        poster="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1920&q=80">
+        <source src="./assets/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span class="badge-text">Haute Joaillerie 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-line"><span>Elegance Sculpted</span></span>
+          <span class="title-line"><span class="text-gold-gradient">In Pure Radiance</span></span>
+        </h1>
+
+        <p class="hero-description">
+          Rare solitaire diamonds and architectural high jewelry, handcrafted in platinum and 24-karat gold with
+          uncompromising gemological excellence.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="collection.html" class="btn btn-gold hero-btn">
+            <span>Explore Collections</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+          <a href="contact.html" class="btn btn-secondary hero-btn">
+            <span>Private Salon</span>
+            <i class="fa-solid fa-gem"></i>
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-val">100%</span>
+            <span class="metric-lbl">Conflict-Free</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-val">GIA</span>
+            <span class="metric-lbl">Certified Solitaires</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-val">1994</span>
+            <span class="metric-lbl">Heritage Atelier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#collections" class="hero-scroll-indicator" aria-label="Scroll Down">
+      <span class="scroll-track">
+        <span class="scroll-pip"></span>
+      </span>
+      <span class="scroll-caption">Discover</span>
+    </a>
+  </section>
+
+
+
+
+
+
+  <section class="marquee-section" aria-label="Brand Highlights Marquee">
+    <div class="marquee-glow-line top" aria-hidden="true"></div>
+
+    <div class="marquee-track-container" id="marqueeContainer">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <div class="marquee-item">
+            <span class="gem-icon">✧</span>
+            <span class="marquee-text">GIA Certified Solitaires</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✦</span>
+            <span class="marquee-text">24K Solid Gold & Platinum</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✧</span>
+            <span class="marquee-text">Conflict-Free Sourcing</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✦</span>
+            <span class="marquee-text">Bespoke Atelier Craft</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✧</span>
+            <span class="marquee-text">Royal Colombian Emeralds</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✦</span>
+            <span class="marquee-text">Insured Global Courier</span>
+          </div>
+        </div>
+
+        <div class="marquee-group" aria-hidden="true">
+          <div class="marquee-item">
+            <span class="gem-icon">✧</span>
+            <span class="marquee-text">GIA Certified Solitaires</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✦</span>
+            <span class="marquee-text">24K Solid Gold & Platinum</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✧</span>
+            <span class="marquee-text">Conflict-Free Sourcing</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✦</span>
+            <span class="marquee-text">Bespoke Atelier Craft</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✧</span>
+            <span class="marquee-text">Royal Colombian Emeralds</span>
+          </div>
+          <div class="marquee-item">
+            <span class="gem-icon">✦</span>
+            <span class="marquee-text">Insured Global Courier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee-glow-line bottom" aria-hidden="true"></div>
+  </section>
+
+
+
+
+
+
+
+  <section class="showcase-carousel-section" id="collections">
+    <div class="carousel-glow-bg" aria-hidden="true"></div>
+
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <span class="carousel-badge">Haute Joaillerie Atelier</span>
+        <h2 class="carousel-title">Signature Haute Creations</h2>
+        <p class="carousel-subtitle">
+          Rare gemstones and architectural metalwork designed in platinum, 24k solid gold, and natural solitaires.
+        </p>
+      </div>
+
+      <div class="carousel-stage-wrapper">
+        <div class="carousel-stage" id="carouselStage">
+
+          <article class="carousel-card card-active" data-index="0">
+            <div class="card-inner">
+              <div class="card-glow-halo"></div>
+              <div class="card-image-wrap">
+                <img src="./assets/img 1.webp" alt="Royal Solitaire Ring" class="card-img" />
+                <div class="card-tag">Certified GIA</div>
+              </div>
+              <div class="card-body">
+                <span class="card-category">Solitaire Diamond</span>
+                <h3 class="card-heading">The Luminary Solitaire</h3>
+                <p class="card-desc">Hand-sculpted in 950 Platinum with a 3.4-carat oval brilliant diamond.</p>
+                <div class="card-foot">
+                  <span class="card-price">₹14,50,000</span>
+                  <a href="collection.html" class="btn btn-gold btn-card-cta">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="carousel-card card-next" data-index="1">
+            <div class="card-inner">
+              <div class="card-glow-halo"></div>
+              <div class="card-image-wrap">
+                <img src="./assets/img 2.webp" alt="Colombian Emerald Pendant" class="card-img" />
+                <div class="card-tag">Bespoke Cut</div>
+              </div>
+              <div class="card-body">
+                <span class="card-category">Precious Emerald</span>
+                <h3 class="card-heading">Verdant Sovereign Necklace</h3>
+                <p class="card-desc">Royal Muzó Colombian emerald surrounded by a constellation of micropavé diamonds.
+                </p>
+                <div class="card-foot">
+                  <span class="card-price">₹28,80,000</span>
+                  <a href="collection.html" class="btn btn-gold btn-card-cta">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="carousel-card card-hidden" data-index="2">
+            <div class="card-inner">
+              <div class="card-glow-halo"></div>
+              <div class="card-image-wrap">
+                <img src="./assets/img 3.webp" alt="Cushion Sapphire Cuff" class="card-img" />
+                <div class="card-tag">Limited Edition</div>
+              </div>
+              <div class="card-body">
+                <span class="card-category">Ceylon Sapphire</span>
+                <h3 class="card-heading">Aura Sapphire Bangle</h3>
+                <p class="card-desc">24-karat solid yellow gold cuff embedded with unheated cornflower blue sapphires.
+                </p>
+                <div class="card-foot">
+                  <span class="card-price">₹18,20,000</span>
+                  <a href="collection.html" class="btn btn-gold btn-card-cta">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="carousel-card card-prev" data-index="3">
+            <div class="card-inner">
+              <div class="card-glow-halo"></div>
+              <div class="card-image-wrap">
+                <img src="./assets/img 4.webp" alt="Rose Gold Diamond Drops" class="card-img" />
+                <div class="card-tag">Masterpiece</div>
+              </div>
+              <div class="card-body">
+                <span class="card-category">Rose Gold Drop</span>
+                <h3 class="card-heading">Étoile Cascade Earrings</h3>
+                <p class="card-desc">Layered rose-gold drops engineered with articulated baguette and marquise cuts.</p>
+                <div class="card-foot">
+                  <span class="card-price">₹9,75,000</span>
+                  <a href="collection.html" class="btn btn-gold btn-card-cta">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn prev-btn" id="carouselPrevBtn" aria-label="Previous Creation">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-indicators" id="carouselIndicators">
+          <span class="indicator-dot active" data-index="0"></span>
+          <span class="indicator-dot" data-index="1"></span>
+          <span class="indicator-dot" data-index="2"></span>
+          <span class="indicator-dot" data-index="3"></span>
+        </div>
+
+        <button class="carousel-btn next-btn" id="carouselNextBtn" aria-label="Next Creation">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="craft-section" id="craftsmanship">
+    <div class="craft-ambient-radial" aria-hidden="true"></div>
+
+    <div class="craft-container">
+      <div class="craft-header">
+        <span class="craft-badge">Master Goldsmithing</span>
+        <h2 class="craft-title">The High Jewelry Atelier</h2>
+        <p class="craft-subtitle">
+          Bridging century-old Florentine micro-pavé techniques with aerospace-grade metallurgy.
+        </p>
+      </div>
+
+      <div class="craft-grid">
+
+        <!-- Vault Specimen Display (Velvet Tray Card) -->
+        <div class="craft-vault-card">
+          <div class="vault-bezel">
+            <div class="vault-inner-lining">
+              <div class="specimen-tag">
+                <span class="specimen-dot"></span>
+                <span>Specimen #AU-950</span>
+              </div>
+
+              <div class="specimen-pedestal">
+                <div class="pedestal-cushion">
+                  <div class="gem-spotlight"></div>
+                  <img src="./assets/img 5.webp" alt="Certified Solitaire Diamond Specimen" class="specimen-img" />
+                </div>
+              </div>
+
+              <div class="specimen-plate">
+                <div class="screw screw-tl"></div>
+                <div class="screw screw-tr"></div>
+                <div class="screw screw-bl"></div>
+                <div class="screw screw-br"></div>
+                <div class="plate-engraving">
+                  <span class="plate-title">Flawless 3.42ct Cushion Solitaire</span>
+                  <span class="plate-meta">D-Color &bull; VVS1 &bull; 950 Solid Platinum Prong</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atelier Tooling & Benchwork Ledger -->
+        <div class="craft-details-panel">
+
+          <div class="spec-tab-card active" data-step="1">
+            <div class="spec-tab-inset">
+              <div class="spec-step-gauge">
+                <span class="gauge-dial">01</span>
+                <span class="gauge-label">Metallurgy</span>
+              </div>
+              <div class="spec-text">
+                <h3 class="spec-heading">Cold-Forged 950 Platinum</h3>
+                <p class="spec-body">
+                  High-density cold rolled platinum forged at 1,768°C to eliminate molecular porosity, yielding mirror
+                  polishes that resist dulling across generations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="spec-tab-card" data-step="2">
+            <div class="spec-tab-inset">
+              <div class="spec-step-gauge">
+                <span class="gauge-dial">02</span>
+                <span class="gauge-label">Setting</span>
+              </div>
+              <div class="spec-text">
+                <h3 class="spec-heading">Acoustic Micro-Pavé Pronging</h3>
+                <p class="spec-body">
+                  Secured under 40x stereomicroscopes with 0.4mm wire prongs. Stones are micro-seated into honeycombed
+                  under-galleries for maximum light transmission.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="spec-tab-card" data-step="3">
+            <div class="spec-tab-inset">
+              <div class="spec-step-gauge">
+                <span class="gauge-dial">03</span>
+                <span class="gauge-label">Certification</span>
+              </div>
+              <div class="spec-text">
+                <h3 class="spec-heading">Micro-Laser Hallmark Seal</h3>
+                <p class="spec-body">
+                  Laser-etched on the diamond girdle with certified GIA serials, paired with 24k hallmark punches
+                  authenticated by the Bureau of Indian Standards (BIS).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hallmark Brass Seal -->
+          <div class="atelier-seal-row">
+            <div class="brass-seal">
+              <div class="seal-inner-bevel">
+                <i class="fa-solid fa-stamp seal-icon"></i>
+                <div class="seal-text">
+                  <span class="seal-main">BIS 916 &bull; GIA REGISTERED</span>
+                  <span class="seal-sub">Guaranteed Conflict-Free Origin</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-gold btn-atelier-cta">
+              <span>Commission Bespoke</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="split-showcase-section" id="splitShowcase">
+    <div class="split-ambient-glow" aria-hidden="true"></div>
+
+    <div class="split-container">
+
+      <div class="split-col split-visual-col">
+        <div class="split-frame-wrapper">
+          <div class="split-gold-rim"></div>
+          <div class="split-image-viewport">
+            <img src="./assets/img 6.webp" alt="The Sovereign Royal Emerald Pendant" class="split-hero-img" />
+            <div class="split-img-overlay"></div>
+
+            <div class="spec-pin pin-emerald">
+              <span class="pin-pulse"></span>
+              <div class="pin-card">
+                <span class="pin-title">Royal Colombian Muzo</span>
+                <span class="pin-desc">5.82 Carats &bull; Minor Cedar Oil</span>
+              </div>
+            </div>
+
+            <div class="spec-pin pin-clasp">
+              <span class="pin-pulse"></span>
+              <div class="pin-card">
+                <span class="pin-title">950 Solid Platinum</span>
+                <span class="pin-desc">Articulated Safety Lock</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-floating-seal">
+            <div class="seal-inner">
+              <span class="seal-year">EST. 1994</span>
+              <span class="seal-hallmark">PIÈCE UNIQUE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-col split-narrative-col">
+        <div class="split-narrative-content">
+          <div class="split-badge">
+            <span class="badge-sparkle">✦</span>
+            <span>Masterpiece of the Month</span>
+          </div>
+
+          <h2 class="split-title">The Sovereign Verdant Pendant</h2>
+
+          <p class="split-lead-text">
+            Sculpted around a certified 5.82-carat untreated Muzo emerald, illuminated by concentric tiers of tapered
+            baguette diamonds and set in mirror-polished 950 platinum.
+          </p>
+
+          <div class="split-spec-grid">
+            <div class="spec-box">
+              <span class="spec-val">5.82 <small>ct</small></span>
+              <span class="spec-key">Center Emerald</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-val">D-F / VVS</span>
+              <span class="spec-key">Accent Diamonds</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-val">950 Pt</span>
+              <span class="spec-key">Fine Metallurgy</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-val">Gubelin</span>
+              <span class="spec-key">Origin Certified</span>
+            </div>
+          </div>
+
+          <div class="split-provenance-box">
+            <div class="provenance-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div class="provenance-copy">
+              <span class="prov-title">Verified Sovereign Provenance</span>
+              <p class="prov-desc">Delivered in hand-stitched velvet archival vaults accompanied by complete Swiss
+                gemological dossier.</p>
+            </div>
+          </div>
+
+          <div class="split-action-row">
+            <a href="contact.html" class="btn btn-gold split-cta-btn">
+              <span>Inquire Private Acquisition</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <div class="split-price-tag">
+              <span class="price-caption">Vault Price</span>
+              <span class="price-value">₹32,50,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="expanding-section" id="expandableCollections">
+    <div class="expanding-container">
+      <div class="expanding-header">
+        <span class="expanding-badge">Curated Universes</span>
+        <h2 class="expanding-title">Explore By Collection</h2>
+        <p class="expanding-subtitle">
+          Immerse yourself in distinct ateliers, from timeless engagement solitaires to royal heritage heirlooms.
+        </p>
+      </div>
+
+      <div class="expand-grid" id="expandGrid">
+
+        <article class="expand-card active" style="background-image: url('./assets/img\ 7.webp');">
+          <div class="card-overlay"></div>
+          <div class="card-inner-content">
+            <span class="card-num">01</span>
+            <div class="card-text-box">
+              <span class="card-category">Bridal & Solitaires</span>
+              <h3 class="card-heading">The Eternal Promise</h3>
+              <p class="card-desc">GIA-certified brilliant cuts engineered in mirror-polished platinum and 18k yellow
+                gold settings.</p>
+              <a href="collection.html" class="btn btn-gold card-link-btn">
+                <span>View Solitaires</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="expand-card" style="background-image: url('./assets/img\ 8.webp');">
+          <div class="card-overlay"></div>
+          <div class="card-inner-content">
+            <span class="card-num">02</span>
+            <div class="card-text-box">
+              <span class="card-category">High Joaillerie</span>
+              <h3 class="card-heading">Royal Gemstones</h3>
+              <p class="card-desc">Untreated Colombian emeralds and Ceylon sapphires framed by constellation micropavé
+                diamonds.</p>
+              <a href="high.html" class="btn btn-gold card-link-btn">
+                <span>View High Jewelry</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="expand-card" style="background-image: url('./assets/img\ 9.webp');">
+          <div class="card-overlay"></div>
+          <div class="card-inner-content">
+            <span class="card-num">03</span>
+            <div class="card-text-box">
+              <span class="card-category">Heritage Legacy</span>
+              <h3 class="card-heading">Florentine Gold</h3>
+              <p class="card-desc">Century-old hand-engraving traditions celebrating imperial motifs and regal temple
+                craftsmanship.</p>
+              <a href="heritage.html" class="btn btn-gold card-link-btn">
+                <span>View Heritage</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="expand-card" style="background-image: url('./assets/img\ 10.webp');">
+          <div class="card-overlay"></div>
+          <div class="card-inner-content">
+            <span class="card-num">04</span>
+            <div class="card-text-box">
+              <span class="card-category">Bespoke Ateliers</span>
+              <h3 class="card-heading">Custom Commissions</h3>
+              <p class="card-desc">Collaborate directly with our master gemologists to bring personal heirloom visions
+                into reality.</p>
+              <a href="contact.html" class="btn btn-gold card-link-btn">
+                <span>Inquire Bespoke</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="testimonial-section" id="testimonials">
+    <div class="testimonial-glow" aria-hidden="true"></div>
+
+    <div class="testimonial-container">
+      <div class="testimonial-header">
+        <span class="testimonial-badge">Patron Acclaim</span>
+        <h2 class="testimonial-title">Voices of Distinction</h2>
+        <p class="testimonial-subtitle">
+          Intimate impressions from connoisseurs who have entrusted their most memorable milestones to our atelier.
+        </p>
+      </div>
+
+      <div class="testimonial-carousel-wrap">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <article class="testimonial-card active" data-index="0">
+            <div class="testimonial-inner">
+              <div class="quote-mark">“</div>
+              <div class="star-rating">
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+              </div>
+              <p class="testimonial-quote">
+                The 4.2-carat solitaire commission surpassed every expectation. The precision of the platinum claw
+                setting and the fire inside the stone are breathtaking. Their private salon experience is pure
+                discretion and luxury.
+              </p>
+              <div class="patron-profile">
+                <div class="patron-avatar">
+                  <img src="./assets/girl 14.webp" alt="Meera Sundaram" />
+                </div>
+                <div class="patron-details">
+                  <h3 class="patron-name">Meera Sundaram</h3>
+                  <span class="patron-meta">Bespoke Solitaire Ring &bull; Chennai</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-index="1">
+            <div class="testimonial-inner">
+              <div class="quote-mark">“</div>
+              <div class="star-rating">
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+              </div>
+              <p class="testimonial-quote">
+                Finding a certified untreated Colombian emerald with this depth of velvety green is virtually
+                impossible. Aurelia sourced a museum specimen and framed it in understated, timeless yellow gold.
+              </p>
+              <div class="patron-profile">
+                <div class="patron-avatar">
+                  <img src="./assets/boy 19.webp" alt="Vikramaditya Rao" />
+                </div>
+                <div class="patron-details">
+                  <h3 class="patron-name">Vikramaditya Rao</h3>
+                  <span class="patron-meta">Muzó Emerald Pendant &bull; Bengaluru</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-index="2">
+            <div class="testimonial-inner">
+              <div class="quote-mark">“</div>
+              <div class="star-rating">
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+                <span class="gem-star">✦</span>
+              </div>
+              <p class="testimonial-quote">
+                Restoring our century-old family heirloom necklace required master hands. Their goldsmiths preserved the
+                antique patina while securing every single Burmese ruby. True artistry and integrity.
+              </p>
+              <div class="patron-profile">
+                <div class="patron-avatar">
+                  <img src="./assets/girl 19.webp" alt="Ananya Singhania" />
+                </div>
+                <div class="patron-details">
+                  <h3 class="patron-name">Ananya Singhania</h3>
+                  <span class="patron-meta">Heirloom Restoration &bull; Mumbai</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="testimonial-nav">
+          <button class="t-nav-btn prev-btn" id="tPrevBtn" aria-label="Previous review">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-pills" id="testimonialPills">
+            <span class="t-pill active" data-index="0"></span>
+            <span class="t-pill" data-index="1"></span>
+            <span class="t-pill" data-index="2"></span>
+          </div>
+          <button class="t-nav-btn next-btn" id="tNextBtn" aria-label="Next review">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <section class="faq-section" id="faq">
+    <div class="faq-glow-ambient" aria-hidden="true"></div>
+
+    <div class="faq-container">
+      <div class="faq-header">
+        <span class="faq-badge">Concierge Advisory</span>
+        <h2 class="faq-title">Frequently Considered Inquiries</h2>
+        <p class="faq-subtitle">
+          Everything you need to know regarding gemological certification, custom bespoke commissions, and private
+          atelier viewings.
+        </p>
+      </div>
+
+      <div class="faq-accordion" id="faqAccordion">
+
+        <div class="faq-item active">
+          <button class="faq-trigger" aria-expanded="true">
+            <span class="faq-number">01</span>
+            <span class="faq-question">How are your solitaires certified and ethically sourced?</span>
+            <span class="faq-icon-box">
+              <span class="faq-line horizontal"></span>
+              <span class="faq-line vertical"></span>
+            </span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              <p>
+                Every diamond above 0.50 carats is independently certified by the Gemological Institute of America (GIA)
+                or Gubelin Laboratories. We strictly follow the Kimberley Process, sourcing 100% natural, untreated, and
+                conflict-free gemstones paired with hallmark-authenticated 24K gold and 950 solid platinum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-number">02</span>
+            <span class="faq-question">What is the timeline and process for a bespoke commission?</span>
+            <span class="faq-icon-box">
+              <span class="faq-line horizontal"></span>
+              <span class="faq-line vertical"></span>
+            </span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              <p>
+                A custom haute creation requires between 3 to 5 weeks. The journey begins with a private 3D render and
+                gouache painting presentation, stone procurement, wax casting, and hand-pronging at our atelier. You
+                receive weekly progress imagery and video dossiers directly from our master goldsmiths.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-number">03</span>
+            <span class="faq-question">How are high-value pieces packaged and insured during transit?</span>
+            <span class="faq-icon-box">
+              <span class="faq-line horizontal"></span>
+              <span class="faq-line vertical"></span>
+            </span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              <p>
+                All shipments are fully insured at retail replacement value through Malca-Amit or Ferrari Logistics.
+                Orders arrive in tamper-proof, armored packaging containing hand-crafted leather jewelry vaults,
+                original micro-laser certification passports, and valuation appraisals for insurance underwriters.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-number">04</span>
+            <span class="faq-question">Do you offer heirloom redesign and diamond restoration?</span>
+            <span class="faq-icon-box">
+              <span class="faq-line horizontal"></span>
+              <span class="faq-line vertical"></span>
+            </span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              <p>
+                Yes. We specialize in archival restorations and modern transformations. We preserve the sentimental
+                integrity and provenance of antique stones while re-engineering structural settings into contemporary,
+                comfortable, everyday silhouettes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-number">05</span>
+            <span class="faq-question">Can I reserve a private salon viewing or consultation?</span>
+            <span class="faq-icon-box">
+              <span class="faq-line horizontal"></span>
+              <span class="faq-line vertical"></span>
+            </span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-body">
+              <p>
+                Private salon viewings are available by appointment at our atelier in Erode or through encrypted virtual
+                consultations. You will be paired with a senior gemologist who prepares a curated tray of curated
+                gemstones based on your aesthetic preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="faq-footer-help">
+        <div class="help-box">
+          <div class="help-text">
+            <h3 class="help-title">Still have an unanswered question?</h3>
+            <p class="help-desc">Our dedicated concierge is at your service 24/7 for bespoke inquiries and appraisals.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-gold help-btn">
+            <span>Speak With Concierge</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="luxury-cta-section" id="concierge">
+    <div class="cta-glow-backdrop" aria-hidden="true"></div>
+
+    <div class="cta-container">
+      <div class="cta-card">
+        <div class="cta-frame-border" aria-hidden="true"></div>
+
+        <div class="cta-content">
+          <span class="cta-badge">Bespoke Privé Services</span>
+
+          <h2 class="cta-title">
+            <span>Begin Your Bespoke</span>
+            <span class="cta-gold-text">Heirloom Journey</span>
+          </h2>
+
+          <p class="cta-description">
+            Whether seeking an investment-grade solitaire, commissioning a one-of-a-kind creation, or requesting a
+            private salon appointment, our senior gemologists await your invitation.
+          </p>
+
+          <div class="cta-action-group">
+            <a href="contact.html" class="btn btn-gold cta-primary-btn">
+              <i class="fa-regular fa-calendar-check btn-icon"></i>
+              <span>Reserve Private Viewing</span>
+            </a>
+            <a href="error.html" class="btn btn-secondary cta-secondary-btn">
+              <i class="fa-solid fa-phone-volume btn-icon"></i>
+              <span>Speak With Atelier</span>
+            </a>
+          </div>
+
+          <div class="cta-features-strip">
+            <div class="cta-feature-item">
+              <i class="fa-solid fa-gem feature-icon"></i>
+              <span class="feature-label">GIA &amp; Gubelin Certified</span>
+            </div>
+            <div class="cta-feature-divider"></div>
+            <div class="cta-feature-item">
+              <i class="fa-solid fa-shield-halved feature-icon"></i>
+              <span class="feature-label">Armored Global Transit</span>
+            </div>
+            <div class="cta-feature-divider"></div>
+            <div class="cta-feature-item">
+              <i class="fa-solid fa-certificate feature-icon"></i>
+              <span class="feature-label">Lifetime Atelier Warranty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- ================= LUXURY FOOTER ================= -->
+  <footer class="site-footer">
+    <!-- Subtle Top Gold Glow Divider -->
+    <div class="footer-divider-glow" aria-hidden="true"></div>
+
+    <div class="footer-container">
+
+      <!-- Top Row: Brand & Multi-Column Navigation -->
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="./assets/logo 10.webp" alt="Aurelia High Jewelry" height="48" width="144">
+          </a>
+          <p class="footer-tagline">
+            Handcrafting rare solitaires, certified diamonds, and bespoke heirloom jewelry since 1994. Every gemstone is
+            ethically sourced and masterfully set.
+          </p>
+
+          <!-- Social Media Icons (Routing to error.html) -->
+          <div class="footer-social-links" aria-label="Social Media Channels">
+            <a href="error.html" class="social-icon" aria-label="Follow us on Instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on Facebook" title="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on Pinterest" title="Pinterest">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on X" title="X (Twitter)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="error.html" class="social-icon" aria-label="Follow us on YouTube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Navigation Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="collection.html" class="footer-link">Collections</a></li>
+            <li><a href="high.html" class="footer-link">High Jewelry</a></li>
+            <li><a href="heritage.html" class="footer-link">Heritage</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Atelier & Client Services Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="error.html" class="footer-link">Bespoke Commissions</a></li>
+            <li><a href="error.html" class="footer-link">Gemological Certification</a></li>
+            <li><a href="error.html" class="footer-link">Heirloom Restoration</a></li>
+            <li><a href="error.html" class="footer-link">Private Salon Booking</a></li>
+            <li><a href="error.html" class="footer-link">Appraisal & Valuations</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Atelier Presence Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Atelier</h4>
+          <div class="footer-contact-items">
+            <p class="contact-entry">
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <span>Bespoke Salon, Erode, Tamil Nadu, India</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <span>+91 (0) 424 222 0000</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-solid fa-envelope contact-icon"></i>
+              <span>concierge@aureliajewelry.com</span>
+            </p>
+            <p class="contact-entry">
+              <i class="fa-regular fa-clock contact-icon"></i>
+              <span>Mon &ndash; Sat: 10:00 AM &ndash; 8:00 PM</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Row: Legal & Copyright -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 AURELIA High Jewelry Atelier. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="error.html" class="legal-link">Privacy Policy</a>
+          <span class="legal-separator">&bull;</span>
+          <a href="error.html" class="legal-link">Terms of Service</a>
+          <span class="legal-separator">&bull;</span>
+          <a href="error.html" class="legal-link">Conflict-Free Diamond Sourcing</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- GSAP Core & ScrollTrigger CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -2209,6 +2209,11 @@ body.menu-open {
     font-size: 0.75rem;
   }
 
+  .pin-emerald {
+  top: 58%;
+  left: 12%;
+}
+
   .pin-desc {
     font-size: 0.62rem;
   }
